@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles.scss';
 
 class App extends Component {
   render() {
@@ -9,12 +9,13 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+           get started you dont know what your doing Welcom To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
     );
   }
 }
+
 
 module.hot.accept();
 

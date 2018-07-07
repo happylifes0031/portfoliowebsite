@@ -21,18 +21,20 @@ module.exports = {
   // Now it uses our "src" folder as a starting point
   devServer: {
     contentBase: paths.SRC,
+    hot: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: path.join('public/', 'index.html'),
+      template: path.join('public/', 'index.html'), 
+      filename: './index.html' 
     }),
     new MiniCssExtractPlugin({
         // Options similar to the same options in webpackOptions.output
         // both options are optional
-        filename: "style.css",
+        filename: "[name].css",
         chunkFilename: "[id].css"
-    })
+    }),
 ],
   module: {
     rules: [
@@ -45,16 +47,16 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+          test: /\.scss$/,                    // made scss
+          use:[
+            MiniCssExtractPlugin.loader,
+            "css-loader",
+            "sass-loader"
+          ]
       }  
     ]
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-  },
-  devServer: {
-    contentBase: './dist',
-    hot: true
   }
 };
