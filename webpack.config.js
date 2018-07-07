@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Import our plugin -> ADDED IN THIS STEP
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
+const { CheckerPlugin } = require('awesome-typescript-loader')
 
 // Constant with our paths
 const paths = {
@@ -35,16 +36,23 @@ module.exports = {
         filename: "[name].css",
         chunkFilename: "[id].css"
     }),
+    new CheckerPlugin()
 ],
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|es6)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: { presets: ["es2015"] }
-        },
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              babelrc: false,
+              plugins: ['react-hot-loader/babel'],
+            },
+          },
+          'awesome-typescript-loader'
+        ],
       },
       {
           test: /\.scss$/,                    // made scss
@@ -57,6 +65,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.es6'],
   }
 };
