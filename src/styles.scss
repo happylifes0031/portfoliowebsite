@@ -1,5 +1,13 @@
 .App {
+  display: grid;
   text-align: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  grid-template-areas:
+  "header header"
+  "intro knowledgeStack"
+  "showcase showcase"
+  "content content"
 }
 
 .App-logo {
@@ -8,10 +16,11 @@
 }
 
 .App-header {
+  grid-area: header;
   background-color: red;
   height: 150px;
   padding: 20px;
-  color: red;
+  color: #fff;
 }
 
 .App-title {
@@ -19,8 +28,28 @@
 }
 
 .App-intro {
+  grid-area: intro;
   font-size: large;
+  background-color: blue;
 }
+
+.App-knowledge-stack{
+  grid-area: knowledgeStack;
+  font-size: large;
+  background-color: blue;
+
+}
+
+.App-showcase{
+  grid-area: showcase;
+  background-color: green;
+}
+
+.App-content{
+  grid-area: content;
+  background-color: silver;
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
