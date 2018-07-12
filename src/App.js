@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
+import { Timeline } from './components/timeline';
+import { Intro } from './components/intro';
+import { Knowledgestack } from './components/knowledgestack';
+import { Showcase } from  './components/showcase';
+import { Content } from './components/content';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          timeline
-        </div>
-        <div className="App-intro">
-           intro blog
-        </div>
-        <div className="App-knowledge-stack">
-          knowledge-stack
-        </div>
-        <div className="App-showcase">
-          showcase
-        </div>
-        <div className="App-content">
-          content
-        </div>
+        <Timeline />
+        <Intro />
+        <Knowledgestack />
+        <Showcase />
+        <Content />
       </div>
     );
   }
