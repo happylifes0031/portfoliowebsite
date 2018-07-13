@@ -13,6 +13,7 @@ const paths = {
 // Webpack configuration
 module.exports = {
   entry: ['./src/index.js', 'react-hot-loader/patch'],
+  devtool: 'inline-source-map',
   output: {
     path: paths.DIST,
     filename: 'app.bundle.js',
@@ -41,18 +42,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx|es6)$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              babelrc: false,
-              plugins: ['react-hot-loader/babel'],
-            },
-          },
-          'awesome-typescript-loader'
-        ],
+        test:  /\.(js|jsx|tsx|.json)$/,
+        use: 'awesome-typescript-loader',
+        exclude: /node_modules/
       },
       {
           test: /\.scss$/,                    // made scss
@@ -65,6 +57,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.es6'],
+    extensions: ['.js', '.jsx', '.tsx', ".json"],
   }
 };

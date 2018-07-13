@@ -1,0 +1,23 @@
+{
+    "adsmb" : [{
+        "imgName":"adsmb",
+        "project":"Aan de slag met Bitcoin",
+        "client": "ikzelf",
+        "description": "Website om je aan te melden voor een cursus in cryptrografie.",
+        "website":"aandeslagmetbitcoin.nl"
+    }],
+    "zwitserleven" : [{
+        "imgName":"adsmb",
+        "project":"Aan de slag met Bitcoin",
+        "client": "ikzelf",
+        "description": "Website om je aan te melden voor een cursus in cryptrografie.",
+        "website":"www.aandeslagmetbitcoin.nl"
+    }],
+    "reaal" : [{
+        "imgName":"adsmb",
+        "project":"Aan de slag met Bitcoin",
+        "client": "ikzelf",
+        "description": "Website om je aan te melden voor een cursus in cryptrografie.",
+        "website":"www.aandeslagmetbitcoin.nl"
+    }]
+}

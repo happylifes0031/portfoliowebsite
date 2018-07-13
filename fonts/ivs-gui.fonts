@@ -1,0 +1,31 @@
+// The style guide sub project needs relative paths to the font files
+
+// Rijks-overheid webfonts
+@font-face {
+  font-family: 'RO Sans';
+  src: url('./RO-SansWebText-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+ }
+
+@font-face {
+  font-family: 'RO Sans';
+  src: url('./RO-SansWebText-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+ }
+
+@font-face {
+  font-family: 'RO Sans';
+  src: url('./RO-SansWebText-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+ }
+
+// Font Awesome fonts
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('./fontawesome-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
