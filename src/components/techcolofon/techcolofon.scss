@@ -1,0 +1,89 @@
+.techColofon{
+    display: block;
+    position: absolute;
+    height: 125px;
+    width: 25px;
+    background-color: #fc920a;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 10px;
+    -webkit-transition: margin-left 2s; /* Safari */
+    transition: margin-left 1s;
+    cursor: pointer;
+    & > span {
+        position: absolute;
+      display: inline-block;
+      padding: 2px;
+      width: 10px;
+      line-height: 16px;
+      word-break: break-all;
+      text-align: center;
+      left: 3px;
+      font-size: 1.0rem;
+      margin-top: 7px;
+    }
+    //REMINDER MOBILE WONT WORK LIKE THIS
+    &:hover{
+      margin-left: 112px;
+      z-index: 999px;
+      -webkit-transition: margin-left 2s; /* Safari */
+      transition: margin-left 1s;
+      .techColofonContent{
+        visibility: visible;
+        animation-name: cf3FadeInOut;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+        animation-duration: 2s;
+        animation-direction: alternate;
+      }
+    }
+  }
+  .techColofonContent{
+    position: relative;
+    float: left;
+    display: block;
+    margin-left: -112px;
+    font-size: 10px;
+    width: 115px;
+    background-color: #fc920a;
+    padding: 5px;
+    height: 115px;
+    visibility: hidden;
+    animation-name: cf3FadeOutIn;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    -webkit-transition: visibility 2s; /* Safari */
+    transition: visibility 2s;
+    & ul {
+      list-style: none;
+      width: 100%;
+      display: block;    
+      padding-left: 0;
+    }
+  }
+
+
+@keyframes cf3FadeInOut {
+    0% {
+      opacity: 0.0;
+    }
+    55% {
+      opacity: 1.0;
+    }
+    100% {
+      opacity: 1.0;
+    }
+  }
+  @keyframes cf3FadeOutIn {
+    0% {
+      opacity: 1.0;
+    }
+    60% {
+      opacity: 0.0;
+    }
+    100% {
+      opacity: 0.0;
+    }
+  }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Timeline } from './components/timeline';
-import { Intro } from './components/intro';
-import { Knowledgestack } from './components/knowledgestack';
+import { Intro } from './components/intro/intro';
+import { Knowledgestack } from './components/knowledgeStack/knowledgeStack';
 import { Showcase } from  './components/showcase';
 import { Content } from './components/content';
 

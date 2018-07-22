@@ -1,3 +1,22 @@
+@import './components/knowledgeStack/knowledgeStack';
+@import './components/techcolofon/techcolofon';
+@font-face {
+  font-family: indieFlower;
+  src: url('../fonts/indie/IndieFlower.ttf');
+}
+@font-face {
+  font-family: amatic;
+  src: url('../fonts/amatic/AmaticSC-Regular.ttf');
+}
+@font-face {
+  font-family: cinzel;
+  src: url('../fonts/cinzel/Cinzel-Regular.ttf');
+}
+@font-face {
+  font-family: josefin;
+  src: url('../fonts/josefin/josefinSlab-Regular.ttf');
+}
+
 .App {
   display: grid;
   text-align: center;
@@ -7,7 +26,8 @@
   "timeline timeline"
   "intro knowledgeStack"
   "showcase showcase"
-  "content content"
+  "content content";
+  grid-template-columns: 65% 35%;
 }
 
 .App-logo {
@@ -32,13 +52,6 @@
   background-color: orange;
 }
 
-.App-knowledge-stack{
-  grid-area: knowledgeStack;
-  font-size: large;
-  background-color: blue;
-
-}
-
 .App-showcase{
   grid-area: showcase;
   background-color: green;
@@ -47,10 +60,4 @@
 .App-content{
   grid-area: content;
   background-color: silver;
-}
-
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

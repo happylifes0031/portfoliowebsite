@@ -1,58 +1,58 @@
 {
-    "Unreal":[{
+    "Unreal":{
         "icon":"unreal",
         "range":"13"
-    }],
-    "Blender":[{
+    },
+    "Blender":{
         "icon":"blender",
         "range":"12"
-    }],
-    "Photoshop":[{
+    },
+    "Photoshop":{
         "icon":"ps",
         "range":"11"
-    }],
-    "Premiere":[{
+    },
+    "Premiere":{
         "icon":"premiere",
         "range":"10"
-    }],
-    "Illustrator":[{
+    },
+    "Illustrator":{
         "icon":"ai",
         "range":"9"
-    }],
-    "VisualStudio":[{
+    },
+    "VisualStudio":{
         "icon":"visualstudio",
         "range":"8"
-    }],
-    "Typescript":[{
+    },
+    "Typescript":{
         "icon":"typescript",
         "range":"7"
-    }],
-    "Angular":[{
+    },
+    "Angular":{
         "icon":"angularjs",
         "range":"6"
-    }],
-    "HTML5":[{
+    },
+    "HTML5":{
         "icon":"html5",
         "range":"5"
-    }],
-    "CSS3":[{
+    },
+    "CSS3":{
         "icon":"css3",
         "range":"5"
-    }],
-    "JS":[{
+    },
+    "JS":{
         "icon":"javascript",
         "range":"4"
-    }],
-    "PYTHON":[{
+    },
+    "PYTHON":{
         "icon":"python",
         "range":"3"
-    }],
-    "SASS":[{
+    },
+    "SASS":{
         "icon":"sass",
         "range":"3"
-    }],
-    "BOOTSTRAP":[{
+    },
+    "BOOTSTRAP":{
         "icon":"bootstrap",
         "range":"3"
-    }]
+    }
 }
