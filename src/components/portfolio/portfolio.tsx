@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 
-export class Showcase extends Component{
+export class Portfolio extends React.Component{
     render() {
         return (
             <div className="App-showcase">
-                showcase
+                portfolio
             </div>
         );
     }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Timeline } from './components/timeline';
 import { Intro } from './components/intro/intro';
 import { Knowledgestack } from './components/knowledgeStack/knowledgeStack';
-import { Showcase } from  './components/showcase';
+import { Portfolio } from  './components/portfolio/portfolio';
 import { Content } from './components/content';
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
         <Timeline />
         <Intro />
         <Knowledgestack />
-        <Showcase />
+        <Portfolio />
         <Content />
       </div>
     );

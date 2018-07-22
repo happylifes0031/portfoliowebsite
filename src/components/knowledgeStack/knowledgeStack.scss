@@ -2,11 +2,20 @@
 .App-knowledge-stack{
   grid-area: knowledgeStack;
   font-size: large;
-  background-color: blue;
 }
 
 .iconTile { 
     width: fit-content;
     display: inline-block;
     margin: 0.8rem;
+}
+
+.addShadow {
+  -webkit-box-shadow: 3px 3px 23px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 3px 23px 0px rgba(0,0,0,0.75);
+  box-shadow: 3px 3px 23px 0px rgba(0,0,0,0.75);
+}
+.addShadow > img { 
+  width: 73px;
+  height: 73px;
 }
