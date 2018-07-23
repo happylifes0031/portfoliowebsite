@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Timeline } from './components/timeline';
 import { Intro } from './components/intro/intro';
-import { Knowledgestack } from './components/knowledgeStack/knowledgeStack';
+import Knowledgestack  from './components/knowledgeStack/knowledgeStack';
 import { Portfolio } from  './components/portfolio/portfolio';
 import { Content } from './components/content';
 
@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <Timeline />
         <Intro />
-        <Knowledgestack />
+        <div><Knowledgestack /></div>
         <Portfolio />
         <Content />
       </div>
