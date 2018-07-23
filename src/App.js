@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Timeline } from './components/timeline';
+import { TimelineFrame } from './components/timeline/timeline';
 import { Intro } from './components/intro/intro';
 import Knowledgestack  from './components/knowledgeStack/knowledgeStack';
 import { Portfolio } from  './components/portfolio/portfolio';
@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Timeline />
+        <TimelineFrame />
         <Intro />
         <div><Knowledgestack /></div>
         <Portfolio />
