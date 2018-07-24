@@ -1,11 +1,10 @@
 import * as React from 'react';
 
-class TechColofon extends React.Component {
-    render(){
-      return (
+const TechColofon = () => {
+    return (
         <div id="personalInfo" className="personalInfo">
-          <div className="socialStack">
-          </div>
+            <div className="socialStack">
+            </div>
             <div className="techColofon marginTop">
                 <div className="techColofonContent">
                     <ul>
@@ -20,8 +19,7 @@ class TechColofon extends React.Component {
                 <span>Colofon</span>
             </div>
         </div>
-      )
-    }
-  }
+    )
+}
 
-  export default TechColofon;
+export default TechColofon;

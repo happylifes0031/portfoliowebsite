@@ -1,27 +1,25 @@
 import * as React from 'react';
 
-export class TimelineFrame extends React.Component { 
-    constructor(props) {
-        super(props)
-            this.state = { 
-                frameWidth: this.getWidth || 0, 
-        }
+export class TimelineFrame extends React.Component {
+    state = {
+        frameWidth: 0
+    };
+     
+    getWidth = () => { 
+        this.setState({ 
+          frameWidth: document.getElementById("timeLine").offsetWidth
+        }); 
     }
-  
-    getWidth = () => { return document.getElementById("timeLine").offsetWidth; }
 
     componentDidMount() {
-        let newSize = window.addEventListener('resize', this.getWidth);
-        console.log('newSIze', newSize);
-        this.setState({ 
-          frameWidth: newSize
-        });
+        window.addEventListener('resize', this.getWidth);
     }
 
     render() {
         //<TimeLineNodes frameWidth={this.state.frameWidth}/>
         return (
-            <div className="timeline">
+            <div id="timeLine" className="timeline">
+                {this.state.frameWidth}
             </div>
         )
     }

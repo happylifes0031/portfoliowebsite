@@ -15,7 +15,7 @@ const Knowledgestack = () => {
       return (<div key={'iconName_'+index} className="iconTile" id={element}>
         <img src={"/images/img/"+element+".png"} alt={element + " icon"} data-align="center" height={ICON_HEIGHT_IN_PIXELS} width={ICON_WIDTH_IN_PIXELS}/>
       </div>
-    });
+  });
 };
 
 
