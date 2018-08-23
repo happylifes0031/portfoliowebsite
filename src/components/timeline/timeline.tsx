@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Node from './node/node';
 
 export class TimelineFrame extends React.Component {
     state = {
@@ -19,7 +20,7 @@ export class TimelineFrame extends React.Component {
         //<TimeLineNodes frameWidth={this.state.frameWidth}/>
         return (
             <div id="timeLine" className="timeline">
-                {this.state.frameWidth}
+                <Node/>
             </div>
         )
     }

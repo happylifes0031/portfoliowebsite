@@ -1,0 +1,28 @@
+.node { 
+    width:16px;
+    height:46px;
+    padding: 1px;
+    position: absolute
+}
+.verticalLine { 
+    position: relative;
+    display: inline-block;
+    width: 2px;
+    height: 30px;
+    border-left: 1px solid transparent;
+    -moz-border-image: -moz-linear-gradient(top, #fa9717 0%, #efefef 100%);
+    -webkit-border-image: -webkit-linear-gradient(top, #fa9717 0%, #efefef 100%);
+    border-image: linear-gradient(to bottom, #fa9717 0%, #efefef 100%);
+    border-image-slice: 1;
+    margin:0 auto;
+}
+.circle {    
+    position: relative;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: #efefef;
+    display: block;
+    border: 1px dashed #fa9717;
+}
