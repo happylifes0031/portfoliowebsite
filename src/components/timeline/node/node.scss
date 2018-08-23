@@ -2,7 +2,9 @@
     width:16px;
     height:46px;
     padding: 1px;
-    position: absolute
+    position: relative;
+    top: 35%;
+    transform: translateY(-50%);
 }
 .verticalLine { 
     position: relative;
