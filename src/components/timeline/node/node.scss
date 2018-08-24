@@ -3,8 +3,9 @@
     height:46px;
     padding: 1px;
     position: relative;
-    top: 35%;
+    display: inline-block;
     transform: translateY(-50%);
+    margin-right: 30%;
 }
 .verticalLine { 
     position: relative;
@@ -27,4 +28,46 @@
     background-color: #efefef;
     display: block;
     border: 1px dashed #fa9717;
+    &:hover .infoBoxEmployer{
+        display: block;
+        top: 20px;
+        left: 15px;
+        z-index: 999;
+        position: relative;
+    }
+}
+.infoBoxEmployer { 
+    display: none;
+    position: absolute;
+    width: 220px;
+    background-color: #fc920a;
+    left: 23px;
+    top: 71px;
+    font-size: 0.7rem;
+    color: black;
+    padding: 0.05rem;
+    border-radius: 5px;
+    z-index: 999;
+    animation: fadein 1.5s;
+    -webkit-box-shadow: -1px 5px 44px -1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: -1px 5px 44px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: -1px 5px 44px -1px rgba(0, 0, 0, 0.2);
+    ul {
+        display: flex;
+        flex-wrap:wrap;
+        background-color: gray;
+        list-style: none;   
+        padding:0;
+        margin:0;
+        text-align: left;
+    }
+    ul>li{
+        padding: 3px 0;
+    }
+    ul>li:nth-child(odd) { 
+        width:32%
+    }
+    ul>li:nth-child(even) { 
+        width:68%
+    }
 }

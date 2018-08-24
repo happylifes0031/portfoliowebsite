@@ -21,6 +21,7 @@ export class TimelineFrame extends React.Component {
         return (
             <div id="timeLine" className="timeline">
                 <Node/>
+                <Node/>
             </div>
         )
     }
