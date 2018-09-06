@@ -1,11 +1,10 @@
 .node { 
+    position: absolute;
     width:16px;
     height:46px;
     padding: 1px;
-    position: relative;
     display: inline-block;
     transform: translateY(-50%);
-    margin-right: 30%;
 }
 .verticalLine { 
     position: relative;
@@ -70,4 +69,12 @@
     ul>li:nth-child(even) { 
         width:68%
     }
+}
+
+.isEven { 
+    transform: rotate(180);
+}
+
+.isEven > h3 {
+    transform: rotate(-180deg);
 }

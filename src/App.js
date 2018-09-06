@@ -8,8 +8,10 @@ import { Content } from './components/content';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <TimelineFrame />
+      <div className="App" id="timeLine">
+        <div className="inbedTimeLine">
+          <TimelineFrame />
+        </div>
         <Intro />
         <div><Knowledgestack /></div>
         <Portfolio />

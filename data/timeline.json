@@ -1,82 +1,82 @@
-{
-    "Coded Illusions":[{
+[
+    {
         "from":"01-2008",
         "till":"05-2008",
         "role": "Technical game developer",
         "skills":"Unreal Engine, Kismet",
         "companyLogo": "codedillusions",
         "companyName": "Coded Illusions"
-    }],
-    "Paperworq":[{
+    },
+    {
         "from":"01-2008",
         "till":"07-2008",
         "role": "Front-end developer",
         "skills":"HTML5, CSS3, PHP",
         "companyLogo": "paperworq",
         "companyName": "Paperworq"
-    }],
-    "Blue Label Design":[{
+    },
+    {
         "from":"08-2008",
         "till":"07-2012",
         "role": "Front-end developer, Designer",
         "skills":"HTML5, CSS3, Wordpress",
         "companyLogo": "bluelabeldesign",
         "companyName": "Blue Label Design"
-    }],
-    "Playlogic":[{
+    },
+    {
         "from":"07-2009",
         "till":"08-2009",
         "role": "Technical Game Designer",
         "skills":"Unreal Engine, Kismet",
         "companyLogo": "playlogic",
         "companyName": "PlayLogic"
-    }],
-    "Blue Label Studio":[{
+    },
+    {
         "from":"08-2012",
         "till":"06-2015",
         "role": "Game director & Designer",
         "skills":"Blender, Python",
         "companyLogo": "bluelabelstudio",
         "companyName": "Blue Label Studio"
-    }],
-    "Hogeschool Rotterdam":[{
+    },
+    {
         "from":"09-2012",
         "till":"04-2016",
         "role": "Parttime docent informatica",
         "skills":"Afstudeerbegeleider, assessor",
         "companyLogo": "hro",
         "companyName": "HRO"
-    }],
-    "Robeco":[{
+    },
+    {
         "from":"09-2015",
         "till":"01-2016",
         "role": "Front-end developer",
         "skills":"Javascript, Tridion",
         "companyLogo": "robeco",
         "companyName": "Robeco"
-    }],
-    "Vivat":[{
+    },
+    {
         "from":"01-2017",
         "till":"12-2017",
         "role": "Front-end developer",
         "skills":"Angularjs 1.6 component based",
         "companyLogo": "vivat",
         "companyName": "Vivat (Zwitserleven & Reaal)"
-    }],
-    "Eurotransplant":[{
+    },
+    {
         "from":"02-2018",
         "till":"03-2018",
         "role": "Front-end developer",
         "skills":"Angular4",
         "companyLogo": "eurotransplant",
         "companyName": "Eurotransplant"
-    }],  
-    "Luminis":[{
+    },  
+    {
         "from":"04-2016",
         "till":"05-2018",
         "role": "Front-end developer",
         "skills":"Angular, Javascript",
         "companyLogo": "luminis",
         "companyName": "Luminis"
-    }]
-}
+    }
+]
