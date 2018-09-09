@@ -8,7 +8,7 @@ class Node extends React.Component{
   };
 
   render() { 
-    const {from, till, role, skills, left, width, isEven} = this.props;
+    const {from, till, role, skills, left, width, isEven, companyName} = this.props;
     
     const nodeStyle = {
       left: left + '%',
@@ -17,21 +17,23 @@ class Node extends React.Component{
     
     return (
       <div className={classNames('node', {'isEven': isEven})} style={nodeStyle}>
-        <h3>hro</h3>
-        <div className="circle" >
-          <div className="infoBoxEmployer">
-            <ul>
-              <li>Tijdsperiode:</li>
-              <li>{from} | {till}</li>
-              <li>Rol:</li>
-              <li>{role}</li>
-              <li>Skills:</li>
-              <li>{skills}</li>
-            </ul>
+          <h5>{companyName}</h5>
+          <div className='stickNode'>
+            <div className={classNames('verticalLine', {'isEven': isEven})}>
+              <div className="circle">
+                <div className='infoBoxEmployer'>
+                  <ul>
+                    <li>Tijdsperiode:</li>
+                    <li>{from} | {till}</li>
+                    <li>Rol:</li>
+                    <li>{role}</li>
+                    <li>Skills:</li>
+                    <li>{skills}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="verticalLine">
-        </div>
       </div>
     )
   }

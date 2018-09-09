@@ -1,25 +1,60 @@
 .node { 
     position: absolute;
-    width:16px;
     height:46px;
     padding: 1px;
-    display: inline-block;
-    transform: translateY(-50%);
+    display: inline-block;    
+    height: 60px;
+    top: 0;
+    padding: 20px;
 }
-.verticalLine { 
+.node > h5 { 
+    font-size: .75rem;
+    left: -10px;
+    position: absolute;
+}
+.isEven {
+    top: 97px;
+}
+.isEven > .stickNode { 
+    top: 10px;
+}
+.isEven > .stickNode > .verticalLine > .circle{ 
+    top: 30px;
+}
+.isEven  > .stickNode > .isEven { 
+    width: 1px;
+    height: 30px;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #fa9717 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#fa9717 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%,#fa9717 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fa9717',GradientType=0 );
+}
+.isEven > h5 {
+    top: 40px;
+}
+.isEven > .circle:hover > .infoBoxEmployer {
+}
+.stickNode{
+    width:2px;
+    left:0;
+    top: 74px;
+    position: absolute;
+}
+.node > .stickNode > .verticalLine:not(.isEven) { 
     position: relative;
     display: inline-block;
     width: 2px;
     height: 30px;
     border-left: 1px solid transparent;
+    margin:0 auto;
     -moz-border-image: -moz-linear-gradient(top, #fa9717 0%, #efefef 100%);
     -webkit-border-image: -webkit-linear-gradient(top, #fa9717 0%, #efefef 100%);
     border-image: linear-gradient(to bottom, #fa9717 0%, #efefef 100%);
     border-image-slice: 1;
-    margin:0 auto;
 }
 .circle {    
-    position: relative;
+    position: absolute;
     display: inline-block;
     height: 14px;
     width: 14px;
@@ -27,6 +62,8 @@
     background-color: #efefef;
     display: block;
     border: 1px dashed #fa9717;
+    top: -15px;
+    left: -8px;
     &:hover .infoBoxEmployer{
         display: block;
         top: 20px;
@@ -69,12 +106,4 @@
     ul>li:nth-child(even) { 
         width:68%
     }
-}
-
-.isEven { 
-    transform: rotate(180);
-}
-
-.isEven > h3 {
-    transform: rotate(-180deg);
 }
