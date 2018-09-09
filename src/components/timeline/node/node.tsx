@@ -8,7 +8,7 @@ class Node extends React.Component{
   };
 
   render() { 
-    const {from, till, role, skills, left, width, isEven, companyName} = this.props;
+    const {from, till, role, skills, left, width, isEven, companyName, toggleUnder, toggleAbove} = this.props;
     
     const nodeStyle = {
       left: left + '%',
@@ -16,7 +16,7 @@ class Node extends React.Component{
     };
     
     return (
-      <div className={classNames('node', {'isEven': isEven})} style={nodeStyle}>
+      <div className={classNames('node', {'isEven': isEven}, {'isHigher': (!isEven && toggleAbove) || (isEven && toggleUnder) })} style={nodeStyle}>
           <h5>{companyName}</h5>
           <div className='stickNode'>
             <div className={classNames('verticalLine', {'isEven': isEven})}>

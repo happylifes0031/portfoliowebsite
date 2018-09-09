@@ -36,17 +36,25 @@ export class TimelineFrame extends React.Component {
     render() {
         const totalAmountOfMonths = this.calculateAmountOfTotalMonths();
         let isEven = false;
-        
+        let isHigher = false;
+        let toggleAbove = true;
+        let toggleUnder = true;
+
         return (
             <div className="timeline">
-                {this.state.startTimeLine}
+                <div className="startDate">{this.state.startTimeLine}</div>
                 { 
                     timeline.map( (companies, index) => {
-                        if( index % 2 !== 0) { 
+                        index++;
+
+                        if (index % 2 === 0) { 
                             isEven = true;
-                        } else { 
+                            toggleUnder = !toggleUnder;
+                        }  else  {
+                            toggleAbove = !toggleAbove;
                             isEven = false;
                         }
+
                         let startYear = this.getNumberValueFromDateString(companies.from, 3, 7);
                         let startMonth = this.getNumberValueFromDateString(companies.from, 0, 2);
                         let endYear = this.getNumberValueFromDateString(companies.till, 3, 7);
@@ -62,11 +70,12 @@ export class TimelineFrame extends React.Component {
                         let left = (percentagePerMonth * start);
                         let width = (percentagePerMonth * totalMonths);
 
-                        return <Node key={index} {...companies} isEven={isEven}
-                         width={width} left={left} totalAmountOfMonths={totalAmountOfMonths} />;
+                        return <Node key={index} {...companies} isEven={isEven} toggleAbove={toggleAbove} 
+                        toggleUnder={toggleUnder} isHigher={isHigher}
+                        width={width} left={left} totalAmountOfMonths={totalAmountOfMonths} />;
                     })
                 }
-                {this.state.endTimeLine}
+                <div className="endDate">{this.state.endTimeLine}</div>
             </div>
         )
     }

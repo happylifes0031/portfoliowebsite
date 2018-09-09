@@ -21,6 +21,26 @@
 .isEven > .stickNode > .verticalLine > .circle{ 
     top: 30px;
 }
+.node.isHigher { 
+    top: -11px;
+    & .stickNode { 
+        & .verticalLine { 
+            height: 45px !important;
+        }
+    }
+}
+.node.isEven.isHigher { 
+    top: 111px;
+    & .stickNode { 
+        top: -6px;
+        & .verticalLine.isEven { 
+            height: 59px;
+            & .circle  {
+                top: 45px;
+            }
+        }
+    }
+}
 .isEven  > .stickNode > .isEven { 
     width: 1px;
     height: 30px;

@@ -10,4 +10,18 @@
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAuMSIgaGVpZ2h0PSI0LjYiIHZpZXdCb3g9IjAgMCAxODAuMSA0LjYiPjxwYXRoIGQ9Ik0yMTYsMzk5LjkyYzEuODcsMCwzNSwyLjgsNTQuNTMsMCwyMC41OS0zLDQxLjgsMS4yNCw1Ni40Ny0xLjE0LDEyLjg0LTIuMDgsNTUuNTgtMS4zNiw2OSwxLjE0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjE2IC0zOTcuMDYpIiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojNDg2ZjkwO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS13aWR0aDoxcHgiLz48L3N2Zz4=);
     background-repeat: repeat-x;
     background-position: center; 
+    font-family: josefin;
+}
+
+.endDate{ 
+    position: absolute;
+    right: -50px;
+    top: 98px;
+    font-size: .75em;
+}
+.startDate{
+    position: absolute;
+    left: -50px;
+    top: 98px;
+    font-size: .75em;
 }
