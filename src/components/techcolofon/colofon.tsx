@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const TechColofon = () => {
+export const TechColofon = () => {
     return (
         <div id="personalInfo" className="personalInfo">
             <div className="socialStack">
@@ -21,5 +21,3 @@ const TechColofon = () => {
         </div>
     )
 }
-
-export default TechColofon;

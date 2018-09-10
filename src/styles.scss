@@ -28,11 +28,10 @@
   grid-template-areas:
   "inBedTimeline inBedTimeline"
   "intro knowledgeStack"
-  "showcase showcase"
-  "content content";
+  "content showcase";
   grid-template-columns: 65% 35%;
-  position: absolute;
-  left:100px;
+  position: relative;
+  margin-top: 30px;
 }
 
 .App-logo {
@@ -48,6 +47,7 @@
   grid-area: intro;
   font-size: large;
   background-color: orange;
+  margin-bottom: 50px;
 }
 
 .App-showcase{
