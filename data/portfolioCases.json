@@ -1,23 +1,50 @@
-{
-    "adsmb" : [{
-        "imgName":"adsmb",
-        "project":"Aan de slag met Bitcoin",
-        "client": "ikzelf",
+[
+    {
+        "projectTitle":"Zwitserleven verzekeringen",
+        "imgName1":"vivat_zw_orv_1",
+        "imgName2":"vivat_zw_orv_2",
+        "client": "Vivat",
+        "clientUrl": "https://vivat.nl/",
+        "description": "Funnel voor de aanvraag van een overlijdensrisco verzekering met AngularJS.",
+        "website":"www.zwitserleven.nl",
+        "url":"https://www.zwitserleven.nl/particulier/overlijdensrisicoverzekering/online-aanvragen/"   
+    },
+    {
+        "projectTitle":"Fairy Tale Fights",
+        "imgName1":"ff_cover",
+        "imgName2":"ff_gameplay",
+        "client": "Vivat",
+        "clientUrl": "https://vivat.nl/",
         "description": "Website om je aan te melden voor een cursus in cryptrografie.",
-        "website":"aandeslagmetbitcoin.nl"
-    }],
-    "zwitserleven" : [{
-        "imgName":"adsmb",
-        "project":"Aan de slag met Bitcoin",
-        "client": "ikzelf",
-        "description": "Website om je aan te melden voor een cursus in cryptrografie.",
-        "website":"www.aandeslagmetbitcoin.nl"
-    }],
-    "reaal" : [{
-        "imgName":"adsmb",
-        "project":"Aan de slag met Bitcoin",
-        "client": "ikzelf",
-        "description": "Website om je aan te melden voor een cursus in cryptrografie.",
-        "website":"www.aandeslagmetbitcoin.nl"
-    }]
-}
+        "website":"aandeslagmetbitcoin.nl",
+        "url":"https://www.zwitserleven.nl/particulier/overlijdensrisicoverzekering/online-aanvragen/"   
+    },
+    {
+        "projectTitle":"Protrader",
+        "imgName1":"binck1",
+        "imgName2":"binck2",
+        "client": "Binck Bank",
+        "clientUrl": "https://www.binck.nl/",
+        "description": "Online beleggingstool.",
+        "website":"https://protrader.binck.nl",
+        "url":"https://protrader.binck.nl/"   
+    },
+    {
+        "projectTitle":"Rijk",
+        "imgName1":"rijk1",
+        "imgName2":"rijk2",
+        "client": "Dalh TV",
+        "clientUrl": "https://blazhoffski.nl/",
+        "description": "Promotie website voor het televisieprogramma Rijk.",
+        "website":"https://www.vcava.nl",
+        "url":"https://www.vcava.nl/"   
+    },
+    {
+        "projectTitle":"Eurotransplant",
+        "imgName1":"eurotransplant1",
+        "imgName2":"eurotransplant2",
+        "client": "Eurotransplant",
+        "clientUrl": "https://www.eurotransplant.org/",
+        "description": "Mockup voor urgente orgaantransplantatie aanvragen"   
+    }
+]

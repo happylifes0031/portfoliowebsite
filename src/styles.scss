@@ -2,6 +2,8 @@
 @import './components/techcolofon/techcolofon';
 @import './components/intro/intro';
 @import './components/timeline/timeline';
+@import './components/portfolio/portfolio';
+@import './components/content/content';
 
 @font-face {
   font-family: indieFlower;
@@ -20,6 +22,10 @@
   src: url('../fonts/josefin/josefinSlab-Regular.ttf');
 }
 
+p {
+  font-family: amatic;
+  font-size: 1.3rem;
+}
 .App {
   display: grid;
   text-align: center;
@@ -33,33 +39,30 @@
   position: relative;
   margin-top: 30px;
 }
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
-
 .App-title {
   font-size: 1.5em;
 }
-
 .App-intro {
   grid-area: intro;
   font-size: large;
   background-color: orange;
   margin-bottom: 50px;
 }
-
 .App-showcase{
   grid-area: showcase;
   background-color: green;
 }
-
-.App-content{
-  grid-area: content;
-  background-color: silver;
+.App-knowledge-stack{
+  grid-area: knowledgeStack;
+  font-size: large;
 }
-
+.content{
+  grid-area: content;
+}
 .inbedTimeLine { 
   grid-area: inBedTimeline;
   position: relative;

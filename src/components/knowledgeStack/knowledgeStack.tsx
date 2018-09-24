@@ -25,7 +25,7 @@ const Icons = ( ) => {
 class Knowledgestack extends React.Component {  
   render() {
     return ( 
-      <div>
+      <div className="App-knowledge-stack">
         <header><h2>Knowledge stack...</h2></header>
         <Icons knowledgeStack={'wes'} />
       </div>

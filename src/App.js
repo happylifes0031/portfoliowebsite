@@ -3,7 +3,7 @@ import { TimelineFrame } from './components/timeline/timeline';
 import { Intro } from './components/intro/intro';
 import Knowledgestack  from './components/knowledgeStack/knowledgeStack';
 import { Portfolio } from  './components/portfolio/portfolio';
-import { Content } from './components/content';
+import { Content } from './components/content/content';
 
 class App extends Component {
   render() {
@@ -13,7 +13,7 @@ class App extends Component {
           <TimelineFrame />
         </div>
         <Intro />
-        <div><Knowledgestack /></div>
+        <div className="App-knowledge-stack"><Knowledgestack /></div>
         <Portfolio />
         <Content />
       </div>
