@@ -3,14 +3,15 @@ import showCase from '../../../data/portfolioCases.json';
 
 export class Portfolio extends React.Component{
     render() {
+        const { activeNode } = this.props;
+        let randomIndex = 0;
+        
         return (
             showCase.reduce( (showCase, cum, index, arr) => { 
-                console.log('showCase', index, arr.length);
-                let randomIndex = Math.floor((Math.random() * arr.length) + 1)-1;
-                console.log('randomIndex', randomIndex);
-                const selectedShowCase = arr[randomIndex];
-                console.log(selectedShowCase);
-
+                
+                let hoverShowCase = arr.find(function (obj) { return obj.company === activeNode });
+                const selectedShowCase = (!hoverShowCase) ? arr[randomIndex] : hoverShowCase;
+                
                 const imageURL1 = `../images/portfoliocases/${selectedShowCase.imgName1}.png`;
                 const imageURL2 = `../images/portfoliocases/${selectedShowCase.imgName2}.png`;
                 return (<div className="portfolioCase">

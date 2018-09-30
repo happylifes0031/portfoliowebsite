@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Import our plugin -> ADDED IN THIS STEP
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
-const { CheckerPlugin } = require('awesome-typescript-loader')
+const devMode = process.env.NODE_ENV !== 'production'
 
 // Constant with our paths
 const paths = {
@@ -28,7 +28,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: path.join('public/', 'index.html'), 
+      template: path.join('dist/', 'index.html'), 
       filename: './index.html' 
     }),
     new MiniCssExtractPlugin({
@@ -36,8 +36,7 @@ module.exports = {
         // both options are optional
         filename: "[name].css",
         chunkFilename: "[id].css"
-    }),
-    new CheckerPlugin()
+    })
 ],
   module: {
     rules: [
@@ -47,11 +46,11 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.scss$/,
+        test: /\.(sa|sc|c)ss$/,
         use:[
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
         ]
       },
       {

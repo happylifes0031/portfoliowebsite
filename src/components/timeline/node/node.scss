@@ -1,16 +1,21 @@
 .node { 
     position: absolute;
-    height:46px;
+    height: 20px;
     padding: 1px;
     display: inline-block;    
-    height: 60px;
     top: 0;
-    padding: 20px;
 }
 .node > h5 { 
     font-size: .75rem;
     left: -10px;
     position: absolute;
+    bottom: -53px;
+}
+.node.isHigher > h5{
+    bottom: -53px;
+}
+.node.isEven.isHigher > h5{
+    bottom: -83px;
 }
 .isEven {
     top: 97px;

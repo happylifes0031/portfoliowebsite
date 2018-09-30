@@ -1,9 +1,9 @@
-@import './components/knowledgeStack/knowledgeStack';
-@import './components/techcolofon/techcolofon';
-@import './components/intro/intro';
-@import './components/timeline/timeline';
-@import './components/portfolio/portfolio';
-@import './components/content/content';
+@import './components/knowledgeStack/knowledgeStack.scss';
+@import './components/techcolofon/techcolofon.scss';
+@import './components/intro/intro.scss';
+@import './components/timeline/timeline.scss';
+@import './components/portfolio/portfolio.scss';
+@import './components/content/content.scss';
 
 @font-face {
   font-family: indieFlower;
@@ -36,7 +36,6 @@ p {
   "intro knowledgeStack"
   "content showcase";
   grid-template-columns: 65% 35%;
-  position: relative;
   margin-top: 30px;
 }
 .App-logo {

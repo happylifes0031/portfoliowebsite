@@ -9,18 +9,19 @@
     margin-bottom: 10px;
     -webkit-transition: margin-left 2s; /* Safari */
     transition: margin-left 1s;
-    top:20%;
+    top:30%;
+    left:0;
     cursor: pointer;
     & > span {
         position: absolute;
       display: inline-block;
       padding: 2px;
-      width: 10px;
+      width: 8px;
       line-height: 16px;
       word-break: break-all;
       text-align: center;
       left: 3px;
-      font-size: 1.0rem;
+      font-size: 0.8rem;
       margin-top: 7px;
     }
     //REMINDER MOBILE WONT WORK LIKE THIS

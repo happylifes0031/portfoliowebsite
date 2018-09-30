@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TechColofon } from '../techcolofon/colofon';
+
 
 export class Intro extends React.Component {
     render() {
@@ -7,14 +7,16 @@ export class Intro extends React.Component {
             <div className="intro">
                 <article id="intro-block">
                     <header><h2>Portfolio website van: <br/> Wesley Blijlevens</h2></header>
-                    <p>Fulltime front-end engineer at <a href="">Luminis Rotterdam</a></p>
-                    <p>Born and raised in Rotterdam but currently living in Amsterdam.</p>
-                    <p>Having a background in games development and moved towards software engineering.</p>
-                    <p>I love technology & design, tought myself 3D Designing and programming.</p>
-                    <p>Beside all of this i work as a teacher at the <a href="">NCOI-group</a> and <a href="">School of Applied Science in Rotterdam</a>.</p>
-                    <p>Contact me @ <a href="mailto:e-postduif@blijlevens.nu">e-mail@blijlevens.nu</a></p>
+                    <p>
+                        Fulltime front-end engineer at <a href="https://rotterdam.luminis.eu/" target="_blank">Luminis Rotterdam</a><br />
+                        Born and raised in Rotterdam but currently living in Amsterdam.<br/>
+                        Having a background in games development and moved towards software engineering.<br/>
+                        I love technology & design, tought myself 3D Designing and programming.<br/>
+                        Beside all of this i work as a teacher at the <a href="https://www.ncoi.nl/" target="_blank">NCOI-group</a> and <a href="https://www.hogeschoolrotterdam.nl/" target="_blank">School of Applied Science in Rotterdam</a>.
+                    </p>
+                    <p>Contact me at: <a href="mailto:e-postduif@blijlevens.nu">e-mail@blijlevens.nu</a></p>
+                    <p><a href="../../../data/wesleyblijlevensEng.pdf" title="Download CV in English">C.V. (pdf | 805kb)</a></p>
                 </article>
-                <TechColofon />
             </div>
         )
     }

@@ -5,7 +5,8 @@
         "role": "Technical game developer",
         "skills":"Unreal Engine, Kismet",
         "companyLogo": "codedillusions",
-        "companyName": "Coded Illusions"
+        "companyName": "Coded Illusions",
+        "company": "codedillusions"
     },
     {
         "from":"01-2008",
@@ -13,7 +14,8 @@
         "role": "Front-end developer",
         "skills":"HTML5, CSS3, PHP",
         "companyLogo": "paperworq",
-        "companyName": "Paperworq"
+        "companyName": "Paperworq",
+        "company": "paperworq"
     },
     {
         "from":"08-2008",
@@ -21,7 +23,8 @@
         "role": "Front-end developer, Designer",
         "skills":"HTML5, CSS3, Wordpress",
         "companyLogo": "bluelabeldesign",
-        "companyName": "Blue Label Design"
+        "companyName": "Blue Label Design",
+        "company": "bluelabeldesign"
     },
     {
         "from":"07-2009",
@@ -29,7 +32,8 @@
         "role": "Technical Game Designer",
         "skills":"Unreal Engine, Kismet",
         "companyLogo": "playlogic",
-        "companyName": "PlayLogic"
+        "companyName": "PlayLogic",
+        "company": "playlogic"
     },
     {
         "from":"08-2012",
@@ -37,7 +41,8 @@
         "role": "Game director & Designer",
         "skills":"Blender, Python",
         "companyLogo": "bluelabelstudio",
-        "companyName": "Blue Label Studio"
+        "companyName": "Blue Label Studio",
+        "company": "bluelabelstudio"
     },
     {
         "from":"09-2012",
@@ -45,7 +50,8 @@
         "role": "Parttime docent informatica",
         "skills":"Afstudeerbegeleider, assessor",
         "companyLogo": "hro",
-        "companyName": "HRO"
+        "companyName": "HRO",
+        "company": "hro"
     },
     {
         "from":"09-2015",
@@ -53,7 +59,8 @@
         "role": "Front-end developer",
         "skills":"Javascript, Tridion",
         "companyLogo": "robeco",
-        "companyName": "Robeco"
+        "companyName": "Robeco",
+        "company": "robeco"
     },
     {
         "from":"01-2017",
@@ -61,7 +68,8 @@
         "role": "Front-end developer",
         "skills":"Angularjs 1.6 component based",
         "companyLogo": "vivat",
-        "companyName": "Vivat (Zwitserleven & Reaal)"
+        "companyName": "Vivat (Zwitserleven & Reaal)",
+        "company": "vivat"
     },
     {
         "from":"02-2018",
@@ -69,7 +77,8 @@
         "role": "Front-end developer",
         "skills":"Angular4",
         "companyLogo": "eurotransplant",
-        "companyName": "Eurotransplant"
+        "companyName": "Eurotransplant",
+        "company": "eurotransplant"
     },  
     {
         "from":"04-2016",
@@ -77,6 +86,7 @@
         "role": "Front-end developer",
         "skills":"Angular2, AngularJS, React, TypeScript, HTML5, CSS3, Javascript",
         "companyLogo": "luminis",
-        "companyName": "Luminis"
+        "companyName": "Luminis",
+        "company": "luminis"
     }
 ]

@@ -70,7 +70,7 @@ export class TimelineFrame extends React.Component {
                         let left = (percentagePerMonth * start);
                         let width = (percentagePerMonth * totalMonths);
 
-                        return <Node key={index} {...companies} isEven={isEven} toggleAbove={toggleAbove} 
+                        return <Node key={index} index={index} {...companies} onmouseOver={this.props.onmouseOver} isEven={isEven} toggleAbove={toggleAbove} 
                         toggleUnder={toggleUnder} isHigher={isHigher}
                         width={width} left={left} totalAmountOfMonths={totalAmountOfMonths} />;
                     })

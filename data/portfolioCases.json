@@ -1,22 +1,24 @@
 [
     {
+        "projectTitle":"Fairy Tale Fights",
+        "imgName1":"ff_cover",
+        "imgName2":"ff_gameplay",
+        "client": "Playlogic",
+        "company": "playlogic",
+        "clientUrl": "https://vivat.nl/",
+        "description": "Website om je aan te melden voor een cursus in cryptrografie.",
+        "website":"aandeslagmetbitcoin.nl",
+        "url":"https://www.zwitserleven.nl/particulier/overlijdensrisicoverzekering/online-aanvragen/"   
+    },
+    {
         "projectTitle":"Zwitserleven verzekeringen",
         "imgName1":"vivat_zw_orv_1",
         "imgName2":"vivat_zw_orv_2",
         "client": "Vivat",
+        "company": "vivat",
         "clientUrl": "https://vivat.nl/",
         "description": "Funnel voor de aanvraag van een overlijdensrisco verzekering met AngularJS.",
         "website":"www.zwitserleven.nl",
-        "url":"https://www.zwitserleven.nl/particulier/overlijdensrisicoverzekering/online-aanvragen/"   
-    },
-    {
-        "projectTitle":"Fairy Tale Fights",
-        "imgName1":"ff_cover",
-        "imgName2":"ff_gameplay",
-        "client": "Vivat",
-        "clientUrl": "https://vivat.nl/",
-        "description": "Website om je aan te melden voor een cursus in cryptrografie.",
-        "website":"aandeslagmetbitcoin.nl",
         "url":"https://www.zwitserleven.nl/particulier/overlijdensrisicoverzekering/online-aanvragen/"   
     },
     {
@@ -24,6 +26,7 @@
         "imgName1":"binck1",
         "imgName2":"binck2",
         "client": "Binck Bank",
+        "company": "binckbank",
         "clientUrl": "https://www.binck.nl/",
         "description": "Online beleggingstool.",
         "website":"https://protrader.binck.nl",
