@@ -1,19 +1,24 @@
 import * as React from 'react';
-import showCase from '../../../data/portfolioCases.json';
+const showCase = require('../../../data/portfolioCases.json');
 
-export class Portfolio extends React.Component{
+export interface Props {
+    activeNode: any;
+}
+
+
+export class Portfolio extends React.Component<Props>{
     render() {
         const { activeNode } = this.props;
         let randomIndex = 0;
         
         return (
-            showCase.reduce( (showCase, cum, index, arr) => { 
+            showCase.reduce( (showCase:any, cum:any, index:number, arr:Array<any>) => { 
                 
-                let hoverShowCase = arr.find(function (obj) { return obj.company === activeNode });
+                let hoverShowCase = arr.find(function (obj:any) { return obj.company === activeNode });
                 const selectedShowCase = (!hoverShowCase) ? arr[randomIndex] : hoverShowCase;
                 
-                const imageURL1 = `../images/portfoliocases/${selectedShowCase.imgName1}.png`;
-                const imageURL2 = `../images/portfoliocases/${selectedShowCase.imgName2}.png`;
+                const imageURL1 = `./images/portfoliocases/${selectedShowCase.imgName1}.png`;
+                const imageURL2 = `./images/portfoliocases/${selectedShowCase.imgName2}.png`;
                 return (<div className="portfolioCase">
                     <header><h2>Showcase</h2></header>
                     <h4>{selectedShowCase.projectTitle}</h4>

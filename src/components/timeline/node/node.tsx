@@ -1,7 +1,22 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
-class Node extends React.Component{
+export interface Props {
+  skills: string;
+  onmouseOver: any;
+  company: string;
+  from: string;
+  till: string;
+  role: string;
+  left: number;
+  width: number;
+  isEven: boolean;
+  companyName: string;
+  toggleUnder: boolean;
+  toggleAbove: boolean;
+}
+
+class Node extends React.Component<Props>{
   state = {
       frameWidth: 0,
       totalAmountOfMonths: 0

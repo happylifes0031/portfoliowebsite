@@ -1,16 +1,22 @@
 import * as React from 'react';
 import Node from './node/node';
-import timeline from '../../../data/timeline.json';
+const timeline = require('../../../data/timeline.json');
 
+export interface Props {
+    stringValue: string;
+    beginIndex: number;
+    endIndex: number;
+    onmouseOver:any;
+}
 
-export class TimelineFrame extends React.Component {
+export class TimelineFrame extends React.Component<Props> {
     state = {
         frameWidth: 0,
         startTimeLine: timeline[0].from,
         endTimeLine: timeline[timeline.length -1].till    
     };
     
-    getNumberValueFromDateString(stringValue, beginIndex, endIndex){
+    getNumberValueFromDateString(stringValue:string, beginIndex:number, endIndex:number){
        return parseInt(stringValue.substring(beginIndex, endIndex));
     }
 
@@ -25,7 +31,7 @@ export class TimelineFrame extends React.Component {
      
     getWidth = () => { 
         this.setState({ 
-          frameWidth: document.getElementById("timeLine").offsetWidth
+          frameWidth: (!document.getElementById("timeLine").offsetWidth)
         });
     }
 
@@ -44,7 +50,7 @@ export class TimelineFrame extends React.Component {
             <div className="timeline">
                 <div className="startDate">{this.state.startTimeLine}</div>
                 { 
-                    timeline.map( (companies, index) => {
+                    timeline.map( (companies:any, index:number) => {
                         index++;
 
                         if (index % 2 === 0) { 

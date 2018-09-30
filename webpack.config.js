@@ -12,11 +12,11 @@ const paths = {
 };
 // Webpack configuration
 module.exports = {
-  entry: ['./src/index.js', 'react-hot-loader/patch'],
+  entry: ['./src/index.js'],
   devtool: 'inline-source-map',
   output: {
     path: paths.DIST,
-    filename: 'app.bundle.js',
+    filename: 'bundle.js',
   },
   mode: 'development',
   // Dev server configuration -> ADDED IN THIS STEP
@@ -28,7 +28,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: path.join('dist/', 'index.html'), 
+      template: path.join('public/', 'index.html'), 
       filename: './index.html' 
     }),
     new MiniCssExtractPlugin({
@@ -62,6 +62,12 @@ module.exports = {
                 outputPath: 'fonts/'
             }
         }]
+      },
+      {
+        test: /\.(jpg|png)$/,
+        use: {
+            loader: 'file-loader',
+        }
       }
     ]
   },
