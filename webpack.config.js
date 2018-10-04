@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // Import our plugin -
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
 const devMode = process.env.NODE_ENV !== 'production'
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // Constant with our paths
 const paths = {
@@ -36,7 +37,11 @@ module.exports = {
         // both options are optional
         filename: "[name].css",
         chunkFilename: "[id].css"
-    })
+    }), 
+    new CopyWebpackPlugin([
+      {from:'src/images',to:'images'}, 
+      {from:'src/data',to:'data'} 
+  ]), 
 ],
   module: {
     rules: [

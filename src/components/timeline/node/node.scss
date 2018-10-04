@@ -99,7 +99,7 @@
         display: block;
         top: 20px;
         left: 15px;
-        z-index: 999;
+        z-index: 1001;
         position: relative;
     }
 }
@@ -112,7 +112,7 @@
     top: 71px;
     font-size: 0.7rem;
     color: black;
-    padding: 0.05rem;
+    padding: 1px;
     border-radius: 5px;
     z-index: 999;
     animation: fadein 1.5s;
@@ -133,6 +133,12 @@
         padding-bottom: 3px;
         padding-left: 2px;
         border-bottom: 1px black dashed;
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+    ul>li:nth-child(5) { 
+        border-bottom: none;
     }
     ul>li:nth-child(odd) { 
         width:30%
