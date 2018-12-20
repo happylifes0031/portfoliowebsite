@@ -47,7 +47,43 @@
         "imgName1":"eurotransplant1",
         "imgName2":"eurotransplant2",
         "client": "Eurotransplant",
+        "company": "eurotransplant",
         "clientUrl": "https://www.eurotransplant.org/",
-        "description": "Mockup voor urgente orgaantransplantatie aanvragen"   
+        "description": "Mockup voor het aanvragen van urgente orgaantransplantaties."   
+    },
+    {
+        "projectTitle":"Nomos",
+        "imgName1":"nomos_1",
+        "imgName2":"nomos_2",
+        "client": "Coded Illusions",        
+        "company": "codedillusions",
+        "clientUrl": "http://vertigo-games.com/",
+        "description": "Xbox 360 third person video game."   
+    },
+    {
+        "projectTitle":"I Will Escape",
+        "imgName1":"iwillescape_1",
+        "imgName2":"iwillescape_2",
+        "client": "Blue Label Studio",        
+        "company": "bluelabelstudio",
+        "description": "Third person video game."   
+    },
+    {
+        "projectTitle":"Protrader",
+        "imgName1":"bink1",
+        "imgName2":"bink2",
+        "client": "Binck Bank",        
+        "company": "binckbank",
+        "clientUrl": "https://protrader.binck.nl/",
+        "description": "Online zelfbeleggingstool"   
+    },
+    {
+        "projectTitle":"Robeco",
+        "imgName1":"robeco1",
+        "imgName2":"robeco2",
+        "client": "Robeco",        
+        "company": "robeco",
+        "clientUrl": "https://www.robeco.nl/",
+        "description": "Cookie consent voor Rob3eco.nl"   
     }
 ]

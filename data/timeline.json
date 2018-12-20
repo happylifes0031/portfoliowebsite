@@ -61,32 +61,41 @@
         "companyLogo": "robeco",
         "companyName": "Robeco",
         "company": "robeco"
+    },  
+    {
+        "from":"04-2016",
+        "till":"12-2018",
+        "role": "Front-end developer",
+        "skills":"Angular2, AngularJS, React, TypeScript, HTML5, CSS3, Javascript, Visualstudio, Sass, Photoshop",
+        "companyLogo": "luminis",
+        "companyName": "Luminis",
+        "company": "luminis"
     },
     {
         "from":"01-2017",
         "till":"12-2017",
         "role": "Front-end developer",
-        "skills":"Angularjs 1.6 component based",
+        "skills":"Angular 1.6 component based",
         "companyLogo": "vivat",
         "companyName": "Vivat (Zwitserleven & Reaal)",
         "company": "vivat"
     },
     {
         "from":"02-2018",
-        "till":"03-2018",
+        "till":"12-2018",
         "role": "Front-end developer",
-        "skills":"Angular4",
+        "skills":"Angular2",
         "companyLogo": "eurotransplant",
         "companyName": "Eurotransplant",
         "company": "eurotransplant"
-    },  
+    },
     {
-        "from":"04-2016",
-        "till":"05-2018",
+        "from":"06-2018",
+        "till":"12-2018",
         "role": "Front-end developer",
-        "skills":"Angular2, AngularJS, React, TypeScript, HTML5, CSS3, Javascript",
-        "companyLogo": "luminis",
-        "companyName": "Luminis",
-        "company": "luminis"
+        "skills":"React, HTML5, CSS3, Javascript, C#",
+        "companyLogo": "binckbank",
+        "companyName": "Binck Bank",
+        "company": "binckbank"
     }
 ]

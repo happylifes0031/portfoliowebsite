@@ -5,14 +5,20 @@ import Knowledgestack  from './components/knowledgeStack/knowledgeStack';
 import { Portfolio } from  './components/portfolio/portfolio';
 import { Content } from './components/content/content';
 import { TechColofon } from './components/techcolofon/colofon';
+import  List from './components/List';
+import store from "./stores/index";
+import { addArticle } from "./actions/action.js";
+
+window.store = store;
+window.addArticle = addArticle;
 
 class App extends Component {
   state = { 
-    moveOverNode : undefined
+    moveOverNode : undefined,
   }
 
   onMouseOver = (value) => { 
-    console.log('value', value)
+    console.log('store.getState()', store.getState()  )
     this.setState({
       moveOverNode : value
     });
@@ -28,7 +34,7 @@ class App extends Component {
         <TechColofon />
         <Intro />
         <div className="App-knowledge-stack"><Knowledgestack /></div>
-        <Portfolio activeNode={this.state.moveOverNode} />
+        <Portfolio activeNode={this.state.moveOverNode} count={this.state.count} />
         <Content />
       </div>
     );

@@ -32,10 +32,9 @@ p {
   max-width: 1280px;
   margin: 0 auto;
   grid-template-areas:
-  "inBedTimeline inBedTimeline"
-  "intro knowledgeStack"
-  "content showcase";
-  grid-template-columns: 65% 35%;
+  "inBedTimeline inBedTimeline inBedTimeline"
+  "intro knowledgeStack showcase";
+  grid-template-columns: 33% 33% 33%;
   margin-top: 30px;
 }
 .App-logo {

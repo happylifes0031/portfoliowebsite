@@ -29,8 +29,8 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: path.join('public/', 'index.html'), 
-      filename: './index.html' 
+      template: 'public/index.html', 
+      filename: 'index.html' 
     }),
     new MiniCssExtractPlugin({
         // Options similar to the same options in webpackOptions.output

@@ -8,7 +8,7 @@
         "range":"12"
     },
     "Photoshop":{
-        "icon":"ps",
+        "icon":"photoshop",
         "range":"11"
     },
     "Premiere":{
@@ -28,7 +28,7 @@
         "range":"7"
     },
     "Angular":{
-        "icon":"angularjs",
+        "icon":"angular2",
         "range":"6"
     },
     "HTML5":{
@@ -54,5 +54,9 @@
     "BOOTSTRAP":{
         "icon":"bootstrap",
         "range":"3"
+    },
+    "REACT":{
+        "icon":"react",
+        "range":"14"
     }
 }

@@ -15,16 +15,18 @@ class Knowledgestack extends React.Component {
 
     knowledgeStack = knowledgeStack.map( (element, index) => { 
       return (
-        <div key={'iconName_'+index} className="iconTile" id={element}>
-          <img src={"./images/img/"+element+".png"} alt={element + " icon"} 
-          data-align="center" height={ICON_HEIGHT_IN_PIXELS} width={ICON_WIDTH_IN_PIXELS}/>
+        <div  key={'iconName_'+index} className="outerIcon" >
+          <div className="iconTile" id={element}>
+            <img src={"./images/img/"+element+".png"} alt={element + " icon"} 
+            data-align="center" height={`${ICON_HEIGHT_IN_PIXELS}`+'px'} width={`${ICON_WIDTH_IN_PIXELS}`+'px'}/>
+          </div>
         </div>
       )})
 
     return ( 
       <div className="App-knowledge-stack">
         <header><h2>Knowledge stack...</h2></header>
-          {knowledgeStack}
+        <div className="displayStack">  {knowledgeStack}</div>
       </div>
     )
   }

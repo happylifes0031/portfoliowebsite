@@ -1,13 +1,14 @@
 .intro{
     position: relative;
+    grid-area: intro;
     intro-block{
         font-size: 1.5rem;
     }
     article#intro-block {
         text-align: left;
-        padding-left: 25px;
         p { 
             line-height: 40px;
+            margin-left: 0;
         }
         a:hover {
             color: rgba(72, 111, 144, 0.7);
