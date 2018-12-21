@@ -10,14 +10,21 @@ export class Portfolio extends React.Component<Props>{
         super(props); 
     }
     state = { 
-        selectedIndex: 0
+        selectedIndex: 0,
+        fadeIn: false
     }
 
     increment = () => { 
-        setTimeout( ()=> { 
-            this.setState({selectedIndex:  Math.floor(Math.random() * showCase.length)});
-            this.increment()
-        }, 5000)
+            setTimeout( ()=> { 
+                this.setState({fadeIn:true})
+                setTimeout( ()=> { 
+                    this.setState({fadeIn:false});
+                }, 7000 );
+                setTimeout( ()=> { 
+                    this.setState({selectedIndex:  Math.floor(Math.random() * showCase.length) });
+                    this.increment()
+                }, 7500);
+        }, 0);
         //this.setState({nextShowcase: !this.state.nextShowcase});
     }
 
@@ -27,10 +34,10 @@ export class Portfolio extends React.Component<Props>{
 
     render() {
         const { activeNode } = this.props;
-        const { selectedIndex } = this.state;
+        const { selectedIndex, fadeIn } = this.state;
         let randomIndex = selectedIndex;
     
-        console.log('nextShowcase', randomIndex);
+        console.log('nextShowcase', randomIndex, fadeIn);
         console.log('activeNode', activeNode);
         console.log(showCase)
 
@@ -52,7 +59,7 @@ export class Portfolio extends React.Component<Props>{
                 return (
                     <div className="portfolioCase">
                         <header><h2>Showcase</h2></header>
-                        <div className={"showcase"}>
+                        <div className={(fadeIn) ? "fadeIn" : "fadeOut"}>
                             <h4>{selectedShowCase.projectTitle}</h4>
                             <figure>
                                 <img width="180px" height="120px;" src={imageURL1} />

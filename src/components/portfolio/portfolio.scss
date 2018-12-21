@@ -2,6 +2,8 @@
     height: 100%; 
     display: inline-block;
     grid-area: showcase;
+    position: relative;
+    z-index: 1;
     & figure { 
       display: inline-block;
       margin: 0;
@@ -25,21 +27,38 @@
           padding: 5px 0;
         }
     }
-    .showcase{
+    .fadeIn { 
       position: relative;
       animation-duration: 1s;
       animation-name: slidein;
     }
-    
+    .fadeOut{
+      position: relative;
+      animation-duration: 0.5s;
+      animation-name: slideout;
+    }
     @keyframes slidein {
       from {
         margin-left: 100%;
         width: 300%; 
+        opacity: 0.0;
       }
-    
       to {
         margin-left: 0%;
         width: 100%;
+        opacity: 1.0;
+      }
+    }
+    @keyframes slideout {
+      from {
+        margin-left: 0%;
+        width: 100%;
+        opacity: 1.0;
+      }
+      to {
+        margin-left:-300px;
+        width: 300px; 
+        opacity: 0.0;
       }
     }
 }

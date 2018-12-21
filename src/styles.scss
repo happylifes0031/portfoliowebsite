@@ -57,6 +57,9 @@ p {
 .App-knowledge-stack{
   grid-area: knowledgeStack;
   font-size: large;
+  position: relative;
+  z-index: 3;
+  background-color: #fff;
 }
 .content{
   grid-area: content;

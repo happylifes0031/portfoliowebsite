@@ -6,7 +6,7 @@ export class Intro extends React.Component {
         return (
             <div className="intro">
                 <article id="intro-block">
-                    <header><h2>Portfolio website van: <br/> Wesley Blijlevens</h2></header>
+                    <header><h2>About me:</h2></header>
                     <p>
                         Fulltime front-end engineer at <a href="https://rotterdam.luminis.eu/" target="_blank">Luminis Rotterdam</a><br />
                         Born and raised in Rotterdam, currently living in Amsterdam.<br/>
