@@ -22,17 +22,6 @@
         "url":"https://www.zwitserleven.nl/particulier/overlijdensrisicoverzekering/online-aanvragen/"   
     },
     {
-        "projectTitle":"Protrader",
-        "imgName1":"binck1",
-        "imgName2":"binck2",
-        "client": "Binck Bank",
-        "company": "binckbank",
-        "clientUrl": "https://www.binck.nl/",
-        "description": "Online beleggingstool.",
-        "website":"https://protrader.binck.nl",
-        "url":"https://protrader.binck.nl/"   
-    },
-    {
         "projectTitle":"Rijk",
         "imgName1":"rijk1",
         "imgName2":"rijk2",
@@ -70,8 +59,8 @@
     },
     {
         "projectTitle":"Protrader",
-        "imgName1":"bink1",
-        "imgName2":"bink2",
+        "imgName1":"binck1",
+        "imgName2":"binck2",
         "client": "Binck Bank",        
         "company": "binckbank",
         "clientUrl": "https://protrader.binck.nl/",
@@ -84,6 +73,6 @@
         "client": "Robeco",        
         "company": "robeco",
         "clientUrl": "https://www.robeco.nl/",
-        "description": "Cookie consent voor Rob3eco.nl"   
+        "description": "Cookie consent voor Robeco.nl"   
     }
 ]

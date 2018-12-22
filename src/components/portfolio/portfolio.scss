@@ -4,10 +4,29 @@
     grid-area: showcase;
     position: relative;
     z-index: 1;
+    .showcase { 
+      width:250px;
+      margin: 0 auto;
+      h4 { 
+        background-color: #5d89a1;
+        padding: 2px;
+        border-radius: 5px;
+        color:#fff;
+        font-weight: lighter;
+        margin: 10px 0;
+        letter-spacing: 2px;
+      }
+    }
+    .showcase-info { 
+      display: block;
+    }
     & figure { 
       display: inline-block;
       margin: 0;
       margin-right: 20px;
+      margin-top: 10px;
+      border: 3px solid #5d89a1;
+      border-radius: 5px;
       & img { 
         display: block;
         margin: 0 auto;
@@ -23,8 +42,14 @@
         font-size: 0.8rem;
         padding: 0;
         text-align: center;
+        margin-top:0;
         & li {
-          padding: 5px 0;
+          font-family: indieFlower;
+          color:#325061;
+          padding:5px;
+          font-size: 15px;
+          margin: 5px;
+          letter-spacing: 2px;
         }
     }
     .fadeIn { 
@@ -40,7 +65,7 @@
     @keyframes slidein {
       from {
         margin-left: 100%;
-        width: 300%; 
+        width: 0; 
         opacity: 0.0;
       }
       to {

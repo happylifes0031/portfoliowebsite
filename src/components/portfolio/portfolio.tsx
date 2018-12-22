@@ -19,13 +19,12 @@ export class Portfolio extends React.Component<Props>{
                 this.setState({fadeIn:true})
                 setTimeout( ()=> { 
                     this.setState({fadeIn:false});
-                }, 7000 );
+                }, 9500);
                 setTimeout( ()=> { 
                     this.setState({selectedIndex:  Math.floor(Math.random() * showCase.length) });
                     this.increment()
-                }, 7500);
+                }, 10000);
         }, 0);
-        //this.setState({nextShowcase: !this.state.nextShowcase});
     }
 
     componentDidMount() {
@@ -60,24 +59,23 @@ export class Portfolio extends React.Component<Props>{
                     <div className="portfolioCase">
                         <header><h2>Showcase</h2></header>
                         <div className={(fadeIn) ? "fadeIn" : "fadeOut"}>
-                            <h4>{selectedShowCase.projectTitle}</h4>
-                            <figure>
-                                <img width="180px" height="120px;" src={imageURL1} />
-                            </figure>
-                            <figure>
-                                <img width="180px" height="120px;" src={imageURL2} />
-                            </figure>
-                            <ul>
-                                <li>
-                                    Client: <a href={selectedShowCase.clientUrl} target="_blank">{selectedShowCase.client}</a>
-                                </li>
-                                <li>
-                                    <a href={selectedShowCase.url} target="_blank">{selectedShowCase.website}</a>
-                                </li>
-                                <li>
-                                    {selectedShowCase.description}
-                                </li>
-                            </ul>
+                            <div className="showcase">
+                                <figure>
+                                    <img width="250px" height="200px;" src={imageURL1} />
+                                </figure>
+                                <h4>{selectedShowCase.projectTitle}</h4>
+                                <ul className="showcase-info">
+                                    <li>
+                                        <b>Client:</b> <a href={selectedShowCase.clientUrl} target="_blank">{selectedShowCase.client}</a>
+                                    </li>
+                                    <li>
+                                        <b>{selectedShowCase.description}</b>
+                                    </li>
+                                    <li>
+                                        <a href={selectedShowCase.url} target="_blank">{selectedShowCase.website}</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 )
