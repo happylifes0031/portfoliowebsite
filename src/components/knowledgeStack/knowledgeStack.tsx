@@ -2,8 +2,8 @@ import * as React from "react";
 
 
 const compleetKnowledgeStack = require('../../../data/knowledgeStack.json');
-const ICON_WIDTH_IN_PIXELS:number = 70;
-const ICON_HEIGHT_IN_PIXELS:number = 70;
+const ICON_WIDTH_IN_PIXELS:number = 60;
+const ICON_HEIGHT_IN_PIXELS:number = 60;
 
 class Knowledgestack extends React.Component {  
   render() {
@@ -25,8 +25,10 @@ class Knowledgestack extends React.Component {
 
     return ( 
       <div className="App-knowledge-stack">
-        <header><h2>Knowledge stack...</h2></header>
-        <div className="displayStack">  {knowledgeStack}</div>
+        <header><h2>Skill set:</h2></header>
+        <div className="displayStack">  
+          {knowledgeStack}
+        </div>
       </div>
     )
   }

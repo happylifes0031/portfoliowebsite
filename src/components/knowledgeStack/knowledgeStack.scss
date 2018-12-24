@@ -1,8 +1,6 @@
-
-
 .iconTile { 
-    width: 70px;
-    height:70px;
+    width: 60px;
+    height: 60px;
     display: inline-block;
     margin: 12px;
     transition-property: all;
@@ -12,27 +10,24 @@
       border-radius: 5px;
     }
 }
-
 .outerIcon {
-  height: 90px;
-  width: 90px;
+  height: 70px;
+  width: 70px;
   float: left;
 }
-
 .addShadow {
   -webkit-box-shadow: 3px 3px 23px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 3px 3px 23px 0px rgba(0,0,0,0.75);
   box-shadow: 3px 3px 23px 0px rgba(0,0,0,0.75);
 }
 .addShadow > img { 
-  width: 75px;
-  height: 75px;
+  width: 65px;
+  height: 65px;
   margin-left: -4px;
   margin-top: -2.5px;
 }
-
 .displayStack{
-  position: relative;
+  height: 500px;
+  width: 100%;
   margin: 0 auto;
-  width: 270px;
 }

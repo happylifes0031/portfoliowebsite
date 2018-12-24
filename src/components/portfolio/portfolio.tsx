@@ -35,29 +35,29 @@ export class Portfolio extends React.Component<Props>{
         const { activeNode } = this.props;
         const { selectedIndex, fadeIn } = this.state;
         let randomIndex = selectedIndex;
-    
-        console.log('nextShowcase', randomIndex, fadeIn);
-        console.log('activeNode', activeNode);
-        console.log(showCase)
-
         let hoverShowCase = null;
+
+        console.log('hover show case', activeNode);
 
         return (
             showCase.reduce( (showCase:any, cum:any, index:number, arr:Array<any>) => { 
                 
-                if(!activeNode) { 
-                    hoverShowCase = arr.find(function (obj:any) { 
-                        return obj.company === activeNode 
+                if(activeNode !== undefined) { 
+                    hoverShowCase = arr.findIndex( (obj:any, index:any) => { 
+                        if( obj.company === activeNode ) {
+                            return index;
+                        } else {
+                            return null;
+                        }
                     });
                 } 
                 
-                const selectedShowCase = (hoverShowCase) ? arr[randomIndex] : hoverShowCase;
+                const selectedShowCase = (activeNode && hoverShowCase !== -1) ? arr[hoverShowCase] : arr[randomIndex] ;
                 const imageURL1 = `./images/portfoliocases/${selectedShowCase.imgName1}.png`;
-                const imageURL2 = `./images/portfoliocases/${selectedShowCase.imgName2}.png`;
 
                 return (
                     <div className="portfolioCase">
-                        <header><h2>Showcase</h2></header>
+                        <header><h2 className="portfolioTitle">Portfolio:</h2></header>
                         <div className={(fadeIn) ? "fadeIn" : "fadeOut"}>
                             <div className="showcase">
                                 <figure>

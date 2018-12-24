@@ -6,10 +6,16 @@
     }
     article#intro-block {
         text-align: left;
-        width: 90%;
+        width: 100%;
+        background-color: #fff;
+        z-index: 3;
+        position: relative;
         p { 
             line-height: 40px;
-            margin-left: 0;
+            margin-left: 30px;
+            font-size: 1.3rem;
+            width: 100%;
+            margin-top:0;
         }
         a:hover {
             color: rgba(72, 111, 144, 0.7);

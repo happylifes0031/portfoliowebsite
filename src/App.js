@@ -23,13 +23,19 @@ class App extends Component {
       moveOverNode : value
     });
   } 
+
+  onMouseLeave = () => { 
+    this.setState({
+      moveOverNode : value
+    });
+  }
   
 
   render() {
     return (
       <div className="App" id="timeLine">
         <div className="inbedTimeLine">
-          <TimelineFrame onmouseOver={this.onMouseOver.bind(this)} />
+          <TimelineFrame onmouseOver={this.onMouseOver.bind(this)} onmouseLeave={this.onMouseLeave.bind(this)}/>
         </div>
         <TechColofon />
         <Intro />
