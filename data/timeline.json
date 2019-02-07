@@ -1,32 +1,5 @@
 [
     {
-        "from":"01-2008",
-        "till":"05-2008",
-        "role": "Technical game developer",
-        "skills":"Unreal Engine, Kismet",
-        "companyLogo": "codedillusions",
-        "companyName": "Coded Illusions",
-        "company": "codedillusions"
-    },
-    {
-        "from":"01-2008",
-        "till":"07-2008",
-        "role": "Front-end developer",
-        "skills":"HTML5, CSS3, PHP",
-        "companyLogo": "paperworq",
-        "companyName": "Paperworq",
-        "company": "paperworq"
-    },
-    {
-        "from":"08-2008",
-        "till":"07-2012",
-        "role": "Front-end developer, Designer",
-        "skills":"HTML5, CSS3, Wordpress",
-        "companyLogo": "bluelabeldesign",
-        "companyName": "Blue Label Design",
-        "company": "bluelabeldesign"
-    },
-    {
         "from":"07-2009",
         "till":"08-2009",
         "role": "Technical Game Designer",

@@ -38,6 +38,7 @@ class App extends Component {
         <Content />
         <TimelineFrame onmouseOver={this.onMouseOver.bind(this)} onmouseLeave={this.onMouseLeave.bind(this)}/>
         <Portfolio activeNode={this.state.moveOverNode} count={this.state.count} />
+              <TimelineFrame onmouseOver={this.onMouseOver.bind(this)} onmouseLeave={this.onMouseLeave.bind(this)}/>
   */
   
 
@@ -51,10 +52,10 @@ class App extends Component {
           <TechColofon />
         </div>
         <div className="breakout"></div>
-        <div className="inbedTimeLine">
-          
-        </div>
-        <div>
+          <div className="inbedTimeLine">
+            <TimelineFrame onmouseOver={this.onMouseOver.bind(this)} onmouseLeave={this.onMouseLeave.bind(this)}/>
+          </div>
+        <div className="content">
           <div className="welcome">
             <article>
               <h2>Hello, i am a freelance</h2>
@@ -76,7 +77,7 @@ class App extends Component {
                 I have a background in games development and moved towards Front-end Engineering.
                 Having a love for technology & design, tought myself 3D Design and programming!</p>
 
-                <p>-Currently working for: <a href="http://vertigo-games.com/" target="_blank">Vertigo Arcade</a></p>
+                <p>- Currently working for: <a href="http://vertigo-games.com/" target="_blank">Vertigo Arcade</a></p>
               </article>
             </div>
           </div>

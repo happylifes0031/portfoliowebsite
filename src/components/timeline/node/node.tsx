@@ -64,12 +64,14 @@ class Node extends React.Component<Props>{
       left: left + '%',
       width: width + '%'
     };
-    
+    /*
+    className={classNames('verticalLine', {'isEven': isEven})}
+    */
     return (
       <div className={classNames('node', {'isEven': isEven}, {'isHigher': (!isEven && toggleAbove) || (isEven && toggleUnder) })} style={nodeStyle}>
           <h5>{companyName}</h5>
           <div className='stickNode'>
-            <div className={classNames('verticalLine', {'isEven': isEven})}>
+            <div>
               <div className="circle" onMouseOver={this.addShadowToTile.bind(this)} onMouseLeave={this.removeClass.bind(this)}>
                 <div className='infoBoxEmployer'>
                   <ul>
