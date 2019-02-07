@@ -8,11 +8,16 @@
     border-radius: 5px;
     img { 
       border-radius: 5px;
+      -webkit-filter: grayscale(90%);
+      -moz-filter: grayscale(90%);
+        -o-filter: grayscale(90%);
+       -ms-filter: grayscale(90%);
+           filter: grayscale(90%);
     }
 }
 .outerIcon {
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   float: left;
 }
 .addShadow {
@@ -27,7 +32,8 @@
   margin-top: -2.5px;
 }
 .displayStack{
-  height: 500px;
   width: 100%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

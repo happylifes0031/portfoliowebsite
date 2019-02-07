@@ -77,7 +77,7 @@
         "role": "Front-end developer",
         "skills":"Angular 1.6 component based",
         "companyLogo": "vivat",
-        "companyName": "Vivat (Zwitserleven & Reaal)",
+        "companyName": "Vivat",
         "company": "vivat"
     },
     {
@@ -97,5 +97,14 @@
         "companyLogo": "binckbank",
         "companyName": "Binck Bank",
         "company": "binckbank"
+    },
+    {
+        "from":"01-2019",
+        "till":"02-2019",
+        "role": "Front-end developer",
+        "skills":"React, HTML5, CSS3, Javascript",
+        "companyLogo": "vertigogames",
+        "companyName": "Vertigo Games",
+        "company": "vertigogames"
     }
 ]

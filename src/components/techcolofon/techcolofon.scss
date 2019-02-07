@@ -1,36 +1,26 @@
 .techColofon{
-    display: block;
-    position: absolute;
-    height: 125px;
-    width: 25px;
-    background-color: #fc920a;
-    border-top-right-radius: 5px;
+    width: 150px;
+    height:20px;
+    float: right;
+    background-color: #fff;
     border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     margin-bottom: 10px;
-    -webkit-transition: margin-left 2s; /* Safari */
-    transition: margin-left 1s;
-    top:33%;
-    left:0;
-    z-index: 999;
-    cursor: pointer;
-    & > span {
-        position: absolute;
-      display: inline-block;
-      padding: 2px;
-      width: 8px;
-      line-height: 16px;
-      word-break: break-all;
-      text-align: center;
-      left: 3px;
-      font-size: 0.8rem;
-      margin-top: 7px;
-    }
+    -webkit-transition: margin-top 2s; /* Safari */
+    transition: margin-top 1s;   
+    z-index: 9999;
+    position: relative;
+    position: absolute;
+    right: 0;
     //REMINDER MOBILE WONT WORK LIKE THIS
     &:hover{
-      margin-left: 112px;
-      z-index: 999px;
-      -webkit-transition: margin-left 2s; /* Safari */
-      transition: margin-left 1s;
+      margin-top: 118px;
+      z-index: 9999px;
+      -webkit-transition: margin-top 2s; /* Safari */
+      transition: margin-top 1s;
+      -webkit-box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.15);
+      box-shadow: 0px 3px 5px 2px rgba(0,0,0,0.15);
       .techColofonContent{
         visibility: visible;
         animation-name: cf3FadeInOut;
@@ -41,17 +31,31 @@
       }
     }
   }
+  .colofon{
+    display: block;
+    margin-top: 1px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 3px;
+    color: #000;
+    font-family: roboto;
+  }
   .techColofonContent{
+    font-family: roboto;
     position: relative;
+    width: 144px;
     float: left;
     display: block;
-    margin-left: -112px;
-    font-size: 10px;
-    width: 115px;
-    background-color: #fc920a;
-    padding: 5px;
-    height: 115px;
+    margin-top: -130px;
+    font-size: 12px;
+    background-color: #fff;
+    padding: 3px;
+    z-index: 999;
     visibility: hidden;
+    -webkit-box-shadow: 0px -3px 5px 2px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px -3px 5px 2px rgba(0,0,0,0.15);
+    box-shadow: 0px -3px 5px 2px rgba(0,0,0,0.15);
     animation-name: cf3FadeOutIn;
     animation-timing-function: linear;
     animation-iteration-count: 1;
@@ -61,7 +65,7 @@
     transition: visibility 2s;
     & ul {
       list-style: none;
-      width: 100%;
+      width: 140px;
       display: block;    
       padding-left: 0;
       line-height: 17px;

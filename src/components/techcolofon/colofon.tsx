@@ -9,11 +9,11 @@ export const TechColofon = () => {
                     <li>React</li>
                     <li>Webpack</li>
                     <li>ES6</li>
-                    <li className="borderTop">Version: 2.0</li>
-                    <li>30/10/2018</li>
+                    <li className="borderTop">Version: 3.0</li>
+                    <li>07/02/2019</li>
                 </ul>
             </div>
-            <span>Colofon</span>
+            <div className="colofon">Colofon</div>
         </div>
     )
 }

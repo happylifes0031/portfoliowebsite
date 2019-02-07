@@ -73,11 +73,11 @@ class Node extends React.Component<Props>{
               <div className="circle" onMouseOver={this.addShadowToTile.bind(this)} onMouseLeave={this.removeClass.bind(this)}>
                 <div className='infoBoxEmployer'>
                   <ul>
-                    <li>Tijdsperiode:</li>
+                    <li><b>Tijdsperiode:</b></li>
                     <li>{from} | {till}</li>
-                    <li>Rol:</li>
+                    <li><b>Rol:</b></li>
                     <li>{role}</li>
-                    <li>Skills:</li>
+                    <li><b>Skills:</b></li>
                     <li>{skills}</li>
                   </ul>
                 </div>

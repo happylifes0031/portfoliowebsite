@@ -63,8 +63,10 @@ export class Portfolio extends React.Component<Props>{
                                 <figure>
                                     <img width="250px" height="200px;" src={imageURL1} />
                                 </figure>
-                                <h4>{selectedShowCase.projectTitle}</h4>
                                 <ul className="showcase-info">
+                                    <li>
+                                        <h4>{selectedShowCase.projectTitle}</h4>
+                                    </li>
                                     <li>
                                         <b>Client:</b> <a href={selectedShowCase.clientUrl} target="_blank">{selectedShowCase.client}</a>
                                     </li>

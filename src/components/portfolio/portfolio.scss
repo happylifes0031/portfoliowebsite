@@ -1,14 +1,8 @@
 .portfolioCase {
-    height: 100%; 
-    display: inline-block;
-    grid-area: showcase;
-    position: relative;
-    z-index: 1;
-    margin-right: -100px;
+    width: 50%;
     .showcase { 
-      width:250px;
-      margin: 0 auto;
-      margin-top:0;
+      display: flex;
+      flex-direction: row;
       h4 { 
         background-color: #5d89a1;
         padding: 2px;
@@ -17,10 +11,12 @@
         font-weight: lighter;
         margin: 10px 0;
         letter-spacing: 2px;
+        width:100%;
+        flex-grow: 1;
       }
     }
     .portfolioTitle { 
-      text-align: center;
+      text-align: left;
     }
     .showcase-info { 
       display: block;
@@ -58,36 +54,26 @@
         }
     }
     .fadeIn { 
-      position: relative;
       animation-duration: 1s;
       animation-name: slidein;
     }
     .fadeOut{
-      position: relative;
-      animation-duration: 0.5s;
+      animation-duration: 1s;
       animation-name: slideout;
     }
     @keyframes slidein {
       from {
-        margin-left: 100%;
-        width: 0; 
         opacity: 0.0;
       }
       to {
-        margin-left: 0%;
-        width: 100%;
         opacity: 1.0;
       }
     }
     @keyframes slideout {
       from {
-        margin-left: 0%;
-        width: 100%;
         opacity: 1.0;
       }
       to {
-        margin-left:-300px;
-        width: 300px; 
         opacity: 0.0;
       }
     }

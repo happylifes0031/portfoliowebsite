@@ -21,21 +21,32 @@
   font-family: josefin;
   src: url('../fonts/josefin/josefinSlab-Regular.ttf');
 }
+@font-face {
+  font-family: roboto;
+  src: url('../fonts/Roboto/Roboto-Thin.ttf');
+}
 
+@font-face {
+  font-family: roboto-bold;
+  src: url('../fonts/Roboto/Roboto-Bold.ttf');
+}
+/*font-family: amatic;*/
+a { 
+  font-family: roboto-bold;
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
+}
 p {
-  font-family: amatic;
+  font-family: roboto;
   font-size: 1.3rem;
 }
 .App {
-  display: grid;
-  text-align: center;
+  display: flex;
   max-width: 1200px;
-  margin: 0 auto;
-  grid-template-areas:
-  "inBedTimeline inBedTimeline inBedTimeline"
-  "intro intro showcase"
-  "knowledgeStack knowledgeStack showcase";
-  grid-template-columns: 33% 33% 33%;
+  height: 100%; 
+  flex-direction: column;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -45,30 +56,104 @@ p {
   font-size: 1.5em;
 }
 .App-intro {
-  grid-area: intro;
   font-size: large;
   background-color: orange;
   margin-bottom: 50px;
 }
 .App-showcase{
-  grid-area: showcase;
   background-color: green;
 }
 .App-knowledge-stack{
-  grid-area: knowledgeStack;
-  font-size: large;
-  position: relative;
-  z-index: 3;
-  background-color: #fff;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 4rem;
 }
-.content{
-  grid-area: content;
+.empty-bar{
+  width: 100%;
+  height: 110px;
+  display: flex;
+  position: relative;
 }
 .inbedTimeLine { 
-  grid-area: inBedTimeline;
   position: relative;
   width: 100%;
-  height: 170px;
-  margin: 20px auto;
-  margin-bottom: 3rem;
+  height: 196px;
+  background-color: #fff;
+  margin-bottom: 5em;
+}
+.midSection {
+  display: flex;
+  margin-bottom: 2rem;
+  margin-top: 3em;
+  .menu{
+    max-width: 25%;
+    min-width: 25%;
+    margin-top: 1.5em;
+    &:before{
+      content: '';
+      display: block;
+      width: 4%;
+      height: 1px;
+      position: absolute;
+      background-color: #fa9717;
+    }
+    nav {
+      display: block;
+      margin-top:3em;
+      a { 
+        color: #000;
+        width: 100%;
+        height: 40px;
+        display: block;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 500;
+      }
+    }
+  }
+  .intro{
+    max-width: 75%;
+    min-width: 75%;
+    color: #fff;
+  }
+}
+.breakout{
+  position: absolute;
+  background-color: #fff;
+  height: 196px;
+  width: 100%;
+  top: 110px;
+  left:0;
+  &:after{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    left: 48%;
+    top: 181px;
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: #fff;
+  }
+}
+
+.avatar{
+  height: 50px;
+  width: 300px;
+  align-self: center;
+  display: flex;
+  img { 
+    display: inline-block;
+    margin-top:-0.2em;
+    margin-right: 1em;
+  }
+  div { 
+    align-self: center;
+    display: inline-block;
+    font-family: roboto-bold;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
 }
