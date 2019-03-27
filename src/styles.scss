@@ -96,7 +96,7 @@ p {
       width: 4%;
       height: 1px;
       position: absolute;
-      background-color: #fa9717;
+      background-color: #e06c02;
     }
     nav {
       display: block;
@@ -116,7 +116,7 @@ p {
   .intro{
     max-width: 75%;
     min-width: 75%;
-    color: #fff;
+    color: #5d89a1;
   }
 }
 
@@ -151,11 +151,22 @@ p {
     width: 30px;
     height: 30px;
     left: 48%;
-    top: 181px;
+    top: 151px;
     position: absolute;
     transform: rotate(45deg);
     background-color: #fff;
+    -webkit-animation: move 0.3s ease-out;
+    -moz-animation:    move 0.3s ease-out; 
+    -o-animation:      move 0.3s ease-out; 
+    animation:         move 0.3s ease-out;
+    animation-delay: 3.2s; 
+    animation-fill-mode: forwards;
   }
+}
+
+@keyframes move {
+  from {top: 151px;}
+  to {top: 181px;}
 }
 
 .avatar{

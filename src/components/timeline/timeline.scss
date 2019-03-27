@@ -4,7 +4,7 @@
 .timeline {
     position: absolute;
     left: 0;
-    width: 100%;
+    width: 1%;
     height: 170px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -13,8 +13,18 @@
     background-repeat: repeat-x;
     background-position: center; 
     font-family: roboto;
+    -webkit-animation: increase 3s;
+    -moz-animation:    increase 3s; 
+    -o-animation:      increase 3s; 
+    animation:         increase 3s;
+    animation-delay: 0.5s; 
+    animation-fill-mode: forwards;
 }
-
+@keyframes increase {
+    100% {
+        width: 100%;
+    }
+}
 %circle{
     content: '';
     display: inline-block;
@@ -28,8 +38,8 @@
 
 .endDate, .startDate {
     position: absolute;
-    top: 99px;
-    font-size: .75em;
+    top: 96px;
+    font-size: 1em;
 }
 
 .endDate{ 

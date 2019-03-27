@@ -4,22 +4,32 @@
     padding: 1px;
     display: inline-block;    
     top: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    
 }
+@keyframes fadeIn {
+        0% { opacity:0; }
+        30% { opacity:0; }
+        100% { opacity:1; }
+  }
+  
 .node > h5 { 
     font-size: .85rem;
-    left: 11px;
+    left: 15px;
     position: absolute;
     bottom: -89px
 }
 .node.isHigher > h5{
 }
 .node.isEven.isHigher > h5{
+    top:-52px;
 }
 .isEven {
     top: 97px;
 }
 .isEven > .stickNode { 
-    top: 10px;
+    top: 2px;
 }
 .isEven > .stickNode > .verticalLine > .circle{ 
     top: 30px;
@@ -38,14 +48,27 @@
         }
     }
 }
+.node.isEven { 
+    & .stickNode {
+        height: 16px;
+        top: 9px;
+        & .verticalLine { 
+            height: 45px !important;
+        }
+        & .circle { 
+            left:-7px;
+            top:16px;
+        }
+    }
+}
 .node.isEven.isHigher { 
-    top: 111px;
+    top: 152px;
     & .stickNode { 
-        top: -6px;
+        top: -46px;
         & .verticalLine.isEven { 
             height: 59px;
             & .circle  {
-                top: 45px;
+                top: 28px;
             }
         }
     }
@@ -60,12 +83,12 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fa9717',GradientType=0 );
 }
 .isEven > h5 {
-    top: 10px;
+    top: 2px;
 }
 .node > .stickNode{
     width: 1px;
-    top: 87px;
-    height: 18px;
+    top: 89px;
+    height: 16px;
     left: 0;
     background-color: #000;
     position: absolute;
@@ -94,9 +117,7 @@
     top: -15px;
     left: -7px;
     &:hover { 
-        background-color: #d7d7d7;
-        padding: 2px;
-        left: -10px;
+        background-color: #5d89a1;
     }
     &:hover .infoBoxEmployer{
         display: block;
@@ -150,3 +171,4 @@
         width:68%
     }
 }
+

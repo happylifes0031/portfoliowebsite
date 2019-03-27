@@ -60,7 +60,7 @@ class App extends Component {
             <article>
               <h2>Hello, i am a freelance</h2>
               <h1>front-end developer</h1>
-              <h2>& part time teacher</h2>
+              <h2>& hobby game developer</h2>
             </article>
           </div>
           <div className="midSection">
@@ -72,7 +72,7 @@ class App extends Component {
             </div>
             <div className="intro">
               <article>
-                <p>Freelance front-end developer & part time teacher.
+                <p>Freelance front-end developer and hobby game developer.
                 Born and raised in Rotterdam, living in Amsterdam.
                 I have a background in games development and moved towards Front-end Engineering.
                 Having a love for technology & design, tought myself 3D Design and programming!</p>

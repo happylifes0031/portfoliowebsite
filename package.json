@@ -20,6 +20,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --progress --env dev",
     "build": "webpack",
+    "deploy": "npm run build && webpack.prod.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
@@ -53,6 +54,7 @@
     "typescript": "^2.8.3",
     "webpack": "^4.21.0",
     "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4"
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.2.1"
   }
 }

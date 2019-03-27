@@ -48,8 +48,9 @@ export class TimelineFrame extends React.Component<Props> {
 
         return (
             <div className="timeline">
-                <div className="startDate">{this.state.startTimeLine}</div>
+                <div className="startDate">{this.state.startTimeLine.slice(3, 7)}</div>
                 { 
+                    
                     timeline.map( (companies:any, index:number) => {
                         index++;
 
@@ -77,11 +78,11 @@ export class TimelineFrame extends React.Component<Props> {
                         let width = (percentagePerMonth * totalMonths);
 
                         return <Node key={index} index={index} {...companies} onmouseOver={this.props.onmouseOver} isEven={isEven} toggleAbove={toggleAbove} 
-                        toggleUnder={toggleUnder} isHigher={isHigher}
-                        width={width} left={left} totalAmountOfMonths={totalAmountOfMonths} />;
+                            toggleUnder={toggleUnder} isHigher={isHigher}
+                            width={width} left={left} totalAmountOfMonths={totalAmountOfMonths} />;
                     })
                 }
-                <div className="endDate">{this.state.endTimeLine}</div>
+                <div className="endDate">{this.state.endTimeLine.slice(3, 7)}</div>
             </div>
         )
     }
