@@ -67,23 +67,24 @@ class App extends Component {
             <div className="menu">
             <nav>
               <a href="../../../data/wesleyblijlevensEng.pdf" title="Download CV in English">Download C.V.</a>
-              <a href="mailto:e-postduif@blijlevens.nu">contact</a>
+              <a href="mailto:e-postduif@blijlevens.nu">Contact</a>
+              <a> Portfolio </a>
             </nav>
             </div>
             <div className="intro">
               <article>
                 <p>Freelance front-end developer and hobby game developer.
-                Born and raised in Rotterdam, living in Amsterdam.
-                I have a background in games development and moved towards Front-end Engineering.
-                Having a love for technology & design, tought myself 3D Design and programming!</p>
-
-                <p>- Currently working for: <a href="http://vertigo-games.com/" target="_blank">Vertigo Arcade</a></p>
+                  Born and raised in Rotterdam, living in Amsterdam.
+                  I have background in game development and currently do front-end development. With a love for technology and design, I have taught myself 3D design and programming!
+                </p>
+                <p>- Currently working for: <b>nobody ;-)</b></p>
               </article>
             </div>
           </div>
           
         </div>
         <Knowledgestack />
+        <Portfolio />
       </div>
     );
   }

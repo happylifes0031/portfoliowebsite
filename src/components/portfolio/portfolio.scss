@@ -1,80 +1,38 @@
-.portfolioCase {
-    width: 50%;
-    .showcase { 
+.portfolio {
+    width: 100%;
+    margin-top: 6em;
+    margin-bottom: 4em;
+    .portfolio-title {
+      width: 100%;
+    }
+    .portfolio-content{
+      width: 100%;
+      height: 200px;
       display: flex;
       flex-direction: row;
-      h4 { 
-        background-color: #5d89a1;
-        padding: 2px;
-        border-radius: 5px;
-        color:#fff;
-        font-weight: lighter;
-        margin: 10px 0;
-        letter-spacing: 2px;
-        width:100%;
-        flex-grow: 1;
+      margin-top: 2em;
+      margin-bottom: 4em;
+    }
+    .portfolioContent { 
+      width: 20%;
+      height:100%;
+      .client{
+        font-size: 1.2em;
+        font-family: roboto;
+      }
+      .project{
+        font-size: 1.2em;
+        font-family: roboto;
       }
     }
-    .portfolioTitle { 
-      text-align: left;
-    }
-    .showcase-info { 
-      display: block;
-    }
-    & figure { 
-      display: inline-block;
-      margin: 0;
-      margin-right: 20px;
-      margin-top: 10px;
-      border: 3px solid #5d89a1;
-      border-radius: 5px;
-      & img { 
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 0.1rem;
-      }
-      & figcaption { 
-        width:100%;
-        font-size: 0.8rem;
-      }
-    }
-    & ul { 
-        list-style: none;
-        font-size: 0.8rem;
-        padding: 0;
-        text-align: center;
-        margin-top:0;
-        & li {
-          font-family: indieFlower;
-          color:#325061;
-          padding:5px;
-          font-size: 15px;
-          margin: 5px;
-          letter-spacing: 2px;
-        }
-    }
-    .fadeIn { 
-      animation-duration: 1s;
-      animation-name: slidein;
-    }
-    .fadeOut{
-      animation-duration: 1s;
-      animation-name: slideout;
-    }
-    @keyframes slidein {
-      from {
-        opacity: 0.0;
-      }
-      to {
-        opacity: 1.0;
-      }
-    }
-    @keyframes slideout {
-      from {
-        opacity: 1.0;
-      }
-      to {
-        opacity: 0.0;
+    .images{ 
+      width: 80%;
+      height: 88%;
+      align-self: flex-end;
+      display: flex;
+      justify-content: space-between;
+      img {
+        border-bottom: 8px solid orange;
       }
     }
 }

@@ -10,8 +10,7 @@ export class Intro extends React.Component {
                     <p>
                         Freelance front-end developer & part time teacher.
                         Born and raised in Rotterdam, currently living in Amsterdam.
-                        <br/>I have a background in games development and moved towards Front-end Engineering.
-                        Having a love for technology & design, tought myself 3D Design and programming!<br/>
+                        <br/>I have background in game development and currently do front-end development. With a love for technology and design, I have taught myself 3D design and programming!<br/>
                     </p><br/>
                     <p>
                         Currently working on: <u>Arcade Launcher</u> for <a href="http://vertigo-games.com/" target="_blank">Vertigo Games</a>
