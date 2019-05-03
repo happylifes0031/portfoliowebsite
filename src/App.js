@@ -8,6 +8,7 @@ import { TechColofon } from './components/techcolofon/colofon';
 import  List from './components/List';
 import store from "./stores/index";
 import { addArticle } from "./actions/action.js";
+import { element } from '../node_modules/@types/prop-types';
 
 window.store = store;
 window.addArticle = addArticle;
@@ -15,6 +16,7 @@ window.addArticle = addArticle;
 class App extends Component {
   state = { 
     moveOverNode : undefined,
+    hidePortfolio: true,
   }
 
   onMouseOver = (value) => { 
@@ -30,17 +32,29 @@ class App extends Component {
     });
   }
 
-  /*
+  togglePortfolio = () => { 
+    this.setState({ 
+      hidePortfolio:!this.state.hidePortfolio
+    });
+  }
 
-        <div className="App-knowledge-stack">
-          
-        </div>
-        <Content />
-        <TimelineFrame onmouseOver={this.onMouseOver.bind(this)} onmouseLeave={this.onMouseLeave.bind(this)}/>
-        <Portfolio activeNode={this.state.moveOverNode} count={this.state.count} />
-              <TimelineFrame onmouseOver={this.onMouseOver.bind(this)} onmouseLeave={this.onMouseLeave.bind(this)}/>
-  */
-  
+  handleScroll = (event) => {
+    let lastScrollY = window.scrollY;
+    
+    if(!this.state.hidePortfolio && lastScrollY <= 50) { 
+      this.setState({ 
+        hidePortfolio:!this.state.hidePortfolio
+      });
+    }
+  }
+
+  componentDidMount = () => {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 
   render() {
     return (
@@ -66,9 +80,9 @@ class App extends Component {
           <div className="midSection">
             <div className="menu">
             <nav>
-              <a href="../../../data/wesleyblijlevensEng.pdf" title="Download CV in English">Download C.V.</a>
+              <a href="#portfolio" onClick={this.togglePortfolio}>Portfolio</a>
               <a href="mailto:e-postduif@blijlevens.nu">Contact</a>
-              <a> Portfolio </a>
+              <a href="../../../data/wesleyblijlevensEng.pdf" title="Download CV in English">Download C.V.</a>
             </nav>
             </div>
             <div className="intro">
@@ -84,7 +98,7 @@ class App extends Component {
           
         </div>
         <Knowledgestack />
-        <Portfolio />
+        <Portfolio hidePortfolio={this.state.hidePortfolio}/>
       </div>
     );
   }

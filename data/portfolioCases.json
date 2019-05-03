@@ -1,8 +1,70 @@
 [
     {
+        "projectTitle":"Haze",
+        "imgName1":"haze1",
+        "imgName2":"haze2",
+        "imgName3":"haze3",
+        "client": "Vertigo Arcade",        
+        "company": "Vertigo Arcade",
+        "clientUrl": "https://www.vertigo-arcade.nl/",
+        "description": "A game launcher app for arcade."   
+    }, 
+    {
+        "projectTitle":"Protrader",
+        "imgName1":"binck1",
+        "imgName2":"binck2",
+        "imgName3":"binck3",
+        "client": "Binck Bank",        
+        "company": "binckbank",
+        "clientUrl": "https://protrader.binck.nl/",
+        "description": "Online self tradingtool which gives the freedom to buy and sell stocks and more. build with React."   
+    },
+    {
+        "projectTitle":"Eurotransplant",
+        "imgName1":"eurotransplant1",
+        "imgName2":"eurotransplant2",
+        "imgName3":"eurotransplant3",
+        "client": "Eurotransplant",
+        "company": "eurotransplant",
+        "clientUrl": "https://www.eurotransplant.org/",
+        "description": "Mockup voor het aanvragen van urgente orgaantransplantaties."   
+    },
+    {
+        "projectTitle":"Zwitserleven verzekeringen",
+        "imgName1":"vivat_zw_orv_1",
+        "imgName2":"vivat_zw_orv_2",
+        "imgName3":"vivat_zw_orv_3",
+        "client": "Vivat",
+        "company": "vivat",
+        "clientUrl": "https://vivat.nl/",
+        "description": "Funnel voor het aanvragen van een overlijdensrisco verzekering.",
+        "website":"www.zwitserleven.nl",
+        "url":"https://www.zwitserleven.nl/particulier/overlijdensrisicoverzekering/online-aanvragen/"   
+    }, 
+    {
+        "projectTitle":"Robeco",
+        "imgName1":"robeco1",
+        "imgName2":"robeco2",
+        "imgName3":"robeco3",
+        "client": "Robeco",        
+        "company": "robeco",
+        "clientUrl": "https://www.robeco.nl/",
+        "description": "I build the cookie banner message and settings for Robeco."   
+    },
+    {
+        "projectTitle":"I Will Escape",
+        "imgName1":"iwillescape_1",
+        "imgName2":"iwillescape_2",
+        "imgName3":"iwillescape_3",
+        "client": "Blue Label Studio",        
+        "company": "bluelabelstudio",
+        "description": "Third person video game action adventure video game for the PC, opensource and build with Blender."   
+    },
+    {
         "projectTitle":"Fairy Tale Fights",
         "imgName1":"ff_cover",
         "imgName2":"ff_gameplay",
+        "imgName3":"ff_gameplay",
         "client": "Playlogic",
         "company": "playlogic",
         "clientUrl": "https://vivat.nl/",
@@ -10,68 +72,13 @@
         "url":"https://en.wikipedia.org/wiki/Fairytale_Fights"   
     },
     {
-        "projectTitle":"Zwitserleven verzekeringen",
-        "imgName1":"vivat_zw_orv_1",
-        "imgName2":"vivat_zw_orv_2",
-        "client": "Vivat",
-        "company": "vivat",
-        "clientUrl": "https://vivat.nl/",
-        "description": "Funnel voor het aanvragen van een overlijdensrisco verzekering.",
-        "website":"www.zwitserleven.nl",
-        "url":"https://www.zwitserleven.nl/particulier/overlijdensrisicoverzekering/online-aanvragen/"   
-    },
-    {
-        "projectTitle":"Rijk",
-        "imgName1":"rijk1",
-        "imgName2":"rijk2",
-        "client": "Dalh TV",
-        "clientUrl": "https://blazhoffski.nl/",
-        "description": "Promotie website voor het televisieprogramma Rijk.",
-        "website":"https://www.vcava.nl",
-        "url":"https://www.vcava.nl/"   
-    },
-    {
-        "projectTitle":"Eurotransplant",
-        "imgName1":"eurotransplant1",
-        "imgName2":"eurotransplant2",
-        "client": "Eurotransplant",
-        "company": "eurotransplant",
-        "clientUrl": "https://www.eurotransplant.org/",
-        "description": "Mockup voor het aanvragen van urgente orgaantransplantaties."   
-    },
-    {
         "projectTitle":"Nomos",
         "imgName1":"nomos_1",
         "imgName2":"nomos_2",
+        "imgName3":"nomos_3",
         "client": "Coded Illusions",        
         "company": "codedillusions",
         "clientUrl": "http://vertigo-games.com/",
         "description": "Third person action adventure video game for the Xbox 360."   
-    },
-    {
-        "projectTitle":"I Will Escape",
-        "imgName1":"iwillescape_1",
-        "imgName2":"iwillescape_2",
-        "client": "Blue Label Studio",        
-        "company": "bluelabelstudio",
-        "description": "Third person video game action adventure video game for the PC, opensource and build with Blender."   
-    },
-    {
-        "projectTitle":"Protrader",
-        "imgName1":"binck1",
-        "imgName2":"binck2",
-        "client": "Binck Bank",        
-        "company": "binckbank",
-        "clientUrl": "https://protrader.binck.nl/",
-        "description": "Online self tradingtool which gives the freedom to buy and sell stocks and more. build with React."   
-    },
-    {
-        "projectTitle":"Robeco",
-        "imgName1":"robeco1",
-        "imgName2":"robeco2",
-        "client": "Robeco",        
-        "company": "robeco",
-        "clientUrl": "https://www.robeco.nl/",
-        "description": "I build the cookie banner message and settings for Robeco."   
     }
 ]

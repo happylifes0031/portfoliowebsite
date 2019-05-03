@@ -19,10 +19,29 @@
       .client{
         font-size: 1.2em;
         font-family: roboto;
+        color: #5d89a1;
+        .client-title { 
+          font-weight: bold;
+          font-style: italic;
+          color: #000;
+        }
       }
       .project{
         font-size: 1.2em;
         font-family: roboto;
+        color: #5d89a1;
+        .client-project { 
+          font-weight: bold;
+          font-style: italic;
+          color: #000;
+        }
+      }
+      .description{
+        margin-top: 0.5em;
+        font-size: 1.0em;
+        font-family: roboto;
+        color: #000;
+        padding-right: 1em;
       }
     }
     .images{ 
@@ -35,4 +54,8 @@
         border-bottom: 8px solid orange;
       }
     }
+}
+
+.hidden { 
+  display: none;
 }
