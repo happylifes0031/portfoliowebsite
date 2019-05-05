@@ -19,7 +19,7 @@
       .client{
         font-size: 1.2em;
         font-family: roboto;
-        color: #5d89a1;
+        color: #0a364e;
         .client-title { 
           font-weight: bold;
           font-style: italic;
@@ -29,7 +29,7 @@
       .project{
         font-size: 1.2em;
         font-family: roboto;
-        color: #5d89a1;
+        color: #0a364e;
         .client-project { 
           font-weight: bold;
           font-style: italic;
@@ -51,7 +51,7 @@
       display: flex;
       justify-content: space-between;
       img {
-        border-bottom: 8px solid orange;
+        border-bottom: 8px solid #e06c02;
       }
     }
 }

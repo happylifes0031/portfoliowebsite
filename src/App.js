@@ -98,7 +98,9 @@ class App extends Component {
           
         </div>
         <Knowledgestack />
-        <Portfolio hidePortfolio={this.state.hidePortfolio}/>
+        { !this.state.hidePortfolio &&
+          <Portfolio />
+        } 
       </div>
     );
   }

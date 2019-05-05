@@ -1,10 +1,8 @@
 import * as React from 'react';
-import classNames from 'classnames';
 const showCase = require('../../../data/portfolioCases.json');
 
 export interface Props {
     activeNode: any;
-    hidePortfolio: boolean;
 }
 
 export class Portfolio extends React.Component<Props>{
@@ -15,7 +13,7 @@ export class Portfolio extends React.Component<Props>{
 
     render() {
         return (
-            <div id='portfolio' className={classNames('portfolio', {'hidden':this.props.hidePortfolio})} >
+            <div id='portfolio' className='portfolio'>
                 <div className='portfolio-title'><h2>Portfolio</h2></div>
                 { 
                     showCase.map( showcase => { return ( 
@@ -28,7 +26,7 @@ export class Portfolio extends React.Component<Props>{
                                 <div className='images'>
                                     <img src={`../images/portfoliocases/${showcase.imgName1}.png`} width='300px' height='100%'/>
                                     <img src={`../images/portfoliocases/${showcase.imgName2}.png`} width='300px' height='100%'/>
-                                    <img src={`../images/portfoliocases/${showcase.imgName3}.png`} width='300px' height='100%'/>
+                                    { showcase.imgName3 && <img src={`../images/portfoliocases/${showcase.imgName3}.png`} width='300px' height='100%'/>}
                                 </div>
                         </div>
                         )
