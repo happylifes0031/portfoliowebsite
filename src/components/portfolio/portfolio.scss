@@ -50,9 +50,52 @@
       align-self: flex-end;
       display: flex;
       justify-content: space-between;
+      position: relative;
       img {
         border-bottom: 8px solid #e06c02;
       }
+      .modal-container {
+        position: absolute;
+        top: 169px;
+        left: -200px;
+        z-index: 999;
+      }
+    }
+    .modal{
+      position: absolute;
+      display: none;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.0); /* Black w/ opacity */
+      .modal-content{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 770px;
+        height: 510px;
+        max-width: 1400px;
+        max-height: 900px;
+        background-color: white;
+        border-radius: 10px;
+        &::before{
+          content: '';
+          position: absolute;
+          left:45%;
+          top:-15px;
+          display:block;
+          width:0;
+          height:0;
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          border-top: 20px solid #fff;
+          clear: both;
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .showModal{
+      display: flex;
     }
 }
 

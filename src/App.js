@@ -17,6 +17,7 @@ class App extends Component {
   state = { 
     moveOverNode : undefined,
     hidePortfolio: true,
+    isScrolling: false
   }
 
   onMouseOver = (value) => { 
@@ -82,7 +83,7 @@ class App extends Component {
             <nav>
               <a href="#portfolio" onClick={this.togglePortfolio}>Portfolio</a>
               <a href="mailto:e-postduif@blijlevens.nu">Contact</a>
-              <a href="../../../data/wesleyblijlevensEng.pdf" title="Download CV in English">Download C.V.</a>
+              <a href="../../../data/blijlevens_cv_eng.pdf" title="Download CV in English">Download C.V.</a>
             </nav>
             </div>
             <div className="intro">
@@ -99,7 +100,7 @@ class App extends Component {
         </div>
         <Knowledgestack />
         { !this.state.hidePortfolio &&
-          <Portfolio />
+          <Portfolio isScrolling={}/>
         } 
       </div>
     );
