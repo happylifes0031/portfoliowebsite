@@ -16,7 +16,11 @@ export class Portfolio extends React.Component<Props>{
         image: '',
         topImage: 10,
         leftImage: 20,
-        offset: 0
+        offset: 0,
+        modalOpend: false,
+        scrollPosition: 0,
+        imagePosition: 0,
+        close: false
     }
 
     imageModal = (e, imageName) => {
@@ -35,7 +39,8 @@ export class Portfolio extends React.Component<Props>{
             image:imageName,
             offset: offset,
             topImage: (e.target.getBoundingClientRect().top + 200),
-            leftImage: (e.target.getBoundingClientRect().left - 215)
+            leftImage: (e.target.getBoundingClientRect().left - 215),
+            close: false
         })
     }
 
@@ -45,15 +50,26 @@ export class Portfolio extends React.Component<Props>{
         })
     }
 
+    toggleModal = (imageOffset:any) => { 
+        console.log('image', imageOffset);
+        this.setState({
+            modalOpend:!this.state.modalOpend,
+            imagePosition: imageOffset.top,
+            close: false
+        });
+    }
+
 
     handleScroll = (event) => {
         let lastScrollY = window.scrollY;
         let offset = this.state.offset;
-        console.log(lastScrollY)
-        console.log(offset);
-        console.log(offset - lastScrollY);
-        let scrollCorrection = (offset - lastScrollY) + 200;
-        this.setState({topImage:scrollCorrection})
+        let scrollCorrection = (offset - lastScrollY);
+        this.setState({scrollPosition:scrollCorrection})
+        let imageOffset = this.state.imagePosition;
+
+        if((imageOffset - scrollCorrection) > 275 ){ 
+            this.setState({close:true, modalOpend:false})
+        }
     }
 
     componentDidMount() {
@@ -77,10 +93,25 @@ export class Portfolio extends React.Component<Props>{
                                     <div className='description'><span className="client-project">{showcase.description}</span></div>
                                 </div>
                                 <div className='images'>
-                                    <PortfolioColumn showCase={showcase.imgName1} />
-                                    <PortfolioColumn showCase={showcase.imgName2} />
+                                    <PortfolioColumn 
+                                        showCase={showcase.imgName1} 
+                                        toggledImage={this.toggleModal} 
+                                        modalOpenend={this.state.modalOpend} 
+                                        close={this.state.close}
+                                    />
+                                    <PortfolioColumn 
+                                        showCase={showcase.imgName2} 
+                                        toggledImage={this.toggleModal} 
+                                        modalOpenend={this.state.modalOpend} 
+                                        close={this.state.close}
+                                    />
                                     { showcase.imgName3 && 
-                                        <PortfolioColumn showCase={showcase.imgName3} />
+                                        <PortfolioColumn 
+                                            showCase={showcase.imgName3} 
+                                            toggledImage={this.toggleModal} 
+                                            modalOpenend={this.state.modalOpend} 
+                                            close={this.state.close}
+                                        />
                                     }
                                 </div>
                         </div>
