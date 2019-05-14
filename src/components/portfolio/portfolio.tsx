@@ -23,52 +23,33 @@ export class Portfolio extends React.Component<Props>{
         close: false
     }
 
-    imageModal = (e, imageName) => {
-        console.log('document.body.getBoundingClientRect()',  document.body.getBoundingClientRect())
-        console.log('client X', e.clientX);
-        console.log('target', e.target.getBoundingClientRect());
-        console.log('client width', e.target.clientWidth);
-        console.log('client offset height', e.target);
-        let pageOffset = document.body.getBoundingClientRect();
-        let offset = e.target.getBoundingClientRect().top - pageOffset.top;
-        
-        console.log('client offset left', offset);
-
-        this.setState({
-            hover:!this.state.hover, 
-            image:imageName,
-            offset: offset,
-            topImage: (e.target.getBoundingClientRect().top + 200),
-            leftImage: (e.target.getBoundingClientRect().left - 215),
-            close: false
-        })
-    }
-
     closeModal = () => { 
         this.setState({
-            hover:!this.state.hover
+            hover:false,
+            modalOpend:false,
+            close: true
         })
     }
 
     toggleModal = (imageOffset:any) => { 
-        console.log('image', imageOffset);
         this.setState({
-            modalOpend:!this.state.modalOpend,
+            modalOpend:true,
             imagePosition: imageOffset.top,
             close: false
         });
     }
 
 
-    handleScroll = (event) => {
+    handleScroll = ( ) => {
         let lastScrollY = window.scrollY;
         let offset = this.state.offset;
         let scrollCorrection = (offset - lastScrollY);
         this.setState({scrollPosition:scrollCorrection})
         let imageOffset = this.state.imagePosition;
 
+        console.log('close', (imageOffset - scrollCorrection))
         if((imageOffset - scrollCorrection) > 275 ){ 
-            this.setState({close:true, modalOpend:false})
+            this.closeModal()
         }
     }
 
@@ -98,12 +79,14 @@ export class Portfolio extends React.Component<Props>{
                                         toggledImage={this.toggleModal} 
                                         modalOpenend={this.state.modalOpend} 
                                         close={this.state.close}
+                                        closeModal={this.closeModal}
                                     />
                                     <PortfolioColumn 
                                         showCase={showcase.imgName2} 
                                         toggledImage={this.toggleModal} 
                                         modalOpenend={this.state.modalOpend} 
                                         close={this.state.close}
+                                        closeModal={this.closeModal}
                                     />
                                     { showcase.imgName3 && 
                                         <PortfolioColumn 
@@ -111,6 +94,7 @@ export class Portfolio extends React.Component<Props>{
                                             toggledImage={this.toggleModal} 
                                             modalOpenend={this.state.modalOpend} 
                                             close={this.state.close}
+                                            closeModal={this.closeModal}
                                         />
                                     }
                                 </div>

@@ -7,6 +7,7 @@ export interface Props {
     toggledImage: any;
     modalOpenend: boolean;
     close: boolean;
+    closeModal: any;
 }
 
 export default class PortfolioColumn extends React.Component<Props>{
@@ -22,49 +23,28 @@ export default class PortfolioColumn extends React.Component<Props>{
 
     imageModal = (e) => {
         e.preventDefault();
-        console.log('document.body.getBoundingClientRect()',  document.body.getBoundingClientRect())
-        console.log('client X', e.clientX);
-        console.log('target', e.target.getBoundingClientRect());
-        console.log('client width', e.target.clientWidth);
-        console.log('client offset height', e.target);
         let pageOffset = document.body.getBoundingClientRect();
-        let offset = e.target.getBoundingClientRect().top - pageOffset.top;
-        
-        console.log('this.props.modalOpenend ', this.props.modalOpenend );
-        console.log('this.state.hover', this.state.hover );
         
         if(!this.props.modalOpenend) { 
             this.setState({
-                hover:!this.state.hover, 
-                offset: offset,
-                topImage: (e.target.getBoundingClientRect().top + 200),
-                leftImage: (e.target.getBoundingClientRect().left - 215)
+                hover:!this.state.hover
             })
             this.props.toggledImage(pageOffset);
         } 
     }
 
     closeModal = () => { 
-        if(this.props.modalOpenend) { 
-            this.setState({
-                hover:!this.state.hover
-            })
-            this.props.toggledImage();
-        }
+        this.setState({
+            hover:!this.state.hover
+        })
+        this.props.closeModal();
     }
 
 
     handleScroll = (event) => {
-        let lastScrollY = window.scrollY;
-        let offset = this.state.offset;
-        console.log('this.state.hover', this.state.hover)
-        console.log('this.props.close', this.props.close);
-        //console.log(offset - lastScrollY);
-        //let scrollCorrection = (offset - lastScrollY) + 200;
-        //this.setState({topImage:scrollCorrection})
         if(this.state.hover && this.props.close) { 
             this.setState({
-                hover:false
+                hover:!this.state.hover
             })
         }
     }
@@ -78,7 +58,6 @@ export default class PortfolioColumn extends React.Component<Props>{
     }
 
     render() {
-        // style={ {top:this.state.topImage, left:this.state.leftImage} }
         return (
             <div className='images'>
                 <img src={`../images/portfoliocases/${this.props.showCase}.png`} width='300px' height='100%' onClick={ (e) => { this.imageModal(e) } }/>

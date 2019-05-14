@@ -64,9 +64,18 @@
     .modal{
       position: absolute;
       display: none;
+      opacity: 0.0;
       height: 100%;
       width: 100%;
       background-color: rgba(0,0,0,0.0); /* Black w/ opacity */
+      
+      -webkit-animation-name: fadeOut;
+      animation-name: fadeOut;
+
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
       .modal-content{
         position: relative;
         display: flex;
@@ -78,6 +87,7 @@
         max-height: 900px;
         background-color: white;
         border-radius: 10px;
+        cursor: pointer;
         &::before{
           content: '';
           position: absolute;
@@ -95,10 +105,37 @@
       }
     }
     .showModal{
-      display: flex;
+      display: block;
+      opacity: 1.0;
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
     }
 }
 
 .hidden { 
   display: none;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadeOut {
+  100% {opacity: 1;}
+    0% {opacity: 0;}
+}
+
+@keyframes fadeOut {
+  100% {opacity: 1;}
+    0% {opacity: 0;}
 }
