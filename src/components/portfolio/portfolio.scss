@@ -42,6 +42,10 @@
         font-family: roboto;
         color: #000;
         padding-right: 1em;
+        .client-project {
+          letter-spacing: 2px;
+          color: #0a364e;
+        }
       }
     }
     .images{ 
@@ -52,7 +56,9 @@
       justify-content: space-between;
       position: relative;
       img {
+        border-radius: 5px;
         border-bottom: 8px solid #e06c02;
+        cursor: pointer;
       }
       .modal-container {
         position: absolute;

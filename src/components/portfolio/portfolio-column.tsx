@@ -18,7 +18,8 @@ export default class PortfolioColumn extends React.Component<Props>{
         image: '',
         topImage: 10,
         leftImage: 20,
-        offset: 0
+        offset: 0,
+        yPos: 0
     }
 
     imageModal = (e) => {
@@ -40,8 +41,8 @@ export default class PortfolioColumn extends React.Component<Props>{
         this.props.closeModal();
     }
 
-
     handleScroll = (event) => {
+        console.log('event', event)
         if(this.state.hover && this.props.close) { 
             this.setState({
                 hover:!this.state.hover
@@ -60,7 +61,7 @@ export default class PortfolioColumn extends React.Component<Props>{
     render() {
         return (
             <div className='images'>
-                <img src={`../images/portfoliocases/${this.props.showCase}.png`} width='300px' height='100%' onClick={ (e) => { this.imageModal(e) } }/>
+                <img src={`../images/portfoliocases/${this.props.showCase}_thumb.png`} width='300px' height='100%' onClick={ (e) => { this.imageModal(e) } }/>
                 <div className='modal-container'>   
                     <div className={classNames('modal', {'showModal':this.state.hover})}  onClick={ () => { this.closeModal() } }>
                         <div className='modal-content'>

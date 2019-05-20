@@ -7,7 +7,7 @@
         "client": "Vertigo Arcade",        
         "company": "Vertigo Arcade",
         "clientUrl": "https://www.vertigo-arcade.nl/",
-        "description": "A game launcher app for arcade."   
+        "description": "A VR game launcher app for arcade halls."   
     }, 
     {
         "projectTitle":"Protrader",
@@ -17,7 +17,7 @@
         "client": "Binck Bank",        
         "company": "binckbank",
         "clientUrl": "https://protrader.binck.nl/",
-        "description": "Online self tradingtool which gives the freedom to buy and sell stocks and more. build with React."   
+        "description": "Online self tradingtool which gives the freedom to buy and sell stocks and more, build with React."   
     },
     {
         "projectTitle":"Eurotransplant",
@@ -27,7 +27,7 @@
         "client": "Eurotransplant",
         "company": "eurotransplant",
         "clientUrl": "https://www.eurotransplant.org/",
-        "description": "Mockup voor het aanvragen van urgente orgaantransplantaties."   
+        "description": "Mockup build to apply for an emergency request of organs."   
     },
     {
         "projectTitle":"Zwitserleven verzekeringen",
@@ -37,7 +37,7 @@
         "client": "Vivat",
         "company": "vivat",
         "clientUrl": "https://vivat.nl/",
-        "description": "Funnel voor het aanvragen van een overlijdensrisco verzekering.",
+        "description": "A funnel for applying to a mortality risk insurance.",
         "website":"www.zwitserleven.nl",
         "url":"https://www.zwitserleven.nl/particulier/overlijdensrisicoverzekering/online-aanvragen/"   
     }, 
@@ -68,7 +68,7 @@
         "client": "Playlogic",
         "company": "playlogic",
         "clientUrl": "https://vivat.nl/",
-        "description": "Fairytale Fights is a hack and slash action-adventure game for the xbox360.",
+        "description": "Fairytale Fights is a hack and slash action-adventure game for the Xbox360.",
         "url":"https://en.wikipedia.org/wiki/Fairytale_Fights"   
     },
     {

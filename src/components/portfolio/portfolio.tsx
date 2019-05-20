@@ -44,10 +44,10 @@ export class Portfolio extends React.Component<Props>{
         let lastScrollY = window.scrollY;
         let offset = this.state.offset;
         let scrollCorrection = (offset - lastScrollY);
-        this.setState({scrollPosition:scrollCorrection})
         let imageOffset = this.state.imagePosition;
-
-        console.log('close', (imageOffset - scrollCorrection))
+        
+        this.setState(scrollCorrection)
+        
         if((imageOffset - scrollCorrection) > 275 ){ 
             this.closeModal()
         }
@@ -73,7 +73,7 @@ export class Portfolio extends React.Component<Props>{
                                     <div className='project'>Project: <span className="client-project">{showcase.projectTitle}</span></div>
                                     <div className='description'><span className="client-project">{showcase.description}</span></div>
                                 </div>
-                                <div className='images'>
+                                <div className='images' id={'row_'+index}>
                                     <PortfolioColumn 
                                         showCase={showcase.imgName1} 
                                         toggledImage={this.toggleModal} 

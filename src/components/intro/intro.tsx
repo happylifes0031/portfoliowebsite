@@ -16,7 +16,7 @@ export class Intro extends React.Component {
                         Currently working on: <u>Arcade Launcher</u> for <a href="http://vertigo-games.com/" target="_blank">Vertigo Games</a>
                     </p><br/>
                     <p>Contact me at: <a href="mailto:e-postduif@blijlevens.nu">e-mail@blijlevens.nu</a>. Download my:
-                     <a href="../../../data/wesleyblijlevensEng.pdf" title="Download CV in English">C.V. (pdf | 805kb)</a></p>
+                     <a href="../../../data/wblijlevens_CV.pdf" title="Download CV in English">C.V. (PDF | 1.1mb)</a></p>
                 </article>
             </div>
         )

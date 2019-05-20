@@ -72,6 +72,11 @@ p {
   height: 80px;
   display: flex;
   position: relative;
+  .socials{
+    float: right;
+    margin-left: auto;
+    margin-right: 169px
+  }
 }
 .inbedTimeLine { 
   position: relative;
@@ -102,13 +107,19 @@ p {
       margin-top:3em;
       a { 
         color: #000;
-        width: 100%;
-        height: 40px;
+        width: fit-content;
         display: block;
         font-size: 1.1em;
         text-transform: uppercase;
         letter-spacing: 3px;
         font-weight: 500;
+        margin-bottom: 30px;
+        line-height: 38px;
+        border-bottom-width: 3px;
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color:  #e06c02;
+        }
       }
     }
   }
@@ -116,7 +127,17 @@ p {
     max-width: 75%;
     min-width: 75%;
     color: #0a364e;
+    .working-for {
+      font-weight: bold;
+      color: #e06c02;
+      font-family: roboto;
+    }
   }
+}
+.downloadNote { 
+  font-size: 0.6em;
+  letter-spacing: 1px;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 999px) {
@@ -173,7 +194,7 @@ p {
   width: 300px;
   align-self: center;
   display: flex;
-  img { 
+  > img { 
     display: inline-block;
     margin-top:-0.2em;
     margin-right: 1em;
@@ -185,6 +206,9 @@ p {
     font-size: 0.9rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+  }
+  :nth-child(3){
+    margin-left:0.5em;
   }
 }
 

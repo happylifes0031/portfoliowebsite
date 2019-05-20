@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
 import { TimelineFrame } from './components/timeline/timeline';
-import { Intro } from './components/intro/intro';
+
 import Knowledgestack  from './components/knowledgeStack/knowledgeStack';
 import { Portfolio } from  './components/portfolio/portfolio';
-import { Content } from './components/content/content';
-import { TechColofon } from './components/techcolofon/colofon';
-import  List from './components/List';
-import store from "./stores/index";
-import { addArticle } from "./actions/action.js";
-import { element } from '../node_modules/@types/prop-types';
 
-window.store = store;
+import { TechColofon } from './components/techcolofon/colofon';
+
+import { addArticle } from "./actions/action.js";
+
 window.addArticle = addArticle;
 
 class App extends Component {
@@ -21,7 +18,6 @@ class App extends Component {
   }
 
   onMouseOver = (value) => { 
-    console.log('store.getState()', store.getState()  )
     this.setState({
       moveOverNode : value
     });
@@ -39,7 +35,7 @@ class App extends Component {
     });
   }
 
-  handleScroll = (event) => {
+  handleScroll = () => {
     let lastScrollY = window.scrollY;
     
     if(!this.state.hidePortfolio && lastScrollY <= 50) { 
@@ -62,8 +58,10 @@ class App extends Component {
       <div className="App">
         <div className="empty-bar">
           <div className="avatar"> 
-            <img src={"./images/avatar.png"} height="40px" width="45px"/> <div>W Blijlevens</div>
+            <img src={"./images/avatar.png"} height="40px" width="45px"/> 
+              <div>W Blijlevens</div>
           </div>
+          <div className="socials"><a href="https://www.linkedin.com/in/wesley-blijlevens" title='View my Linkedin page.' target="_blank"><img src={"./images/linkedin.png"} height="20px" width="20px"/></a></div>
           <TechColofon />
         </div>
         <div className="breakout"></div>
@@ -83,7 +81,7 @@ class App extends Component {
             <nav>
               <a href="#portfolio" onClick={this.togglePortfolio}>Portfolio</a>
               <a href="mailto:e-postduif@blijlevens.nu">Contact</a>
-              <a href="../../../data/blijlevens_cv_eng.pdf" title="Download CV in English">Download C.V.</a>
+              <a href="../../../data/blijlevens_cv_eng.pdf" title="Download CV in English">Download C.V. <span className="downloadNote">(PDF | 1.1mb)</span></a>
             </nav>
             </div>
             <div className="intro">
@@ -92,7 +90,7 @@ class App extends Component {
                   Born and raised in Rotterdam, living in Amsterdam.
                   I have background in game development and currently do front-end development. With a love for technology and design, I have taught myself 3D design and programming!
                 </p>
-                <p>- Currently working for: <b>nobody ;-)</b></p>
+                <span>- Currently working for:</span> <span className='working-for'>DEVA</span>
               </article>
             </div>
           </div>

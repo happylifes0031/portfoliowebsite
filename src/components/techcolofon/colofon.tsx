@@ -10,7 +10,7 @@ export const TechColofon = () => {
                     <li>Webpack</li>
                     <li>ES6</li>
                     <li className="borderTop">Version: 3.0</li>
-                    <li>07/02/2019</li>
+                    <li>14/05/2019</li>
                 </ul>
             </div>
             <div className="colofon">Colofon</div>

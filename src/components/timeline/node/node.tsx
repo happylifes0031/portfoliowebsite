@@ -28,8 +28,8 @@ class Node extends React.Component<Props>{
     
     for(let i in skills) { 
       let idName = (skills[i].search(',') !== -1) ? skills[i].slice(0, -1) : skills[i];
-      console.log(idName);
       let element = document.getElementById(idName);
+
       if(element) { 
         if (element.className.match("iconTile addShadow")) {
           element.className = "iconTile";
@@ -44,10 +44,8 @@ class Node extends React.Component<Props>{
     
     for(let i in skills) { 
       let idName = (skills[i].search(',') !== -1) ? skills[i].slice(0, -1) : skills[i];
-      let index = i;
-      console.log(idName);
       let element = document.getElementById(idName);
-      console.log(element);
+      
       if(element) { 
         if (!element.className.match("addShadow")) {
           element.className += " " + "addShadow";
