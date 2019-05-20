@@ -1,24 +1,44 @@
 import * as React from "react";
 
+interface IntroProps { 
+    togglePortfolio: () => void;
+}
 
-export class Intro extends React.Component {
-    render() {
+export class Intro extends React.Component<IntroProps> {
+    private togglePortfolio = ():void => { 
+        this.props.togglePortfolio();
+    }
+
+    public render() {
         return (
-            <div className="intro">
-                <article id="intro-block">
-                    <header><h2>About me:</h2></header>
-                    <p>
-                        Freelance front-end developer & part time teacher.
-                        Born and raised in Rotterdam, currently living in Amsterdam.
-                        <br/>I have background in game development and currently do front-end development. With a love for technology and design, I have taught myself 3D design and programming!<br/>
-                    </p><br/>
-                    <p>
-                        Currently working on: <u>Arcade Launcher</u> for <a href="http://vertigo-games.com/" target="_blank">Vertigo Games</a>
-                    </p><br/>
-                    <p>Contact me at: <a href="mailto:e-postduif@blijlevens.nu">e-mail@blijlevens.nu</a>. Download my:
-                     <a href="../../../data/wblijlevens_CV.pdf" title="Download CV in English">C.V. (PDF | 1.1mb)</a></p>
-                </article>
+            <div className="content">
+            <div className="welcome">
+              <article>
+                <h2>Hello, i am a freelance</h2>
+                <h1>front-end developer</h1>
+                <h2>& hobby game developer</h2>
+              </article>
             </div>
+            <div className="midSection">
+              <div className="menu">
+              <nav>
+                <a href="#portfolio" onClick={this.togglePortfolio}>Portfolio</a>
+                <a href="mailto:e-postduif@blijlevens.nu">Contact</a>
+                <a href="../../../data/blijlevens_cv_eng.pdf" title="Download CV in English">Download C.V. <span className="downloadNote">(PDF | 1.1mb)</span></a>
+              </nav>
+              </div>
+              <div className="intro">
+                <article>
+                  <p>Freelance front-end developer and hobby game developer.
+                    Born and raised in Rotterdam, living in Amsterdam.
+                    I have background in game development and currently do front-end development. With a love for technology and design, I have taught myself 3D design and programming!
+                  </p>
+                  <span>- Currently working for:</span> <span className='working-for'>DEVA</span>
+                </article>
+              </div>
+            </div>
+            
+          </div>
         )
     }
 }
