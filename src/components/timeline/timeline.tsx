@@ -2,25 +2,22 @@ import * as React from 'react';
 import Node from './node/node';
 const timeline = require('../../../data/timeline.json');
 
-export interface Props {
-    stringValue: string;
-    beginIndex: number;
-    endIndex: number;
-    onmouseOver:any;
+export interface TimelineFrameProps {
+    onmouseOver: (companyName:string) => void;
 }
 
-export class TimelineFrame extends React.Component<Props> {
+export class TimelineFrame extends React.Component<TimelineFrameProps> {
     state = {
         frameWidth: 0,
         startTimeLine: timeline[0].from,
         endTimeLine: timeline[timeline.length -1].till    
     };
     
-    getNumberValueFromDateString(stringValue:string, beginIndex:number, endIndex:number){
+    private getNumberValueFromDateString(stringValue:string, beginIndex:number, endIndex:number):number {
        return parseInt(stringValue.substring(beginIndex, endIndex));
     }
 
-    calculateAmountOfTotalMonths = () => {
+    private calculateAmountOfTotalMonths = ():number => {
         const startYear = this.getNumberValueFromDateString(this.state.startTimeLine, 3, 7);
         const startMonth = this.getNumberValueFromDateString(this.state.startTimeLine, 0, 2);
         const endYear = this.getNumberValueFromDateString(this.state.endTimeLine, 3, 7);
@@ -29,17 +26,17 @@ export class TimelineFrame extends React.Component<Props> {
         return ((endYear-startYear)*12) - startMonth + endMonth;
     }
      
-    getWidth = () => { 
+    private getWidth = ():void => { 
         this.setState({ 
           frameWidth: (!document.getElementById("timeLine").offsetWidth)
         });
     }
 
-    componentDidMount() {
+    public componentDidMount() {
         window.addEventListener('resize', this.getWidth);
     }
 
-    render() {
+    public render() {
         const totalAmountOfMonths = this.calculateAmountOfTotalMonths();
         let isEven = false;
         let isHigher = false;
@@ -77,9 +74,19 @@ export class TimelineFrame extends React.Component<Props> {
                         let left = (percentagePerMonth * start);
                         let width = (percentagePerMonth * totalMonths);
 
-                        return <Node key={index} index={index} {...companies} onmouseOver={this.props.onmouseOver} isEven={isEven} toggleAbove={toggleAbove} 
-                            toggleUnder={toggleUnder} isHigher={isHigher}
-                            width={width} left={left} totalAmountOfMonths={totalAmountOfMonths} />;
+                        return <Node 
+                                key={index} 
+                                index={index} 
+                                {...companies} 
+                                onmouseOver={this.props.onmouseOver} 
+                                isEven={isEven} 
+                                toggleAbove={toggleAbove} 
+                                toggleUnder={toggleUnder} 
+                                isHigher={isHigher}
+                                width={width} 
+                                left={left} 
+                                totalAmountOfMonths={totalAmountOfMonths} 
+                            />;
                     })
                 }
                 <div className="endDate">{this.state.endTimeLine.slice(3, 7)}</div>

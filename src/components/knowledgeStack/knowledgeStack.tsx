@@ -21,7 +21,7 @@ class Knowledgestack extends React.Component {
             data-align="center" height={`${ICON_HEIGHT_IN_PIXELS}`+'px'} width={`${ICON_WIDTH_IN_PIXELS}`+'px'}/>
           </div>
         </div>
-      )})
+    )})
 
     return ( 
       <div className="App-knowledge-stack">

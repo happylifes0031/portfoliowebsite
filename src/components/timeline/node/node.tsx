@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
-export interface Props {
+export interface NodeProps {
   skills: string;
   onmouseOver: any;
   company: string;
@@ -16,13 +16,13 @@ export interface Props {
   toggleAbove: boolean;
 }
 
-class Node extends React.Component<Props>{
+class Node extends React.Component<NodeProps>{
   state = {
       frameWidth: 0,
       totalAmountOfMonths: 0
   };
 
-  removeClass(){
+  private removeClass():void {
     let skillName = this.props.skills;
     var skills = skillName.toLowerCase().split(" ");
     
@@ -38,7 +38,7 @@ class Node extends React.Component<Props>{
     }
   }
 
-  addShadowToTile( ){
+  private addShadowToTile():void {
     let skillName = this.props.skills;
     var skills = skillName.toLowerCase().split(" ");
     
@@ -55,16 +55,14 @@ class Node extends React.Component<Props>{
     this.props.onmouseOver(this.props.company);
   }
 
-  render() { 
+  public render() { 
     const {from, till, role, skills, left, width, isEven, companyName, toggleUnder, toggleAbove} = this.props;
     
     const nodeStyle = {
       left: left + '%',
       width: width + '%'
     };
-    /*
-    className={classNames('verticalLine', {'isEven': isEven})}
-    */
+
     return (
       <div className={classNames('node', {'isEven': isEven}, {'isHigher': (!isEven && toggleAbove) || (isEven && toggleUnder) })} style={nodeStyle}>
           <h5>{companyName}</h5>

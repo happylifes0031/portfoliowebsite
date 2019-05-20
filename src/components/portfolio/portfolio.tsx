@@ -3,13 +3,7 @@ const showCase = require('../../../data/portfolioCases.json');
 import {PortfolioRow} from './portfolio-row';
 
 
-export interface Props {
-    activeNode: any;
-    pos:number;
-}
-
-
-export class Portfolio extends React.Component<Props>{
+export class Portfolio extends React.Component {
     state = { 
         offset: 0,
         scrollPosition: 0,
