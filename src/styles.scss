@@ -3,7 +3,6 @@
 @import './components/intro/intro.scss';
 @import './components/timeline/timeline.scss';
 @import './components/portfolio/portfolio.scss';
-@import './components/content/content.scss';
 
 @font-face {
   font-family: indieFlower;
@@ -69,7 +68,7 @@ p {
 }
 .empty-bar{
   width: 100%;
-  height: 80px;
+  height: 8vh;
   display: flex;
   position: relative;
   .socials{
@@ -161,7 +160,7 @@ p {
 .breakout{
   position: absolute;
   background-color: #fff;
-  height: 196px;
+  height: 19.2vh;
   width: 100%;
   top: 110px;
   left:0;

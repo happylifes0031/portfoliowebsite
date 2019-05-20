@@ -10,11 +10,11 @@ const imageminPngquant = require('imagemin-pngquant');
 let cleanCSS = require('gulp-clean-css');
 
 
-gulp.task('deploy-dev', function() {
+gulp.task('deploy', function() {
     var conn = ftp.create( {
-        host:     'ftp.blijlevens.nl',
+        host:     'ftp.blijlevens.nu',
         user:     'happylifes@blijlevens.nu',
-        password: '8Z2Bd2SJ',
+        password: 'w0G26RuI',
         parallel: 3,
         log:      gutil.log
     } );
@@ -29,6 +29,7 @@ gulp.task('deploy-dev', function() {
         .pipe( conn.dest( 'domains/blijlevens.nu/public_html/' ) )
         .pipe( notify("Dev site updated!"));
 });
+
 gulp.task('default', function () {
     gulp.watch(['*', '**/*'], ['deploy-dev']);
 });
