@@ -24,4 +24,5 @@ export const Knowledgestack = () => {
         <Icons/>
       </div>
     </div>
-)
+  )
+}
