@@ -1,4 +1,5 @@
 import * as React from 'react';
+import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 const showCase = require('../../../data/portfolioCases.json');
 
@@ -41,8 +42,7 @@ export default class PortfolioColumn extends React.Component<Props>{
         this.props.closeModal();
     }
 
-    handleScroll = (event) => {
-        console.log('event', event)
+    handleScroll = () => {
         if(this.state.hover && this.props.close) { 
             this.setState({
                 hover:!this.state.hover
@@ -52,6 +52,8 @@ export default class PortfolioColumn extends React.Component<Props>{
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
+        let n = ReactDOM.findDOMNode(this);
+        console.log(n);
     }
 
     componentWillUnmount() {

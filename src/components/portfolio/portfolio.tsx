@@ -1,7 +1,6 @@
 import * as React from 'react';
-import classNames from 'classnames';
-import PortfolioColumn from './portfolio-column';
 const showCase = require('../../../data/portfolioCases.json');
+import {PortfolioRow} from './portfolio-row';
 
 export interface Props {
     activeNode: any;
@@ -12,92 +11,49 @@ export class Portfolio extends React.Component<Props>{
     state = { 
         selectedIndex: 0,
         fadeIn: false,
-        hover:false,
+        hover: false,
         image: '',
         topImage: 10,
         leftImage: 20,
         offset: 0,
-        modalOpend: false,
         scrollPosition: 0,
         imagePosition: 0,
-        close: false
+        listOfRows: []
     }
 
-    closeModal = () => { 
-        this.setState({
-            hover:false,
-            modalOpend:false,
-            close: true
-        })
-    }
-
-    toggleModal = (imageOffset:any) => { 
-        this.setState({
-            modalOpend:true,
-            imagePosition: imageOffset.top,
-            close: false
-        });
-    }
-
-
-    handleScroll = ( ) => {
+    private handleScroll = ():void => {
         let lastScrollY = window.scrollY;
         let offset = this.state.offset;
         let scrollCorrection = (offset - lastScrollY);
-        let imageOffset = this.state.imagePosition;
         
         this.setState(scrollCorrection)
-        
-        if((imageOffset - scrollCorrection) > 275 ){ 
-            this.closeModal()
-        }
     }
 
-    componentDidMount() {
+    public componentDidMount():void {
         window.addEventListener('scroll', this.handleScroll);
     }
 
-    componentWillUnmount() {
+    public componentWillUnmount():void {
         window.removeEventListener('scroll', this.handleScroll);
     }
 
-    render() {
+    private listOfRows = (rowId:string):void => { }
+
+    public render() {
         return (
             <div id='portfolio' className='portfolio'>
                 <div className='portfolio-title'><h2>Portfolio</h2></div>
                 { 
-                    showCase.map( (showcase, index) => { return ( 
+                    showCase.map( (showcase, index) => { 
+                        this.listOfRows( ('row_'+index) )
+                        return ( 
                             <div className='portfolio-content'>
                                 <div className='portfolioContent'>
                                     <div className='client'>Client: <span className="client-title">{showcase.client}</span></div>
                                     <div className='project'>Project: <span className="client-project">{showcase.projectTitle}</span></div>
                                     <div className='description'><span className="client-project">{showcase.description}</span></div>
                                 </div>
-                                <div className='images' id={'row_'+index}>
-                                    <PortfolioColumn 
-                                        showCase={showcase.imgName1} 
-                                        toggledImage={this.toggleModal} 
-                                        modalOpenend={this.state.modalOpend} 
-                                        close={this.state.close}
-                                        closeModal={this.closeModal}
-                                    />
-                                    <PortfolioColumn 
-                                        showCase={showcase.imgName2} 
-                                        toggledImage={this.toggleModal} 
-                                        modalOpenend={this.state.modalOpend} 
-                                        close={this.state.close}
-                                        closeModal={this.closeModal}
-                                    />
-                                    { showcase.imgName3 && 
-                                        <PortfolioColumn 
-                                            showCase={showcase.imgName3} 
-                                            toggledImage={this.toggleModal} 
-                                            modalOpenend={this.state.modalOpend} 
-                                            close={this.state.close}
-                                            closeModal={this.closeModal}
-                                        />
-                                    }
-                                </div>
+                            <PortfolioRow showcase={showcase} index={index}/>
                         </div>
                         )
                     })
