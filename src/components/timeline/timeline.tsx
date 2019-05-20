@@ -1,5 +1,5 @@
-import * as React from 'react';
-import Node from './node/node';
+import React from 'react';
+import {Node} from './node/node';
 const timeline = require('../../../data/timeline.json');
 
 export interface TimelineFrameProps {

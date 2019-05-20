@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 const showCase = require('../../../data/portfolioCases.json');
 import {PortfolioRow} from './portfolio-row';
 
@@ -10,8 +10,7 @@ export class Portfolio extends React.Component {
         pos: 0
     }
 
-    private handleScroll = ():void => {
-    }
+    private handleScroll = ():void => {}
 
     public componentDidMount():void {
         window.addEventListener('scroll', this.handleScroll);

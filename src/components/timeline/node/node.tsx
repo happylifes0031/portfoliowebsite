@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 export interface NodeProps {
@@ -16,7 +16,7 @@ export interface NodeProps {
   toggleAbove: boolean;
 }
 
-class Node extends React.Component<NodeProps>{
+export class Node extends React.Component<NodeProps>{
   state = {
       frameWidth: 0,
       totalAmountOfMonths: 0
@@ -86,5 +86,3 @@ class Node extends React.Component<NodeProps>{
     )
   }
 }
-
-export default Node;

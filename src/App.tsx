@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { TimelineFrame } from './components/timeline/timeline';
 
-import Knowledgestack  from './components/knowledgeStack/knowledgeStack';
+import { Knowledgestack }  from './components/knowledgeStack/knowledgeStack';
 import { Portfolio } from  './components/portfolio/portfolio';
 import { TechColofon } from './components/techcolofon/colofon';
 import { Intro } from './components/intro/intro';
