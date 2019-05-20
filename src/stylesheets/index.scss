@@ -27,46 +27,6 @@ p {
   font-size: 1.3rem;
 }
 
-@media only screen and (min-width: 1000px) {
-  h1{
-    font-size: 5.0em;
-    letter-spacing: 0.1em;
-  }
-  h2 { 
-    font-size: 2em;
-    margin: 0;
-    word-spacing: 1px;
-    letter-spacing: 7px;
-  }
-  p {
-    font-size: 1.35rem;
-    line-height: 1.5em;
-    & a { 
-      letter-spacing: 1px;
-    }
-  }
-}
-@media only screen and (max-width: 999px) {
-  h1{
-    font-size: 3.0em;
-    letter-spacing: 0.1em;
-    margin:0;
-  }
-  h2 { 
-    font-size: 1em;
-    margin: 0;
-    word-spacing: 1px;
-    letter-spacing: 7px;
-  }
-  p {
-    font-size: 0.85rem;
-    line-height: 1.5em;
-    & a { 
-      letter-spacing: 1px;
-    }
-  }
-}
-
 h1{
   font-family: roboto-bold;
   color: black;
@@ -89,5 +49,46 @@ p {
     color:#e06c02;
     text-decoration: none;
     letter-spacing: 1px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  h1{
+    font-size: 5.0em;
+    letter-spacing: 0.1em;
+  }
+  h2 { 
+    font-size: 2em;
+    margin: 0;
+    word-spacing: 1px;
+    letter-spacing: 7px;
+  }
+  p {
+    font-size: 1.35rem;
+    line-height: 1.5em;
+    & a { 
+      letter-spacing: 1px;
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  h1{
+    font-size: 3.0em;
+    letter-spacing: 0.1em;
+    margin:0;
+  }
+  h2 { 
+    font-size: 1em;
+    margin: 0;
+    word-spacing: 1px;
+    letter-spacing: 7px;
+  }
+  p {
+    font-size: 0.85rem;
+    line-height: 1.5em;
+    & a { 
+      letter-spacing: 1px;
+    }
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import { TimelineFrame } from './components/timeline/timeline';
 
+import { TimelineFrame } from './components/timeline/timeline';
 import { Knowledgestack }  from './components/knowledgeStack/knowledgeStack';
 import { Portfolio } from  './components/portfolio/portfolio';
 import { TechColofon } from './components/techcolofon/colofon';
