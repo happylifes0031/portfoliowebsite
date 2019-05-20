@@ -13,26 +13,22 @@ export class PortfolioRow extends React.Component<Props> {
     state = { 
         yPosition: 0,
         modalOpend: false,
-        close: false,
+        close: false
+    }
+
+    private updateRowState = (modalOpend:boolean, close:boolean):void => { 
+        this.setState({modalOpend, close})
     }
 
     private closeModal = ():void => { 
-        this.setState({
-            hover:false,
-            modalOpend:false,
-            close: true
-        })
+        this.updateRowState(false,true);
     }
 
-    public toggleModal = (imageOffset:any):void => { 
-        this.setState({
-            modalOpend:true,
-            imagePosition: imageOffset.top,
-            close: false
-        });
+    public toggleModal = ():void => { 
+        this.updateRowState(true,false);
     }
 
-    private handleScroll = ():void => {
+    private handleScroll = (event):void => {   
     }
 
     public componentDidMount():void {

@@ -13,18 +13,11 @@ export interface Props {
 
 export default class PortfolioColumn extends React.Component<Props>{
     state = { 
-        selectedIndex: 0,
-        fadeIn: false,
         hover:false,
-        image: '',
-        topImage: 10,
-        leftImage: 20,
-        offset: 0,
-        yPos: 0
     }
 
-    imageModal = (e) => {
-        e.preventDefault();
+    private imageModal = (event:React.MouseEvent<HTMLElement>):void => {
+        event.preventDefault();
         let pageOffset = document.body.getBoundingClientRect();
         
         if(!this.props.modalOpenend) { 
@@ -35,14 +28,14 @@ export default class PortfolioColumn extends React.Component<Props>{
         } 
     }
 
-    closeModal = () => { 
+    private closeModal = ():void => { 
         this.setState({
             hover:!this.state.hover
         })
         this.props.closeModal();
     }
 
-    handleScroll = () => {
+    private handleScroll = ():void => {
         if(this.state.hover && this.props.close) { 
             this.setState({
                 hover:!this.state.hover
@@ -50,17 +43,15 @@ export default class PortfolioColumn extends React.Component<Props>{
         }
     }
 
-    componentDidMount() {
+    public componentDidMount():void {
         window.addEventListener('scroll', this.handleScroll);
-        let n = ReactDOM.findDOMNode(this);
-        console.log(n);
     }
 
-    componentWillUnmount() {
+    public componentWillUnmount():void {
         window.removeEventListener('scroll', this.handleScroll);
     }
 
-    render() {
+    public render() {
         return (
             <div className='images'>
                 <img src={`../images/portfoliocases/${this.props.showCase}_thumb.png`} width='300px' height='100%' onClick={ (e) => { this.imageModal(e) } }/>
