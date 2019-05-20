@@ -45,7 +45,8 @@ export default class App extends React.Component {
   public render() {
     return (
       <div className="App">
-        <div className="empty-bar">
+        
+        <div className="avatar-bar">
           <div className="avatar"> 
             <img src={"./images/avatar.png"} height="40px" width="45px"/> 
               <div>W Blijlevens</div>
@@ -56,7 +57,8 @@ export default class App extends React.Component {
           </div>
           <TechColofon />
         </div>
-        <div className="breakout"></div>
+        
+        <div className="outer-timeline"></div>
           <div className="inbedTimeLine">
             <TimelineFrame onmouseOver={this.onMouseOver}/>
           </div>

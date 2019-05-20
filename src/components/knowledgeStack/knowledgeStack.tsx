@@ -10,7 +10,7 @@ export const Icons = () => {
     return (
         <div key={'iconName_'+index} className="outerIcon" >
           <div className="iconTile" id={element}>
-            <img src={"./images/img/"+element.icon+".png"} alt={element.icon + " icon"} 
+            <img src={"./images/icons/"+element.icon+".png"} alt={element.icon + " icon"} 
             data-align="center" height={`${ICON_HEIGHT_IN_PIXELS}`+UNIT_TYPE} width={`${ICON_WIDTH_IN_PIXELS}`+UNIT_TYPE}/>
           </div>
         </div>
