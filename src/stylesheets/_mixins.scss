@@ -1,0 +1,14 @@
+
+@mixin grayscale($grayscale) {
+    -webkit-filter: grayscale($grayscale);
+    -moz-filter: grayscale($grayscale);
+    -o-filter: grayscale($grayscale);
+    -ms-filter: grayscale($grayscale);
+    filter: grayscale($grayscale);
+}
+
+@mixin shadow($h-offset, $v-offset, $blur, $spread, $color ) { 
+    -webkit-box-shadow: $h-offset, $v-offset, $blur, $spread, $color;
+    -moz-box-shadow: $h-offset, $v-offset, $blur, $spread, $color;
+    box-shadow: $h-offset, $v-offset, $blur, $spread, $color;
+}

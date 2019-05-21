@@ -15,7 +15,7 @@
           width: 4%;
           height: 1px;
           position: absolute;
-          background-color: #e06c02;
+          background-color: $orange-color;
         }
         nav {
           display: block;
@@ -33,7 +33,7 @@
             border-bottom-width: 3px;
             &:hover {
               text-decoration: underline;
-              text-decoration-color:  #e06c02;
+              text-decoration-color:  $orange-color;
             }
           }
         }
@@ -46,12 +46,11 @@
       .intro {
         max-width: 75%;
         min-width: 75%;
-        color: #0a364e;
+        color: $blue-color;
         margin-top: 3em;
         .working-for {
           font-weight: bold;
-          color: #e06c02;
-          font-family: roboto;
+          color: $orange-color;
           text-transform: uppercase;
         }
       }

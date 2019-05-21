@@ -6,7 +6,6 @@
     top: 0;
     animation-name: fadeIn;
     animation-duration: 1s;
-    
 }
 @keyframes fadeIn {
     0% { opacity:0; }
@@ -63,15 +62,6 @@
         }
     }
 }
-.isEven > .stick-node > .isEven { 
-    width: 1px;
-    height: 30px;
-    background: #ffffff; /* Old browsers */
-    background: -moz-linear-gradient(top, #ffffff 0%, #fa9717 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ffffff 0%,#fa9717 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #ffffff 0%,#fa9717 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fa9717',GradientType=0 );
-}
 .isEven > h5 {
     top: 2px;
 }
@@ -82,18 +72,6 @@
     left: 0;
     background-color: #000;
     position: absolute;
-}
-.node > .stick-node > .vertical-line:not(.isEven) { 
-    position: relative;
-    display: inline-block;
-    width: 2px;
-    height: 30px;
-    border-left: 1px solid transparent;
-    margin:0 auto;
-    -moz-border-image: -moz-linear-gradient(top, #fa9717 0%, #efefef 100%);
-    -webkit-border-image: -webkit-linear-gradient(top, #fa9717 0%, #efefef 100%);
-    border-image: linear-gradient(to bottom, #fa9717 0%, #efefef 100%);
-    border-image-slice: 1;
 }
 .circle {    
     position: absolute;
@@ -130,9 +108,7 @@
     border-radius: 5px;
     z-index: 999;
     animation: fadein 1.5s;
-    -webkit-box-shadow: -1px 5px 44px -1px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: -1px 5px 44px -1px rgba(0, 0, 0, 0.2);
-    box-shadow: -1px 5px 44px -1px rgba(0, 0, 0, 0.2);
+    @include shadow(-1px, 5px, 44px, -1px,rgba(0, 0, 0, 0.2));
     ul {
         display: flex;
         flex-wrap:wrap;

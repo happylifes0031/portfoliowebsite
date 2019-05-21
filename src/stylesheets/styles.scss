@@ -1,9 +1,13 @@
+@import './fonts';
+@import './mixins';
+@import './settings';
+
 @import '../components/knowledgeStack/knowledgeStack.scss';
 @import '../components/techcolofon/techcolofon.scss';
 @import '../components/intro/intro.scss';
 @import '../components/timeline/timeline.scss';
 @import '../components/portfolio/portfolio.scss';
-@import './fonts.scss';
+
 
 .App {
   display: flex;
