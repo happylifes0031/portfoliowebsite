@@ -43,13 +43,12 @@
   }
 }
 
-
 .outer-timeline{
   position: absolute;
   background-color: #fff;
   height: 196px;
   width: 100%;
-  top: 110px;
+  top: 80px;
   left:0;
   &:after{
     content: '';
@@ -74,8 +73,7 @@
   position: relative;
   width: 100%;
   height: 175px;
-  margin-bottom: 5em;
-  top: 50px;
+  top: 10px;
 }
 
 @keyframes move {

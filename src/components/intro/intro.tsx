@@ -26,7 +26,7 @@ export const Intro = (props:IntroProps) => {
                     Born and raised in Rotterdam, living in Amsterdam.
                     I have background in game development and currently do front-end development. With a love for technology and design, I have taught myself 3D design and programming!
                     </p>
-                    <span>- Currently working for:</span> <span className='working-for'>DEVA</span>
+                    <span>- Currently working for:</span> <span className='working-for'>deva</span>
                 </article>
                 </div>
             </div>
