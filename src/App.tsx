@@ -59,7 +59,7 @@ export default class App extends React.Component {
         </div>
         
         <div className="outer-timeline"></div>
-          <div className="inbedTimeLine">
+          <div className="inbedded-timeline">
             <TimelineFrame onmouseOver={this.onMouseOver}/>
           </div>
         <Intro togglePortfolio={this.togglePortfolio} />

@@ -1,6 +1,5 @@
 @import './node/node';
-/*     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxODAuMSIgaGVpZ2h0PSI0LjYiIHZpZXdCb3g9IjAgMCAxODAuMSA0LjYiPjxwYXRoIGQ9Ik0yMTYsMzk5LjkyYzEuODcsMCwzNSwyLjgsNTQuNTMsMCwyMC41OS0zLDQxLjgsMS4yNCw1Ni40Ny0xLjE0LDEyLjg0LTIuMDgsNTUuNTgtMS4zNiw2OSwxLjE0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjE2IC0zOTcuMDYpIiBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojNDg2ZjkwO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS13aWR0aDoxcHgiLz48L3N2Zz4=);
-*/
+
 .timeline {
     position: absolute;
     left: 0;
@@ -9,7 +8,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     color: #000;
-    background-image: url('./images/blackline.png');
+    background-image: url('../images/blackline.png');
     background-repeat: repeat-x;
     background-position: center; 
     font-family: roboto;
@@ -36,20 +35,19 @@
     z-index: 999;
 }
 
-.endDate, .startDate {
+.end-date, .start-date {
     position: absolute;
     top: 96px;
     font-size: 1em;
 }
-
-.endDate{ 
+.end-date{ 
     right: -50px;
     &:before{
         @extend %circle;
         margin-right:2px;
     }
 }
-.startDate{
+.start-date{
     left: -50px;
     &:after{
         @extend %circle;

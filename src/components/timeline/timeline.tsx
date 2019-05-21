@@ -45,7 +45,7 @@ export class TimelineFrame extends React.Component<TimelineFrameProps> {
 
         return (
             <div className="timeline">
-                <div className="startDate">{this.state.startTimeLine.slice(3, 7)}</div>
+                <div className="start-date">{this.state.startTimeLine.slice(3, 7)}</div>
                 { 
                     
                     timeline.map( (companies:any, index:number) => {
@@ -89,7 +89,7 @@ export class TimelineFrame extends React.Component<TimelineFrameProps> {
                             />;
                     })
                 }
-                <div className="endDate">{this.state.endTimeLine.slice(3, 7)}</div>
+                <div className="end-date">{this.state.endTimeLine.slice(3, 7)}</div>
             </div>
         )
     }

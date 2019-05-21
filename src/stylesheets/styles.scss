@@ -1,8 +1,8 @@
-@import './components/knowledgeStack/knowledgeStack.scss';
-@import './components/techcolofon/techcolofon.scss';
-@import './components/intro/intro.scss';
-@import './components/timeline/timeline.scss';
-@import './components/portfolio/portfolio.scss';
+@import '../components/knowledgeStack/knowledgeStack.scss';
+@import '../components/techcolofon/techcolofon.scss';
+@import '../components/intro/intro.scss';
+@import '../components/timeline/timeline.scss';
+@import '../components/portfolio/portfolio.scss';
 @import './fonts.scss';
 
 .App {
@@ -11,116 +11,38 @@
   height: 100%; 
   flex-direction: column;
 }
-.App-title {
-  font-size: 1.5em;
-}
-.App-intro {
-  font-size: large;
-  background-color: orange;
-  margin-bottom: 50px;
-}
-.App-showcase{
-  background-color: green;
-}
-.App-knowledge-stack{
-  width: 100%;
-  flex-direction: column;
-}
-
 
 .avatar-bar{
   width: 100%;
   height: 60px;
   display: flex;
   position: relative;
+  .avatar{
+    height: 50px;
+    width: 300px;
+    align-self: center;
+    display: flex;
+    > img { 
+      display: inline-block;
+      margin-top:-0.2em;
+      margin-right: 1em;
+    }
+    div { 
+      align-self: center;
+      display: inline-block;
+      font-family: roboto-bold;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
   .socials{
     float: right;
     margin-left: auto;
     margin-right: 169px
   }
 }
-x
-.inbedTimeLine { 
-  position: relative;
-  width: 100%;
-  height: 175px;
-  margin-bottom: 5em;
-  top: 50px;
-}
 
-.midSection {
-  display: flex;
-  margin-bottom: 1rem;
-  margin-top: 3em;
-  letter-spacing: 1px;
-  .menu{
-    max-width: 25%;
-    min-width: 25%;
-    margin-top: 1.5em;
-    &:before{
-      content: '';
-      display: block;
-      width: 4%;
-      height: 1px;
-      position: absolute;
-      background-color: #e06c02;
-    }
-    nav {
-      display: block;
-      margin-top:3em;
-      a { 
-        color: #000;
-        width: fit-content;
-        display: block;
-        font-size: 1.1em;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        font-weight: 500;
-        margin-bottom: 30px;
-        line-height: 38px;
-        border-bottom-width: 3px;
-        &:hover {
-          text-decoration: underline;
-          text-decoration-color:  #e06c02;
-        }
-      }
-    }
-  }
-  .intro{
-    max-width: 75%;
-    min-width: 75%;
-    color: #0a364e;
-    .working-for {
-      font-weight: bold;
-      color: #e06c02;
-      font-family: roboto;
-    }
-  }
-}
-.downloadNote { 
-  font-size: 0.6em;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-
-@media only screen and (max-width: 999px) {
-  .midSection {
-    margin-bottom: 1rem;
-    margin-top: 1.5em;
-    .menu{
-      nav {
-        display: block;
-        margin-top:2em;
-        a { 
-          font-size: .7em;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-weight: 200;
-        }
-      }
-    }
-  }
-}
 
 .outer-timeline{
   position: absolute;
@@ -148,33 +70,15 @@ x
   }
 }
 
+.inbedded-timeline { 
+  position: relative;
+  width: 100%;
+  height: 175px;
+  margin-bottom: 5em;
+  top: 50px;
+}
+
 @keyframes move {
   from {top: 151px;}
   to {top: 181px;}
-}
-
-.avatar{
-  height: 50px;
-  width: 300px;
-  align-self: center;
-  display: flex;
-  > img { 
-    display: inline-block;
-    margin-top:-0.2em;
-    margin-right: 1em;
-  }
-  div { 
-    align-self: center;
-    display: inline-block;
-    font-family: roboto-bold;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-}
-
-.content{
-  display: block;
-  width: 100%;
-  margin-top:3em;
 }

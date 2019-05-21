@@ -13,7 +13,7 @@
       margin-top: 2em;
       margin-bottom: 4em;
     }
-    .portfolioContent { 
+    .portfolio-info { 
       width: 20%;
       height:100%;
       .client{
@@ -73,11 +73,9 @@
       opacity: 0.0;
       height: 100%;
       width: 100%;
-      background-color: rgba(0,0,0,0.0); /* Black w/ opacity */
-      
+      background-color: rgba(0,0,0,0.0);
       -webkit-animation-name: fadeOut;
       animation-name: fadeOut;
-
       -webkit-animation-duration: 1s;
       animation-duration: 1s;
       -webkit-animation-fill-mode: both;
@@ -110,7 +108,7 @@
         }
       }
     }
-    .showModal{
+    .show-modal{
       display: block;
       opacity: 1.0;
       -webkit-animation-name: fadeIn;

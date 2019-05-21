@@ -55,7 +55,7 @@ export default class PortfolioColumn extends React.Component<Props>{
             <div className='images'>
                 <img src={`../images/portfoliocases/${this.props.showCase}_thumb.png`} width='300px' height='100%' onClick={ (e) => { this.imageModal(e) } }/>
                 <div className='modal-container'>   
-                    <div className={classNames('modal', {'showModal':this.state.hover})}  onClick={ () => { this.closeModal() } }>
+                    <div className={classNames('modal', {'show-modal':this.state.hover})}  onClick={ () => { this.closeModal() } }>
                         <div className='modal-content'>
                             <img 
                                 src={`../images/portfoliocases/${this.props.showCase}.png`}  

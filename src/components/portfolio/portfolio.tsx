@@ -28,7 +28,7 @@ export class Portfolio extends React.Component {
                     showCase.map( (showcase, index) => { 
                         return ( 
                             <div className='portfolio-content'>
-                                <div className='portfolioContent'>
+                                <div className='portfolio-info'>
                                     <div className='client'>Client: <span className="client-title">{showcase.client}</span></div>
                                     <div className='project'>Project: <span className="client-project">{showcase.projectTitle}</span></div>
                                     <div className='description'><span className="client-project">{showcase.description}</span></div>

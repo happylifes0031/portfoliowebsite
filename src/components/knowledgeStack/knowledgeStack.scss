@@ -1,48 +1,53 @@
-.iconTile { 
-    width: 60px;
-    height: 60px;
-    display: inline-block;
-    margin: 12px;
-    transition-property: all;
-    transition-duration: 1s;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    img { 
-      border-radius: 5px;
-      -webkit-filter: grayscale(90%);
-      -moz-filter: grayscale(90%);
-        -o-filter: grayscale(90%);
-       -ms-filter: grayscale(90%);
-           filter: grayscale(90%);
-    }
-}
-.outerIcon {
-  height: 50px;
-  width: 50px;
-  float: left;
-  img { 
-    border-radius: 5px;
-    align-self: center;
-  }
-}
-.addShadow {
-  -webkit-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.35);
-  -moz-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.35);
-  box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.35);
-}
-.addShadow > img { 
-  width: 55px;
-  height: 55px;
-  -webkit-filter: grayscale(0%);
-  -moz-filter: grayscale(0%);
-    -o-filter: grayscale(0%);
-   -ms-filter: grayscale(0%);
-       filter: grayscale(0%);
-}
-.displayStack{
+
+.knowledge-stack{
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  .display-stack{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .icon-tile { 
+      width: 60px;
+      height: 60px;
+      display: inline-block;
+      margin: 12px;
+      transition-property: all;
+      transition-duration: 1s;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      img { 
+        border-radius: 5px;
+        -webkit-filter: grayscale(90%);
+        -moz-filter: grayscale(90%);
+          -o-filter: grayscale(90%);
+         -ms-filter: grayscale(90%);
+             filter: grayscale(90%);
+      }
+  }
+    .outer-icon {
+      height: 50px;
+      width: 50px;
+      float: left;
+      img { 
+        border-radius: 5px;
+        align-self: center;
+      }
+    }
+    .add-shadow {
+      -webkit-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.35);
+      -moz-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.35);
+      box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.35);
+    }
+    .add-shadow > img { 
+      width: 55px;
+      height: 55px;
+      -webkit-filter: grayscale(0%);
+      -moz-filter: grayscale(0%);
+        -o-filter: grayscale(0%);
+      -ms-filter: grayscale(0%);
+          filter: grayscale(0%);
+    }
+  }
 }

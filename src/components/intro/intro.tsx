@@ -8,19 +8,17 @@ export const Intro = (props:IntroProps) => {
     return (
         <div className="content">
             <div className="welcome">
-                <article>
                 <h2>Hello, i am a freelance</h2>
                 <h1>front-end developer</h1>
                 <h2>& hobby game developer</h2>
-                </article>
             </div>
-            <div className="midSection">
+            <div className="mid-section">
                 <div className="menu">
-                <nav>
-                <a href="#portfolio" onClick={props.togglePortfolio}>Portfolio</a>
-                <a href="mailto:e-postduif@blijlevens.nu">Contact</a>
-                <a href="../../../data/blijlevens_cv_eng.pdf" title="Download CV in English">Download C.V. <span className="downloadNote">(PDF | 1.1mb)</span></a>
-                </nav>
+                    <nav>
+                        <a href="#portfolio" onClick={props.togglePortfolio}>Portfolio</a>
+                        <a href="mailto:e-postduif@blijlevens.nu">Contact</a>
+                        <a href="../../../data/blijlevens_cv_eng.pdf" title="Download CV in English">Download C.V. <span className="download-note">(PDF | 1.1mb)</span></a>
+                    </nav>
                 </div>
                 <div className="intro">
                 <article>

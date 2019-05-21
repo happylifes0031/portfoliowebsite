@@ -9,10 +9,10 @@
     
 }
 @keyframes fadeIn {
-        0% { opacity:0; }
-        30% { opacity:0; }
-        100% { opacity:1; }
-  }
+    0% { opacity:0; }
+    30% { opacity:0; }
+    100% { opacity:1; }
+}
   
 .node > h5 { 
     font-size: .85rem;
@@ -20,28 +20,21 @@
     position: absolute;
     bottom: -89px
 }
-.node.isHigher > h5{
-}
 .node.isEven.isHigher > h5{
     top:-52px;
 }
 .isEven {
     top: 97px;
 }
-.isEven > .stickNode { 
+.isEven > .stick-node { 
     top: 2px;
 }
-.isEven > .stickNode > .verticalLine > .circle{ 
-    top: 30px;
-}
+
 .node.isHigher { 
     top: -11px;
-    & .stickNode {
+    & .stick-node {
         height: 28px;
         top: 88px;
-        & .verticalLine { 
-            height: 45px !important;
-        }
         & .circle { 
             left:-7px;
             top:-16px;
@@ -49,12 +42,9 @@
     }
 }
 .node.isEven { 
-    & .stickNode {
+    & .stick-node {
         height: 16px;
         top: 9px;
-        & .verticalLine { 
-            height: 45px !important;
-        }
         & .circle { 
             left:-7px;
             top:16px;
@@ -63,9 +53,9 @@
 }
 .node.isEven.isHigher { 
     top: 152px;
-    & .stickNode { 
+    & .stick-node { 
         top: -46px;
-        & .verticalLine.isEven { 
+        & .vertical-line.isEven { 
             height: 59px;
             & .circle  {
                 top: 28px;
@@ -73,7 +63,7 @@
         }
     }
 }
-.isEven  > .stickNode > .isEven { 
+.isEven > .stick-node > .isEven { 
     width: 1px;
     height: 30px;
     background: #ffffff; /* Old browsers */
@@ -85,7 +75,7 @@
 .isEven > h5 {
     top: 2px;
 }
-.node > .stickNode{
+.node > .stick-node{
     width: 1px;
     top: 89px;
     height: 16px;
@@ -93,7 +83,7 @@
     background-color: #000;
     position: absolute;
 }
-.node > .stickNode > .verticalLine:not(.isEven) { 
+.node > .stick-node > .vertical-line:not(.isEven) { 
     position: relative;
     display: inline-block;
     width: 2px;
@@ -119,7 +109,7 @@
     &:hover { 
         background-color: #5d89a1;
     }
-    &:hover .infoBoxEmployer{
+    &:hover .info-box-employer{
         display: block;
         top: 20px;
         left: 15px;
@@ -127,7 +117,7 @@
         position: relative;
     }
 }
-.infoBoxEmployer { 
+.info-box-employer { 
     display: none;
     position: absolute;
     width: 220px;

@@ -31,8 +31,8 @@ export class Node extends React.Component<NodeProps>{
       let element = document.getElementById(idName);
 
       if(element) { 
-        if (element.className.match("iconTile addShadow")) {
-          element.className = "iconTile";
+        if (element.className.match("icon-tile add-shadow")) {
+          element.className = "icon-tile";
         }
       }
     }
@@ -47,8 +47,8 @@ export class Node extends React.Component<NodeProps>{
       let element = document.getElementById(idName);
       
       if(element) { 
-        if (!element.className.match("addShadow")) {
-          element.className += " " + "addShadow";
+        if (!element.className.match("add-shadow")) {
+          element.className += " " + "add-shadow";
         }
       }
     }
@@ -66,10 +66,10 @@ export class Node extends React.Component<NodeProps>{
     return (
       <div className={classNames('node', {'isEven': isEven}, {'isHigher': (!isEven && toggleAbove) || (isEven && toggleUnder) })} style={nodeStyle}>
           <h5>{companyName}</h5>
-          <div className='stickNode'>
+          <div className='stick-node'>
             <div>
               <div className="circle" onMouseOver={this.addShadowToTile.bind(this)} onMouseLeave={this.removeClass.bind(this)}>
-                <div className='infoBoxEmployer'>
+                <div className='info-box-employer'>
                   <ul>
                     <li><b>Timetable:</b></li>
                     <li>{from} | {till}</li>
