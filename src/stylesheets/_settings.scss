@@ -1,5 +1,35 @@
 
 $body-bg-color: #D5d8d5;
+$timeline-bg-color: #fff;
 $heading-color: #000;
 $orange-color: #e06c02;
-$blue-color: #0a364e;
+$blue-color: hsl(201, 77%, 17%);
+
+$time-node-color: #5d89a1;
+$default-text-color: #000;
+$node-color: #000;
+$node-line-color: #000;
+
+// *** SET BREAKING POINTS *** //
+$phone-width: 0px;
+$tablet-width: 512px;
+$desktop-width: 1024px;
+
+@mixin phone {
+  @media (min-width: #{$phone-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width+1}) {
+    @content;
+  }
+}
+  

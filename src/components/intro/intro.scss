@@ -1,78 +1,47 @@
-.content { 
-  margin-top: 7em;
-  .mid-section {
-      display: flex;
-      margin-bottom: 3em;
-      margin-top: 2em;
-      letter-spacing: 1px;
-      .menu{
-        max-width: 25%;
-        min-width: 25%;
-        margin-top: 1.5em;
-        &:before{
-          content: '';
-          display: block;
-          width: 4%;
-          height: 1px;
-          position: absolute;
-          background-color: $orange-color;
-        }
-        nav {
-          display: block;
-          margin-top:3em;
-          a { 
-            color: #000;
-            width: fit-content;
-            display: block;
-            font-size: 1em;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: 500;
-            margin-bottom: 0.5em;
-            line-height: 38px;
-            border-bottom-width: 3px;
-            &:hover {
-              text-decoration: underline;
-              text-decoration-color:  $orange-color;
-            }
-          }
-        }
-        .download-note { 
-          font-size: 0.6em;
-          letter-spacing: 1px;
-          text-decoration: none;
-        }
-      }
-      .intro {
-        max-width: 75%;
-        min-width: 75%;
-        color: $blue-color;
-        margin-top: 3em;
-        .working-for {
-          font-weight: bold;
-          color: $orange-color;
-          text-transform: uppercase;
-        }
-      }
-  }
-}
-
-
-@media only screen and (max-width: 999px) {
-    .midSection {
-      margin-bottom: 1rem;
-      margin-top: 1.5em;
-      .menu{
-        nav {
-          display: block;
-          margin-top:2em;
-          a { 
-            font-size: .7em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 200;
-          }
-        }
+main { 
+  .who-am-i {
+    margin: 0 0 2em 0;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    @include desktop { 
+      background-color: #D5d8d5;
+      text-align: left;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 48%;
+      bottom: -10px;
+      transform: rotate(45deg);
+      background-color: #fff;
+      z-index: -1;
+      -webkit-animation: move 0.3s ease-out;
+      -moz-animation:    move 0.3s ease-out; 
+      -o-animation:      move 0.3s ease-out; 
+      animation:         move 0.3s ease-out;
+      animation-delay: 3.2s; 
+      animation-fill-mode: forwards;
+      @include desktop { 
+        display: none;
       }
     }
+  }
+  .background-story {
+    margin: 1em;
+    @include desktop { 
+      margin: 0;
+      display: flex;
+    }
+    .download-note { 
+      font-size: 0.3em; 
+    }
+    .working-for {
+      font-weight: bold;
+      color: $orange-color;
+    }
+  }
 }

@@ -12,3 +12,15 @@
     -moz-box-shadow: $h-offset, $v-offset, $blur, $spread, $color;
     box-shadow: $h-offset, $v-offset, $blur, $spread, $color;
 }
+
+@mixin animation($name, $timing, $count, $duration, $direction) {
+    animation-name: $name;
+    animation-timing-function: $timing;
+    animation-iteration-count: $count;
+    animation-duration: $duration;
+    animation-direction: $direction;
+    transition: visibility 2s;
+    -webkit-animation-name: $name;
+    -webkit-animation-duration: $duration;
+    -webkit-transition: visibility 2s;
+}

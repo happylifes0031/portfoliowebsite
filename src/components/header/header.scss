@@ -1,0 +1,34 @@
+header {
+  display: flex;
+  height: 28px;
+  padding: 1em;
+  @include desktop { 
+    height: 80px;
+    padding: 0;
+  }
+  .exlibris { 
+    height: 50px;
+    max-width: 300px;
+    @include phone { 
+      display: flex;
+      align-self: center;
+    }
+    .my-name {
+      font-family: roboto-bold;
+      font-size: 0.5em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-left: 1.5em;
+      align-self: center;
+      @include desktop { 
+        font-size: 0.9em;
+      }
+    }
+  } 
+  .linkedin {
+    margin-left: auto;
+    @include desktop { 
+      margin-right: 1em;
+    }
+  }
+}

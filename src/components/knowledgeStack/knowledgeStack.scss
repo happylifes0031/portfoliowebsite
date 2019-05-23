@@ -1,42 +1,36 @@
-.knowledge-stack{
-  width: 100%;
-  flex-direction: column;
-  .display-stack{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .icon-tile { 
-      width: 60px;
-      height: 60px;
-      display: inline-block;
-      margin: 12px;
+.knowledge-stack {
+  margin: 0 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include desktop {
+    margin: 1.5em 0;
+  }
+  .icon { 
+      width: 30px;
+      height: 30px;
+      margin-right: 0.8em;
+      margin-top: 0.8em;
       transition-property: all;
       transition-duration: 1s;
-      border-radius: 5px;
-      display: flex;
-      justify-content: center;
-      img { 
+      img {
+        width: 30px;
+        height: 30px;
         border-radius: 5px;
-      }
-    }
-    .outer-icon {
-      height: 50px;
-      width: 50px;
-      float: left;
-      img { 
-        border-radius: 5px;
-        align-self: center;
+        @include desktop {
+          width: 50px;
+          height: 50px;  
+        }
         @include grayscale(90%);
       }
     }
     .add-shadow {
       @include shadow(1px, 1px, 12px, 0px, rgba(0,0,0,0.35));
-    }
-    .add-shadow > img { 
-      width: 55px;
-      height: 55px;
-      @include grayscale(0%);
-    }
+      img { 
+        width: 55px;
+        height: 55px;
+        @include grayscale(0%);
+      }
   }
 }

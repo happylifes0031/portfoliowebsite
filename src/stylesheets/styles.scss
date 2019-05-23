@@ -1,86 +1,101 @@
+@import './settings';
 @import './fonts';
 @import './mixins';
 @import './settings';
-
-@import '../components/knowledgeStack/knowledgeStack.scss';
-@import '../components/techcolofon/techcolofon.scss';
+@import '../components/header/header.scss';
+@import '../components/header/techcolofon/techcolofon.scss';
+@import '../components/header/timeline/timeline.scss';
 @import '../components/intro/intro.scss';
-@import '../components/timeline/timeline.scss';
 @import '../components/portfolio/portfolio.scss';
+@import '../components/knowledgeStack/knowledgeStack.scss';
 
-
-.App {
+html {
+  min-height: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  background-color: $body-bg-color;
+  font-family: roboto;
+  letter-spacing: 1px;
+  color: $default-text-color;
+  text-transform: uppercase;
+}
+#root{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+a { 
+  font-family: roboto-bold;
+  text-decoration: none;
+  color: $node-line-color;
+  @include desktop {
+    margin: 0.3em 0;
+    letter-spacing: 0.2em;
+  }
+  &:active {
+    text-decoration: none;
+  }
+}
+h1 {
+  font-family: roboto-bold;
+  font-size: 1.9em;
+  @include desktop {
+    font-size: 5em;
+  }
+}
+h2 { 
+  @include desktop {
+    font-size: 2em;
+  }
+}
+h1, h2 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav {
+  font-size: 0.7em;
+  margin: 1.0em 0;
+  display: flex;
+  justify-content: space-between;
+  @include desktop {
+    flex-direction: column;
+    width: 40%;
+    font-size: 1em;
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 12%;
+    height: 1px;
+    background-color: $orange-color;
+    position: absolute;
+    margin-top: -7px;
+    @include desktop {
+      width: 5%;
+    }
+  }
+}
+article {
+  color: $blue-color;
+  text-transform: initial;
+  line-height: 1.5em;
+  text-align: justify;
+  @include desktop {
+    margin: 1em 0;
+    font-size: 1.2em;
+  }
+}
+.container {
   display: flex;
   max-width: 1200px;
   height: 100%; 
   flex-direction: column;
-}
-
-.avatar-bar{
-  width: 100%;
-  height: 60px;
-  display: flex;
-  position: relative;
-  .avatar{
-    height: 50px;
-    width: 300px;
-    align-self: center;
-    display: flex;
-    > img { 
-      display: inline-block;
-      margin-top:-0.2em;
-      margin-right: 1em;
-    }
-    div { 
-      align-self: center;
-      display: inline-block;
-      font-family: roboto-bold;
-      font-size: 0.9rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-  }
-  .socials{
-    float: right;
-    margin-left: auto;
-    margin-right: 169px
-  }
-}
-
-.outer-timeline{
-  position: absolute;
-  background-color: #fff;
-  height: 196px;
-  width: 100%;
-  top: 80px;
-  left:0;
-  &:after{
-    content: '';
-    display: block;
-    width: 30px;
-    height: 30px;
-    left: 48%;
-    top: 151px;
-    position: absolute;
-    transform: rotate(45deg);
-    background-color: #fff;
-    -webkit-animation: move 0.3s ease-out;
-    -moz-animation:    move 0.3s ease-out; 
-    -o-animation:      move 0.3s ease-out; 
-    animation:         move 0.3s ease-out;
-    animation-delay: 3.2s; 
-    animation-fill-mode: forwards;
-  }
-}
-
-.inbedded-timeline { 
-  position: relative;
-  width: 100%;
-  height: 175px;
-  top: 10px;
-}
-
-@keyframes move {
-  from {top: 151px;}
-  to {top: 181px;}
 }

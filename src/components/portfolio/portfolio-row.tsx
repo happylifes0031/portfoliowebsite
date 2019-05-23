@@ -41,7 +41,7 @@ export class PortfolioRow extends React.Component<Props> {
 
     public render() {
         return (
-            <div className='images'>
+            <div className='portfolio-row'>
                 <PortfolioColumn 
                     showCase={this.props.showcase.imgName1} 
                     toggledImage={this.toggleModal} 

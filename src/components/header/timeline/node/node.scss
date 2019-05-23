@@ -1,0 +1,136 @@
+.node { 
+    position: absolute;
+    height: 20px;
+    padding: 1px;
+    display: inline-block;    
+    top: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+  
+.node > h5 { 
+    font-size: .85rem;
+    left: 15px;
+    position: absolute;
+    bottom: -89px
+}
+.node.isEven.isHigher > h5{
+    top:-52px;
+}
+.isEven {
+    top: 97px;
+    .stick-node { 
+        top: 2px;
+    }
+}
+
+.node.isHigher { 
+    top: -11px;
+    .stick-node {
+        height: 28px;
+        top: 88px;
+        .circle { 
+            left:-7px;
+            top:-16px;
+        }
+    }
+}
+.node.isEven { 
+    .stick-node {
+        height: 16px;
+        top: 9px;
+        .circle { 
+            left:-7px;
+            top:16px;
+        }
+    }
+}
+.node.isEven.isHigher { 
+    top: 152px;
+    .stick-node { 
+        top: -46px;
+        .vertical-line.isEven { 
+            height: 59px;
+            .circle  {
+                top: 28px;
+            }
+        }
+    }
+}
+.isEven > h5 {
+    top: 2px;
+}
+.node > .stick-node{
+    width: 1px;
+    top: 89px;
+    height: 16px;
+    left: 0;
+    background-color: $node-color;
+    position: absolute;
+}
+.circle {    
+    position: absolute;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    display: block;
+    border: 1px dashed $node-color;
+    top: -15px;
+    left: -7px;
+    &:hover { 
+        background-color: $time-node-color;
+    }
+    &:hover .info-box-employer{
+        display: block;
+        top: 20px;
+        left: 15px;
+        z-index: 1001;
+        position: relative;
+    }
+}
+
+.info-box-employer { 
+    display: none;
+    position: absolute;
+    width: 220px;
+    background-color: $orange-color;
+    left: 23px;
+    top: 71px;
+    font-size: 0.7rem;
+    padding: 1px;
+    border-radius: 5px;
+    z-index: 999;
+    animation: fadein 1.5s;
+    @include shadow(-1px, 5px, 44px, -1px,rgba(0, 0, 0, 0.2));
+    ul {
+        display: flex;
+        flex-wrap:wrap;
+        background-color: #efefef;
+        list-style: none;   
+        padding:0;
+        margin:0;
+        text-align: left;
+        li {
+            padding-top: 6px;
+            padding-bottom: 3px;
+            padding-left: 2px;
+            border-bottom: 1px black dashed;
+            &:last-of-type, &:nth-child(5) {
+                border-bottom: none;
+            }
+            &:nth-child(odd) { 
+                width:30%
+            }
+            &:nth-child(even) { 
+                width:68%
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    30% { opacity:0; }
+    100% { opacity:1; }
+}
