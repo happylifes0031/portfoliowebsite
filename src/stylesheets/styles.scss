@@ -47,13 +47,11 @@ h1 {
     font-size: 5em;
   }
 }
-h2 { 
-  @include desktop {
-    font-size: 2em;
-  }
-}
 h1, h2 {
   margin: 0;
+  @include desktop {
+    letter-spacing: 0.2em;
+  }
 }
 ul {
   margin: 0;
