@@ -118,4 +118,7 @@ article {
   @include small-desktop {
     max-width: 90%;
   }
+  @include desktop {
+    max-width: 100%;
+  }
 }

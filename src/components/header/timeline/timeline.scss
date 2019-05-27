@@ -69,6 +69,11 @@
     right: -50px;
     @include small-desktop {  
         right: -39px; 
+        top: 79px;
+    }
+     @include desktop {  
+        right: -48px; 
+        top: 76px;
     }
     @extend .date-circle;
     &:before {
@@ -79,6 +84,11 @@
 .start-date{
     @include small-desktop {  
         left: -38px; 
+        top: 80px;
+    }
+    @include desktop {  
+        left: -48px; 
+        top: 76px;
     }
     @extend .date-circle;
     &:after {
