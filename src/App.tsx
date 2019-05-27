@@ -48,7 +48,9 @@ export default class App extends React.Component {
       <div className="container">
         <Header />
         <div className='timeline-frame'>
-          
+          <TimelineFrame onmouseOver={this.onMouseOver}/>
+          <div className="inbedded-timeline">
+          </div>
         </div>
         <Intro togglePortfolio={this.togglePortfolio} />
         <Knowledgestack />
@@ -60,11 +62,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-
-/*
-<div className="outer-timeline"></div>
-  <div className="inbedded-timeline">
-      <TimelineFrame onmouseOver={this.onMouseOver}/>
-  </div>
-*/

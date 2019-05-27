@@ -4,7 +4,7 @@ main {
     text-align: center;
     background-color: #fff;
     position: relative;
-    @include desktop { 
+    @include small-desktop { 
       background-color: #D5d8d5;
       text-align: left;
     }
@@ -25,14 +25,14 @@ main {
       animation:         move 0.3s ease-out;
       animation-delay: 3.2s; 
       animation-fill-mode: forwards;
-      @include desktop { 
+      @include small-desktop { 
         display: none;
       }
     }
   }
   .background-story {
     margin: 1em;
-    @include desktop { 
+    @include small-desktop { 
       margin: 0;
       display: flex;
     }

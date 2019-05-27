@@ -2,7 +2,7 @@ header {
   display: flex;
   height: 28px;
   padding: 1em;
-  @include desktop { 
+  @include small-desktop { 
     height: 80px;
     padding: 0;
   }
@@ -20,14 +20,14 @@ header {
       text-transform: uppercase;
       margin-left: 1.5em;
       align-self: center;
-      @include desktop { 
+      @include small-desktop { 
         font-size: 0.9em;
       }
     }
   } 
   .linkedin {
     margin-left: auto;
-    @include desktop { 
+    @include small-desktop { 
       margin-right: 1em;
     }
   }

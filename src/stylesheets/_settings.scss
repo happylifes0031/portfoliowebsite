@@ -3,7 +3,7 @@ $body-bg-color: #D5d8d5;
 $timeline-bg-color: #fff;
 $heading-color: #000;
 $orange-color: #e06c02;
-$blue-color: hsl(201, 77%, 17%);
+$blue-color: #0a354d;
 
 $time-node-color: #5d89a1;
 $default-text-color: #000;
@@ -13,7 +13,8 @@ $node-line-color: #000;
 // *** SET BREAKING POINTS *** //
 $phone-width: 0px;
 $tablet-width: 512px;
-$desktop-width: 1024px;
+$small-desktop-width: 1000px;
+$large-desktop-width: 1200px;
 
 @mixin phone {
   @media (min-width: #{$phone-width}) {
@@ -27,8 +28,14 @@ $desktop-width: 1024px;
   }
 }
 
+@mixin small-desktop {
+  @media (min-width: #{$small-desktop-width}) {
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media (min-width: #{$desktop-width+1}) {
+  @media (min-width: #{$large-desktop-width}) {
     @content;
   }
 }

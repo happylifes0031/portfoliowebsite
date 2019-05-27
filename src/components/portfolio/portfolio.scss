@@ -1,10 +1,10 @@
 .portfolio {
     margin: 2em 1em;
-    @include desktop {
+    @include small-desktop {
       margin: 2em 0; 
     }
     h2 {
-      @include desktop {
+      @include small-desktop {
         margin: 1em 0 1.5em 0; 
       }
     }
@@ -31,7 +31,7 @@
       .portfolio-row{
         display: flex;
         flex-direction: column;
-        @include desktop {
+        @include small-desktop {
           flex-direction: row;
           justify-content: space-between;
         }

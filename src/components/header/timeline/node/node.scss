@@ -6,29 +6,27 @@
     top: 0;
     animation-name: fadeIn;
     animation-duration: 1s;
+    cursor: pointer;
 }
-  
 .node > h5 { 
-    font-size: .85rem;
     left: 15px;
     position: absolute;
-    bottom: -89px
+    bottom: -65px
 }
 .node.isEven.isHigher > h5{
-    top:-52px;
+    top:-37px;
 }
 .isEven {
-    top: 97px;
+    top: 77px;
     .stick-node { 
         top: 2px;
     }
 }
-
 .node.isHigher { 
     top: -11px;
     .stick-node {
-        height: 28px;
-        top: 88px;
+        height: 18px;
+        top: 79px;
         .circle { 
             left:-7px;
             top:-16px;
@@ -46,7 +44,7 @@
     }
 }
 .node.isEven.isHigher { 
-    top: 152px;
+    top: 132px;
     .stick-node { 
         top: -46px;
         .vertical-line.isEven { 
@@ -58,11 +56,11 @@
     }
 }
 .isEven > h5 {
-    top: 2px;
+    top: 11px;
 }
 .node > .stick-node{
     width: 1px;
-    top: 89px;
+    top: 70px;
     height: 16px;
     left: 0;
     background-color: $node-color;

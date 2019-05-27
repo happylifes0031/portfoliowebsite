@@ -2,7 +2,7 @@ import React from "react";
 import { TechColofon } from './techcolofon/colofon';
 import { TimelineFrame } from './timeline/timeline';
  
-export const Header = () => {
+export const Header = (props) => {
     return (
         <header>
             <div className='exlibris'>

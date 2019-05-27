@@ -1,26 +1,31 @@
+@mixin iconSize($iconWidth, $iconHeight) {
+  width: $iconWidth;
+  height: $iconHeight;
+}
+
 .knowledge-stack {
   margin: 0 1em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  @include desktop {
+  @include small-desktop {
     margin: 1.5em 0;
   }
   .icon { 
-      width: 30px;
-      height: 30px;
+      @include iconSize(30px, 30px);
       margin-right: 0.8em;
       margin-top: 0.8em;
       transition-property: all;
       transition-duration: 1s;
       img {
-        width: 30px;
-        height: 30px;
+        @include iconSize(30px, 30px);
         border-radius: 5px;
+        @include small-desktop {
+          @include iconSize(40px, 40px); 
+        }
         @include desktop {
-          width: 50px;
-          height: 50px;  
+          @include iconSize(50px, 50px);
         }
         @include grayscale(90%);
       }
@@ -28,8 +33,7 @@
     .add-shadow {
       @include shadow(1px, 1px, 12px, 0px, rgba(0,0,0,0.35));
       img { 
-        width: 55px;
-        height: 55px;
+        @include iconSize(55px, 55px);
         @include grayscale(0%);
       }
   }

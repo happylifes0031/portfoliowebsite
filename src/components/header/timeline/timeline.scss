@@ -5,7 +5,11 @@
     height: 80px;
     background-color: #fff;
     display: none;
-    @include desktop { 
+    position: relative;
+    background-image: url('../images/blackline.png');
+    background-repeat: repeat-x;
+    background-position: center;
+    @include small-desktop { 
         display: block;
         height: 170px;
         margin-bottom: 3em;
@@ -36,51 +40,48 @@
     width: 100%;
     top: 80px;
     left:0;
-    @include desktop { 
+    @include small-desktop { 
         display: block;
     }
 }
-.inbedded-timeline { 
-    position: relative;
-    width: 100%;
-    height: 175px;
-    top: 10px;
-    display: none;
-    @include desktop { 
+.inbedded-timeline {
+    position: relative; 
+    height: inherit;
+    width: 500%;
+    margin-left: -200%;
+    background-color:#fff;
+    z-index: -1;
+    @include small-desktop { 
         display: block;
     }
 }
-/*
-
-    
-    background-image: url('../images/blackline.png');
-    background-repeat: repeat-x;
-    background-position: center;
-    background-color: #fff;
-
-    -webkit-animation: increase 3s;
-    -moz-animation:    increase 3s; 
-    -o-animation:      increase 3s; 
-    animation:         increase 3s;
-    animation-delay: 0.5s; 
-    animation-fill-mode: forwards;
-*/
-
-.end-date, .start-date {
+.date-circle {
     position: absolute;
-    top: 96px;
-    font-size: 1em;
+    top: 76px;
+    @include small-desktop {
+        font-size: 0.75em;
+    }
+    @include desktop {
+        font-size: 1em;
+    }
 }
 .end-date{ 
     right: -50px;
-    &:before{
+    @include small-desktop {  
+        right: -39px; 
+    }
+    @extend .date-circle;
+    &:before {
         @extend %circle;
         margin-right: 2px;
     }
 }
 .start-date{
-    left: -50px;
-    &:after{
+    @include small-desktop {  
+        left: -38px; 
+    }
+    @extend .date-circle;
+    &:after {
         @extend %circle;
         margin-left: 2px;
     }
