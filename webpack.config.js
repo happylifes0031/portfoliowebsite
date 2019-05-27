@@ -17,7 +17,7 @@ module.exports = {
   devtool: 'inline-source-map',
   output: {
     path: paths.DIST,
-    filename: 'bundle.js',
+    filename: '[name].[hash].js',
   },
   mode: 'development',
   // Dev server configuration -> ADDED IN THIS STEP
