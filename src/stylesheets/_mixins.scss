@@ -13,14 +13,14 @@
     box-shadow: $h-offset, $v-offset, $blur, $spread, $color;
 }
 
-@mixin animation($name, $timing, $count, $duration, $direction) {
-    animation-name: $name;
-    animation-timing-function: $timing;
-    animation-iteration-count: $count;
-    animation-duration: $duration;
-    animation-direction: $direction;
-    transition: visibility 2s;
-    -webkit-animation-name: $name;
-    -webkit-animation-duration: $duration;
-    -webkit-transition: visibility 2s;
+@mixin animation($name, $time, $effect)  {
+    -webkit-animation: $name $time $effect;
+    -moz-animation:    $name $time $effect;
+    -o-animation:      $name $time $effect;
+    animation:         $name $time $effect;
+}
+
+@mixin transition($effect, $time) {
+    -webkit-transition: $effect, $time;
+    transition: $effect, $time;
 }

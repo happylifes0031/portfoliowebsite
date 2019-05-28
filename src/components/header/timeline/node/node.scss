@@ -110,9 +110,7 @@
         margin:0;
         text-align: left;
         li {
-            padding-top: 6px;
-            padding-bottom: 3px;
-            padding-left: 2px;
+            padding: 6px 0 3px 2px;
             border-bottom: 1px black dashed;
             &:last-of-type, &:nth-child(5) {
                 border-bottom: none;

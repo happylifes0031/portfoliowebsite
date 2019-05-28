@@ -24,10 +24,7 @@
         position: absolute;
         transform: rotate(45deg);
         background-color: #fff;
-        -webkit-animation: move 0.3s ease-out;
-        -moz-animation:    move 0.3s ease-out; 
-        -o-animation:      move 0.3s ease-out; 
-        animation:         move 0.3s ease-out;
+        @include animation(move, 0.3s, ease-out)
         animation-delay: 3.2s; 
         animation-fill-mode: forwards;
     }

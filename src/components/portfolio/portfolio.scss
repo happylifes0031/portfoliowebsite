@@ -67,10 +67,7 @@
         height: 100%;
         width: 100%;
         background-color: rgba(0,0,0,0.0);
-        -webkit-animation-name: fadeOut;
-        animation-name: fadeOut;
-        -webkit-animation-duration: 1s;
-        animation-duration: 1s;
+        @include animation(fadeOut, 1s, ease-out);
         -webkit-animation-fill-mode: both;
         animation-fill-mode: both;
         .modal-content{
@@ -105,11 +102,8 @@
     .show-modal{
       display: block;
       opacity: 1.0;
-      animation-name: fadeIn;
-      animation-duration: 1s;
+      @include animation(fadeIn, 1s, ease-out);
       animation-fill-mode: both;
-      -webkit-animation-name: fadeIn;
-      -webkit-animation-duration: 1s;
       -webkit-animation-fill-mode: both;
     }
 }
@@ -118,21 +112,25 @@
   display: none;
 }
 
+
+@mixin effect($start, $end) {
+  @keyframes fade {
+    0% {opacity: $start;}
+    100% {opacity: $end;}
+  }  
+}
 @-webkit-keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
-
 @keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
-
 @-webkit-keyframes fadeOut {
   100% {opacity: 1;}
     0% {opacity: 0;}
 }
-
 @keyframes fadeOut {
   100% {opacity: 1;}
     0% {opacity: 0;}

@@ -16,8 +16,6 @@ header {
     .my-name {
       font-family: roboto-bold;
       font-size: 0.5em;
-      letter-spacing: 2px;
-      text-transform: uppercase;
       margin-left: 1.5em;
       align-self: center;
       @include small-desktop { 
