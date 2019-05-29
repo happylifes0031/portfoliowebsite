@@ -9,6 +9,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   @include small-desktop {
     margin: 1.5em 0;
   }
