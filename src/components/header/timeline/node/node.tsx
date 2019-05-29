@@ -22,36 +22,22 @@ export class Node extends React.Component<NodeProps>{
       totalAmountOfMonths: 0
   };
 
-  private removeClass = ():void => {
-    let skillName = this.props.skills;
-    var skills = skillName.toLowerCase().split(" ");
-    
-    for(let i in skills) { 
-      let idName = (skills[i].search(',') !== -1) ? skills[i].slice(0, -1) : skills[i];
-      let element = document.getElementById(idName);
-
-      if(element) { 
-        if (element.className.match("icon add-shadow")) {
-          element.className = "icon";
-        }
-      }
+  private modifyClassName = (element:HTMLElement, add:boolean) => {
+    if(element) { 
+      (add) ? element.className += " " + "add-shadow" : element.className = "icon";
     }
   }
 
-  private addShadowToTile = ():void => {
+  private toggleIconShadow = (add:boolean):void => {
     let skillName = this.props.skills;
-    var skills = skillName.toLowerCase().split(" ");
+    let skills = skillName.toLowerCase().split(" ");
+  
+    skills.map( (icon) => { 
+        let idName = (icon.search(',') !== -1) ? icon.slice(0, -1) : icon;
+        let element = document.getElementById(idName);
+        this.modifyClassName(element, add);
+    })
     
-    for(let i in skills) { 
-      let idName = (skills[i].search(',') !== -1) ? skills[i].slice(0, -1) : skills[i];
-      let element = document.getElementById(idName);
-      
-      if(element) { 
-        if (!element.className.match("add-shadow")) {
-          element.className += " " + "add-shadow";
-        }
-      }
-    }
     this.props.onmouseOver(this.props.company);
   }
 
@@ -68,7 +54,7 @@ export class Node extends React.Component<NodeProps>{
           <h5>{companyName}</h5>
           <div className='stick-node'>
             <div>
-              <div className="circle" onMouseOver={this.addShadowToTile} onMouseLeave={this.removeClass}>
+              <div className="circle" onMouseOver={ () => { this.toggleIconShadow(true)} } onMouseLeave={ () => { this.toggleIconShadow(false)} }>
                 <div className='info-box-employer'>
                   <ul>
                     <li><b>Timetable:</b></li>
