@@ -22,7 +22,7 @@ export class Node extends React.Component<NodeProps>{
       totalAmountOfMonths: 0
   };
 
-  private removeClass():void {
+  private removeClass = ():void => {
     let skillName = this.props.skills;
     var skills = skillName.toLowerCase().split(" ");
     
@@ -31,14 +31,14 @@ export class Node extends React.Component<NodeProps>{
       let element = document.getElementById(idName);
 
       if(element) { 
-        if (element.className.match("icon-tile add-shadow")) {
-          element.className = "icon-tile";
+        if (element.className.match("icon add-shadow")) {
+          element.className = "icon";
         }
       }
     }
   }
 
-  private addShadowToTile():void {
+  private addShadowToTile = ():void => {
     let skillName = this.props.skills;
     var skills = skillName.toLowerCase().split(" ");
     
@@ -68,7 +68,7 @@ export class Node extends React.Component<NodeProps>{
           <h5>{companyName}</h5>
           <div className='stick-node'>
             <div>
-              <div className="circle" onMouseOver={this.addShadowToTile.bind(this)} onMouseLeave={this.removeClass.bind(this)}>
+              <div className="circle" onMouseOver={this.addShadowToTile} onMouseLeave={this.removeClass}>
                 <div className='info-box-employer'>
                   <ul>
                     <li><b>Timetable:</b></li>
