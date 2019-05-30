@@ -50,7 +50,7 @@ export default class PortfolioColumn extends React.Component<Props>{
         window.removeEventListener('scroll', this.handleScroll);
     }
 
-    public render() {
+    public render():React.ReactNode {
         return (
             <div className='images'>
                 <div className='thumbnail' 

@@ -39,7 +39,7 @@ export class PortfolioRow extends React.Component<Props> {
         window.removeEventListener('scroll', this.handleScroll);
     }
 
-    public render() {
+    public render():React.ReactNode {
         return (
             <div className='portfolio-row'>
                 <PortfolioColumn 

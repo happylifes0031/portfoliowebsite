@@ -20,7 +20,7 @@ export class Portfolio extends React.Component {
         window.removeEventListener('scroll', this.handleScroll);
     }
 
-    public render() {
+    public render():React.ReactNode {
         return (
             <div id='portfolio' className='portfolio'>
                 <h2>Portfolio</h2>

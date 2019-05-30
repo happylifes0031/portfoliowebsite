@@ -36,7 +36,7 @@ export class TimelineFrame extends React.Component<TimelineFrameProps> {
         window.addEventListener('resize', this.getWidth);
     }
 
-    public render() {
+    public render():React.ReactNode {
         const totalAmountOfMonths = this.calculateAmountOfTotalMonths();
         let isEven = false;
         let isHigher = false;

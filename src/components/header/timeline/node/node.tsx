@@ -24,6 +24,7 @@ export class Node extends React.Component<NodeProps>{
 
   private modifyClassName = (element:HTMLElement, add:boolean) => {
     if(element) { 
+      //add class or reset to normal
       (add) ? element.className += " " + "add-shadow" : element.className = "icon";
     }
   }
@@ -41,7 +42,7 @@ export class Node extends React.Component<NodeProps>{
     this.props.onmouseOver(this.props.company);
   }
 
-  public render() { 
+  public render():React.ReactNode { 
     const {from, till, role, skills, left, width, isEven, companyName, toggleUnder, toggleAbove} = this.props;
     
     const nodeStyle = {
