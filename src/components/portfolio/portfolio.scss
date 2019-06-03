@@ -44,6 +44,7 @@
       border-radius: 5px;
       border-bottom: 8px solid $orange-color;
       background-size: cover;
+      cursor: pointer;
       @include small-desktop {
         height: 150px;
         width: 280px;
@@ -66,6 +67,7 @@
         opacity: 0.0;
         height: 100%;
         width: 100%;
+        left: -175px;
         background-color: rgba(0,0,0,0.0);
         @include animation(fadeOut, 1s, ease-out);
         -webkit-animation-fill-mode: both;
@@ -82,11 +84,12 @@
           background-color: white;
           border-radius: 10px;
           cursor: pointer;
+          border: 10px solid #fff;
           &::before{
             content: '';
             position: absolute;
             left:45%;
-            top:-15px;
+            top:-24px;
             display:block;
             width:0;
             height:0;
@@ -97,10 +100,19 @@
             transform: rotate(180deg);
           }
         }
+        .background {
+          position: fixed;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width:100%;
+          background-color: rgba(114,114,114, 0.5);
+        }
       }
     }
     .show-modal{
-      display: block;
+      display: block !important;
       opacity: 1.0;
       @include animation(fadeIn, 1s, ease-out);
       animation-fill-mode: both;

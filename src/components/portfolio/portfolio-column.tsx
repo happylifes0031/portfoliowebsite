@@ -18,7 +18,7 @@ export default class PortfolioColumn extends React.Component<Props>{
     private imageModal = (event:React.MouseEvent<HTMLElement>):void => {
         event.preventDefault();
         let pageOffset = document.body.getBoundingClientRect();
-        
+        console.log('image modal')
         if(!this.props.modalOpenend) { 
             this.setState({
                 hover:!this.state.hover
@@ -55,11 +55,13 @@ export default class PortfolioColumn extends React.Component<Props>{
             <div className='images'>
                 <div className='thumbnail' 
                     style={ { backgroundImage: 'url(' + `../images/portfoliocases/${this.props.showCase}_thumb.png` + ')'} }
-                    onClick={ (e) => { this.imageModal(e) } }> 
+                    onClick={ (e) => { this.imageModal(e) } }
+                    title='click to open' > 
                 </div>
-                <div className='modal-container'>   
+                <div className='modal-container'  onClick={ () => { this.closeModal() } }>   
                     <div className={classNames('modal', {'show-modal':this.state.hover})}  onClick={ () => { this.closeModal() } }>
                         <div className='modal-content'>
+                            <div className='background'> </div>
                             <img 
                                 src={`../images/portfoliocases/${this.props.showCase}.png`}  
                                 onClick={ () => { this.closeModal() } }
