@@ -1,12 +1,16 @@
 import React from 'react';
-
-
 import { Header } from './components/header/header';
-
 import { Knowledgestack }  from './components/knowledgeStack/knowledgeStack';
 import { Portfolio } from  './components/portfolio/portfolio';
 import { Intro } from './components/intro/intro';
 import { TimelineFrame } from './components/header/timeline/timeline';
+import { ThemeProvider } from 'emotion-theming';
+
+
+
+const theme = {
+  color: 'red'
+}
 
 export default class App extends React.Component {
   state = { 
@@ -45,20 +49,22 @@ export default class App extends React.Component {
 
   public render() {
     return (
-      <div className="container">
-        <Header />
-        <div className='timeline-frame'>
-          <TimelineFrame onmouseOver={this.onMouseOver}/>
-          <div className="inbedded-timeline">
+      <ThemeProvider theme={theme}>
+        <div className="container">
+          <Header />
+          <div className='timeline-frame'>
+            <TimelineFrame onmouseOver={this.onMouseOver}/>
+            <div className="inbedded-timeline">
+            </div>
           </div>
+          <Intro togglePortfolio={this.togglePortfolio} />
+          <Knowledgestack />
+          { 
+            !this.state.hidePortfolio &&
+            <Portfolio />
+          } 
         </div>
-        <Intro togglePortfolio={this.togglePortfolio} />
-        <Knowledgestack />
-        { 
-          !this.state.hidePortfolio &&
-          <Portfolio />
-        } 
-      </div>
+      </ThemeProvider>
     );
   }
 }
