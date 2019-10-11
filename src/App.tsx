@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from './components/header/header';
-import { Knowledgestack }  from './components/knowledgeStack/knowledgeStack';
+import KnowledgeStack from './components/knowledgeStack/knowledgeStack';
 import { Portfolio } from  './components/portfolio/portfolio';
 import { Intro } from './components/intro/intro';
 import { TimelineFrame } from './components/header/timeline/timeline';
@@ -49,7 +49,6 @@ export default class App extends React.Component {
 
   public render() {
     return (
-      <ThemeProvider theme={theme}>
         <div className="container">
           <Header />
           <div className='timeline-frame'>
@@ -58,13 +57,12 @@ export default class App extends React.Component {
             </div>
           </div>
           <Intro togglePortfolio={this.togglePortfolio} />
-          <Knowledgestack />
+          <KnowledgeStack />
           { 
             !this.state.hidePortfolio &&
             <Portfolio />
           } 
         </div>
-      </ThemeProvider>
     );
   }
 }
