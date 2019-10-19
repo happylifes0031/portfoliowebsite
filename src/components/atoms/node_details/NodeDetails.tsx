@@ -45,7 +45,7 @@ const StyledResumeTable = styled(`div`)`
   }
 `;
 
-const ResumeTable = ({ from, till, role, skills}: ResumeTableProps) => (
+const NodeDetails = ({ from, till, role, skills}: ResumeTableProps):React.ReactElement => (
   <StyledResumeTable>
     <ul>
       <li>
@@ -66,4 +66,4 @@ const ResumeTable = ({ from, till, role, skills}: ResumeTableProps) => (
   </StyledResumeTable>
 );
 
-export default ResumeTable;
+export default NodeDetails;

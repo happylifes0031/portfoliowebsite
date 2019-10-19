@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 
-import ResumeTable from "../node_details/ResumeTable";
+import NodeDetails from "../node_details/NodeDetails";
 
 interface TimeLineNodeProps {
   skills: string;
@@ -55,7 +55,6 @@ const TimeLineNode = (props: TimeLineNodeProps): React.ReactElement => {
     >
       <h5>{props.company}</h5>
       <div className="stick-node">
-        <>
           <div
             className="circle"
             onMouseOver={() => {
@@ -66,9 +65,8 @@ const TimeLineNode = (props: TimeLineNodeProps): React.ReactElement => {
               props.onMouseOver([]);
             }}
           >
-            {isHoveringOver && <ResumeTable {...props} />}
+            {isHoveringOver && <NodeDetails {...props} />}
           </div>
-        </>
       </div>
     </div>
   );

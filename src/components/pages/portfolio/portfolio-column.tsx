@@ -18,7 +18,7 @@ export default class PortfolioColumn extends React.Component<Props>{
     private imageModal = (event:React.MouseEvent<HTMLElement>):void => {
         event.preventDefault();
         let pageOffset = document.body.getBoundingClientRect();
-        console.log('image modal')
+        console.log('image modal');
         if(!this.props.modalOpenend) { 
             this.setState({
                 hover:!this.state.hover

@@ -1,11 +1,8 @@
 import React from 'react';
 
-import Context from "../../../context/Context";
 import TimeLineNode from '../../atoms/node/node';
-const timeline = require('../../../../data/timeline.json');
-// @ts-ignore
-//import TimeLineUtil from '../../../utils/timeline';
 import TimeLineUtil from '../../../utils/timeline-util';
+const timeline = require('../../../../data/timeline.json');
 
 export interface TimelineFrameProps {
     onMouseOver: (companyName:string) => void;
