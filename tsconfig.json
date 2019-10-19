@@ -16,6 +16,7 @@
       "removeComments": true,
       "baseUrl": "./src",
       "esModuleInterop": true,
+      "typeRoots": ["./@types"]
     },
     "include": [
       "./src/**/*"

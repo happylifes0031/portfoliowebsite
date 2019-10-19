@@ -45,7 +45,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test:  /\.(js|jsx|tsx)$/,
+        test:  /\.(js|jsx|tsx|ts)$/,
         use: 'awesome-typescript-loader',
         exclude: /node_modules/
       },
@@ -76,6 +76,6 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.tsx'],
+    extensions: ['.js', '.jsx', '.tsx', '.ts'],
   }
 };

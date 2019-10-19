@@ -15,7 +15,7 @@ export const Intro:React.SFC<IntroProps> = (props:IntroProps) => (
             <nav>
                 <a href="#portfolio" onClick={props.togglePortfolio}>Portfolio</a>
                 <a href="mailto:e-postduif@blijlevens.nu">Contact</a>
-                <a href="../../../data/blijlevens_cv_eng.pdf" title="Download CV in English">C.V. <span className="download-note">(PDF | 1.1mb)</span></a>
+                <a href="../../../../data/blijlevens_cv_eng.pdf" title="Download CV in English">C.V. <span className="download-note">(PDF | 1.1mb)</span></a>
             </nav>                
             <article>
                 Freelance front-end developer and hobby game developer.

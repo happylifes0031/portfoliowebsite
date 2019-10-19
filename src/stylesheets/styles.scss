@@ -2,12 +2,12 @@
 @import './fonts';
 @import './mixins';
 @import './settings';
-@import '../components/header/header.scss';
-@import '../components/header/techcolofon/techcolofon.scss';
-@import '../components/header/timeline/timeline.scss';
-@import '../components/intro/intro.scss';
-@import '../components/portfolio/portfolio.scss';
-@import '../components/knowledgeStack/knowledgeStack.scss';
+@import '../components/organisms/header/header.scss';
+@import '../components/atoms/techcolofon/techcolofon.scss';
+@import '../components/molecules/timeline/timeline.scss';
+@import '../components/templates/intro/intro.scss';
+@import '../components/pages/portfolio/portfolio.scss';
+@import '../components/organisms/knowledgeStack/knowledgeStack.scss';
 
 html {
   min-height: 100%;

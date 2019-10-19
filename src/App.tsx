@@ -1,10 +1,11 @@
 import React from 'react';
-import { Header } from './components/header/header';
-import KnowledgeStack from './components/knowledgeStack/knowledgeStack';
-import { Portfolio } from  './components/portfolio/portfolio';
-import { Intro } from './components/intro/intro';
-import { TimelineFrame } from './components/header/timeline/timeline';
+import { Header } from './components/organisms/header/header';
+import KnowledgeStack from './components/organisms/knowledgeStack/knowledgeStack';
+import { Portfolio } from './components/pages/portfolio/portfolio';
+import { Intro } from './components/templates/intro/intro';
+import { TimelineFrame } from './components/molecules/timeline/timeline';
 import { ThemeProvider } from 'emotion-theming';
+import Context from "./context/Context";
 
 
 
@@ -13,15 +14,15 @@ const theme = {
 }
 
 export default class App extends React.Component {
-  state = { 
-    moveOverNode : '',
+  state = {
+    skillSet : [],
     hidePortfolio: true,
     isScrolling: false
   }
 
-  private onMouseOver = (companyName:string):void => { 
+  private onMouseOver = (skillSet:string):void => {
     this.setState({
-      moveOverNode: companyName
+      skillSet: skillSet
     });
   } 
 
@@ -49,20 +50,22 @@ export default class App extends React.Component {
 
   public render() {
     return (
-        <div className="container">
-          <Header />
-          <div className='timeline-frame'>
-            <TimelineFrame onmouseOver={this.onMouseOver}/>
-            <div className="inbedded-timeline">
+        <Context.Provider value={this.state.skillSet} > {
+          <div className="container">
+            <Header />
+            <div className='timeline-frame'>
+              <TimelineFrame onMouseOver={this.onMouseOver}/>
+              <div className="inbedded-timeline">
+              </div>
             </div>
-          </div>
-          <Intro togglePortfolio={this.togglePortfolio} />
-          <KnowledgeStack />
-          { 
-            !this.state.hidePortfolio &&
-            <Portfolio />
-          } 
-        </div>
+            <Intro togglePortfolio={this.togglePortfolio} />
+            <KnowledgeStack />
+            {
+              !this.state.hidePortfolio &&
+              <Portfolio />
+            }
+          </div> }
+        </Context.Provider>
     );
   }
 }

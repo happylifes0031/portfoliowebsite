@@ -1,5 +1,5 @@
 import React from 'react';
-const showCase = require('../../../data/portfolioCases.json');
+const showCase = require('../../../../data/portfolioCases.json');
 import {PortfolioRow} from './portfolio-row';
 
 

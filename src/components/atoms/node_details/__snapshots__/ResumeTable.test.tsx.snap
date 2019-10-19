@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResumeTable Renders as expected 1`] = `
+<div
+  className="css-8pl6jd"
+>
+  <ul>
+    <li>
+      <b>
+        Timetable:
+      </b>
+    </li>
+    <li>
+      
+       | 
+      
+    </li>
+    <li>
+      <b>
+        Rol:
+      </b>
+    </li>
+    <li>
+      
+    </li>
+    <li>
+      <b>
+        Skills:
+      </b>
+    </li>
+    <li>
+      
+    </li>
+  </ul>
+</div>
+`;

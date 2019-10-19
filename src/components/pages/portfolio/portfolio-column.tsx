@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-const showCase = require('../../../data/portfolioCases.json');
+const showCase = require('../../../../data/portfolioCases.json');
 
 export interface Props {
     showCase: any;
