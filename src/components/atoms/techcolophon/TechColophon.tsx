@@ -10,7 +10,7 @@ const TechColophon = (): JSX.Element => (
       <li>Version: 3.0</li>
       <li>14/05/2019</li>
     </ul>
-    <div>Colophon</div>
+    <div>olophon</div>
   </div>
 );
 

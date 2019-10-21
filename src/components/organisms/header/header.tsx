@@ -1,6 +1,5 @@
 import React from "react";
 import TechColophon from "../../atoms/techcolophon/TechColophon";
-import { TimelineFrame } from "../../molecules/timeline/timeline";
 
 export const Header: React.SFC = () => (
   <header>

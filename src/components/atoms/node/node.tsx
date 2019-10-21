@@ -3,10 +3,9 @@ import classNames from "classnames";
 
 import NodeDetails from "../node_details/NodeDetails";
 
-interface TimeLineNodeProps {
+export interface TimeLineNodeProps {
   skills: string;
-  onMouseOver: any;
-  company: string;
+  onMouseOver: (skills: Array<string>) => void;
   from: string;
   till: string;
   role: string;
@@ -14,14 +13,12 @@ interface TimeLineNodeProps {
   width: number;
   isEven: boolean;
   companyName: string;
-  toggleUnder: boolean;
-  toggleAbove: boolean;
 }
 
 const TimeLineNode = (props: TimeLineNodeProps): React.ReactElement => {
   const [isHoveringOver, setIsHoveringOver] = useState(false);
 
-  const hoverOverNode = ():void => {
+  const hoverOverNode = (): void => {
     const stringOfSkills = props.skills.toLowerCase().split(" ");
     const listOfSkillNames = stringOfSkills.map((skillName: string) => {
       return skillName.replace(/[, ]+/g, " ").trim();
@@ -31,9 +28,9 @@ const TimeLineNode = (props: TimeLineNodeProps): React.ReactElement => {
     setIsHoveringOver(true);
   };
 
-  const onMouseLeave = ():void => {
+  const onMouseLeave = (): void => {
     setIsHoveringOver(false);
-  }
+  };
 
   const nodeStyle = {
     left: props.left + "%",
@@ -42,31 +39,23 @@ const TimeLineNode = (props: TimeLineNodeProps): React.ReactElement => {
 
   return (
     <div
-      className={classNames(
-        "node",
-        { isEven: props.isEven },
-        {
-          isHigher:
-            (!props.isEven && props.toggleAbove) ||
-            (props.isEven && props.toggleUnder)
-        }
-      )}
+      className={classNames("node", { isEven: props.isEven })}
       style={nodeStyle}
     >
-      <h5>{props.company}</h5>
+      <h5>{props.companyName}</h5>
       <div className="stick-node">
-          <div
-            className="circle"
-            onMouseOver={() => {
-              hoverOverNode();
-            }}
-            onMouseLeave={ () => {
-              onMouseLeave();
-              props.onMouseOver([]);
-            }}
-          >
-            {isHoveringOver && <NodeDetails {...props} />}
-          </div>
+        <div
+          className="circle"
+          onMouseOver={() => {
+            hoverOverNode();
+          }}
+          onMouseLeave={() => {
+            onMouseLeave();
+            props.onMouseOver([]);
+          }}
+        >
+          {isHoveringOver && <NodeDetails {...props} />}
+        </div>
       </div>
     </div>
   );

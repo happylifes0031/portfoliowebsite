@@ -3,7 +3,7 @@ import { Header } from './components/organisms/header/header';
 import KnowledgeStack from './components/organisms/knowledgeStack/knowledgeStack';
 import { Portfolio } from './components/pages/portfolio/portfolio';
 import { Intro } from './components/templates/intro/intro';
-import { TimelineFrame } from './components/molecules/timeline/timeline';
+import TimelineWrapper from './components/molecules/timeline/timeline';
 import { ThemeProvider } from 'emotion-theming';
 import Context from "./context/Context";
 
@@ -54,7 +54,7 @@ export default class App extends React.Component {
           <div className="container">
             <Header />
             <div className='timeline-frame'>
-              <TimelineFrame onMouseOver={this.onMouseOver}/>
+              <TimelineWrapper onMouseOver={this.onMouseOver}/>
               <div className="inbedded-timeline">
               </div>
             </div>
