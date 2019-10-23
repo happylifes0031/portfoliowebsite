@@ -26,6 +26,7 @@ interface StyledNodeProps {
 
 interface StyledCircleProps {
   companyName: string;
+  isEven: boolean;
 }
 
 const StyledCircle = styled.div( (props:StyledCircleProps):SerializedStyles => {
@@ -36,9 +37,10 @@ const StyledCircle = styled.div( (props:StyledCircleProps):SerializedStyles => {
       border-radius: 50%;
       display: block;
       border: 1px dashed #0a354d;
-      top: -15px;
+      top: ${ props.isEven ? -15 : 51 }px;
       left: -8px;
       &:after{
+        width:150px;
         position:absolute;
         font-size: 0.7em;
         left: 20px;
@@ -58,7 +60,7 @@ const StyledNode = styled.div(  (props: StyledNodeProps): SerializedStyles => {
     width: ${props.width}px;
     padding: 1px;
     display: inline-block;    
-    top: 35px;
+    top: ${ props.isEven ? 34 : 85 }px;
     left: ${props.left}px;
     animation-name: fadeIn;
     animation-duration: 1s;
@@ -95,6 +97,7 @@ const TimeLineNode = (props: TimeLineNodeProps): React.ReactElement => {
     >
       <StyledCircle
           companyName={props.companyName}
+          isEven={props.isEven}
           onMouseOver={() => {
             hoverOverNode();
           }}
