@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { useSpring, animated } from "react-spring";
 
 interface ResumeTableProps {
   from: string;
   till: string;
   role: string;
   skills: string;
+  isVisible: boolean;
 }
 
 const StyledResumeTable = styled(`div`)`
@@ -19,7 +21,7 @@ const StyledResumeTable = styled(`div`)`
   border-radius: 5px;
   z-index: 999;
   animation: fadein 1.5s;
-  display: "block";
+  display: block;
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -45,25 +47,39 @@ const StyledResumeTable = styled(`div`)`
   }
 `;
 
-const NodeDetails = ({ from, till, role, skills}: ResumeTableProps):React.ReactElement => (
-  <StyledResumeTable>
-    <ul>
-      <li>
-        <b>Timetable:</b>
-      </li>
-      <li>
-        {from} | {till}
-      </li>
-      <li>
-        <b>Rol:</b>
-      </li>
-      <li>{role}</li>
-      <li>
-        <b>Skills:</b>
-      </li>
-      <li>{skills}</li>
-    </ul>
-  </StyledResumeTable>
-);
+const NodeDetails = ({
+  from,
+  till,
+  role,
+  skills,
+  isVisible
+}: ResumeTableProps): React.ReactElement => {
+  const transition = useSpring({
+    opacity: isVisible ? 1 : 0
+  });
+
+  return (
+    <animated.div style={transition}>
+      <StyledResumeTable>
+        <ul>
+          <li>
+            <b>Timetable:</b>
+          </li>
+          <li>
+            {from} | {till}
+          </li>
+          <li>
+            <b>Rol:</b>
+          </li>
+          <li>{role}</li>
+          <li>
+            <b>Skills:</b>
+          </li>
+          <li>{skills}</li>
+        </ul>
+      </StyledResumeTable>
+    </animated.div>
+  );
+};
 
 export default NodeDetails;

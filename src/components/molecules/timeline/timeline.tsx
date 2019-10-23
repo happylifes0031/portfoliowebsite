@@ -18,12 +18,14 @@ interface CompanyProps {
 }
 
 const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName }) => {
+  const [frameWidth, setFrameWidth] = useState(0);
   const totalAmountOfMonths = TimeLineUtil.calculateAmountOfTotalMonths(
     startTimeLine,
     endTimeLine
   );
   const startTimeLineYear = TimeLineUtil.getYearFromDateString(startTimeLine);
   const startTimeLineMonth = TimeLineUtil.getMonthFromDateString(startTimeLine);
+  const percentagePerMonth =  frameWidth / (totalAmountOfMonths + 2);
 
   const calculatePosition = (company: CompanyProps) => {
     const startYear = TimeLineUtil.getYearFromDateString(company.from);
@@ -34,7 +36,6 @@ const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName }) => {
     const totalMonths =
       (endYear - startYear) * 12 + (12 - startMonth + endMonth);
 
-    const percentagePerMonth = 100 / (totalAmountOfMonths + 2);
     const start =
       (startYear - startTimeLineYear) * 12 + (startMonth - startTimeLineMonth);
 
@@ -42,6 +43,10 @@ const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName }) => {
     const width = Math.floor(percentagePerMonth * totalMonths);
     return [left, width];
   };
+
+  useEffect( () => {
+    setFrameWidth(document.getElementById("timeLine").offsetWidth)
+  }, []);
 
   return timeline.map((company: CompanyProps, index: number) => {
     const [left, width] = calculatePosition(company);
@@ -59,7 +64,7 @@ const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName }) => {
   });
 };
 
-const TimelineWrapper = props => {
+const TimelineWrapper = (props:TimelineFrameProps) => {
   const startTimeLine = timeline[0].from;
   const endTimeLine = timeline[timeline.length - 1].till;
 
