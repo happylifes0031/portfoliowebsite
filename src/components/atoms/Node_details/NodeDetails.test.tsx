@@ -9,7 +9,7 @@ expect.extend(matchers);
 describe("ResumeTable", () => {
   it("Renders as expected", () => {
     const resumeTable = renderer
-      .create(<NodeDetails from={''} till={''} role={''} skills={''} isVisible={true}/>)
+      .create(<NodeDetails from={''} till={''} role={''} skills={''} isVisible={true} top={0}/>)
       .toJSON();
     expect(resumeTable).toMatchSnapshot();
   });

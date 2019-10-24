@@ -3,10 +3,10 @@ import { Header } from './components/organisms/header/header';
 import KnowledgeStack from './components/organisms/knowledgeStack/knowledgeStack';
 import { Portfolio } from './components/pages/portfolio/portfolio';
 import { Intro } from './components/templates/intro/intro';
-import TimelineWrapper from './components/molecules/timeline/timeline';
+import TimelineWrapper from './components/organisms/Timeline/Timeline';
 import { ThemeProvider } from 'emotion-theming';
 import Context from "./context/Context";
-
+import TimeLine from './components/templates/Timeline/Timeline';
 
 
 const theme = {
@@ -53,11 +53,7 @@ export default class App extends React.Component {
         <Context.Provider value={this.state.skillSet} > {
           <div className="container">
             <Header />
-            <div className='timeline-frame'>
-              <TimelineWrapper onMouseOver={this.onMouseOver}/>
-              <div className="inbedded-timeline">
-              </div>
-            </div>
+            <TimeLine />
             <Intro togglePortfolio={this.togglePortfolio} />
             <KnowledgeStack />
             {

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { useSpring, animated } from "react-spring";
+import { css, SerializedStyles } from "@emotion/core";
 
 interface ResumeTableProps {
   from: string;
@@ -8,14 +9,19 @@ interface ResumeTableProps {
   role: string;
   skills: string;
   isVisible: boolean;
+  top: number;
 }
 
-const StyledResumeTable = styled(`div`)`
+interface StyledResumeTableProps {
+  top: number;
+}
+
+const StyledResumeTable = styled.div( ({top}:StyledResumeTableProps):SerializedStyles => { return css`
   position: absolute;
-  width: 220px;
+  width: 250px;
   background-color: orange;
   left: 23px;
-  top: 71px;
+  top: ${top}px;
   font-size: 0.7rem;
   padding: 1px;
   border-radius: 5px;
@@ -27,7 +33,7 @@ const StyledResumeTable = styled(`div`)`
     flex-wrap: wrap;
     background-color: #efefef;
     list-style: none;
-    padding: 0;
+    padding: 3px;
     margin: 0;
     text-align: left;
     li {
@@ -45,40 +51,43 @@ const StyledResumeTable = styled(`div`)`
       }
     }
   }
-`;
+`});
 
 const NodeDetails = ({
   from,
   till,
   role,
   skills,
-  isVisible
+  isVisible,
+    top
 }: ResumeTableProps): React.ReactElement => {
   const transition = useSpring({
     opacity: isVisible ? 1 : 0
   });
 
   return (
-    <animated.div style={transition}>
-      <StyledResumeTable>
-        <ul>
-          <li>
-            <b>Timetable:</b>
-          </li>
-          <li>
-            {from} | {till}
-          </li>
-          <li>
-            <b>Rol:</b>
-          </li>
-          <li>{role}</li>
-          <li>
-            <b>Skills:</b>
-          </li>
-          <li>{skills}</li>
-        </ul>
-      </StyledResumeTable>
-    </animated.div>
+    <>
+      {isVisible && (
+        <StyledResumeTable top={top}>
+          <ul>
+            <li>
+              <b>Timetable:</b>
+            </li>
+            <li>
+              {from} | {till}
+            </li>
+            <li>
+              <b>Rol:</b>
+            </li>
+            <li>{role}</li>
+            <li>
+              <b>Skills:</b>
+            </li>
+            <li>{skills}</li>
+          </ul>
+        </StyledResumeTable>
+      )}
+    </>
   );
 };
 

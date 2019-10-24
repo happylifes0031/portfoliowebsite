@@ -1,5 +1,5 @@
 import React from 'react';
-import {TitlesH1, TitlesH2} from '../../atoms/Titles';
+import {TitlesH1, TitlesH2} from '../../atoms/Titles/Titles';
 
 const TitlesHeader = () => {
     return ( 

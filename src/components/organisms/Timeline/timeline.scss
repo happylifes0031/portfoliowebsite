@@ -1,4 +1,4 @@
-@import '../../atoms/node/node';
+@import '../../molecules/Node/node';
 
 .timeline-frame {
     width: 100%;
@@ -108,5 +108,4 @@
     height: 12px;
     border-radius: 50%;
     background-color: $blue-color;
-    z-index: 999;
 }

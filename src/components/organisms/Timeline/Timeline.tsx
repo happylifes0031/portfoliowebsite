@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
+import styled from "@emotion/styled";
 
-import TimeLineNode, { TimeLineNodeProps } from "../../atoms/node/node";
+import TimeLineNode from "../../molecules/Node/node";
 import TimeLineUtil from "../../../utils/timeline-util";
-const timeline = require("../../../../data/timeline.json");
+
 
 export interface TimelineFrameProps {
   onMouseOver: (companyName: string) => void;
+  timeline: any;
 }
 
 interface CompanyProps {
@@ -17,7 +19,7 @@ interface CompanyProps {
   companyLogo: string;
 }
 
-const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName }) => {
+const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName, timeline} ) => {
   const [frameWidth, setFrameWidth] = useState(0);
   const totalAmountOfMonths = TimeLineUtil.calculateAmountOfTotalMonths(
     startTimeLine,
@@ -25,7 +27,8 @@ const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName }) => {
   );
   const startTimeLineYear = TimeLineUtil.getYearFromDateString(startTimeLine);
   const startTimeLineMonth = TimeLineUtil.getMonthFromDateString(startTimeLine);
-  const percentagePerMonth =  frameWidth / (totalAmountOfMonths + 2);
+  const percentagePerMonth = frameWidth / (totalAmountOfMonths + 2);
+  let nodePairItt = 0;
 
   const calculatePosition = (company: CompanyProps) => {
     const startYear = TimeLineUtil.getYearFromDateString(company.from);
@@ -44,18 +47,20 @@ const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName }) => {
     return [left, width];
   };
 
-  useEffect( () => {
-    setFrameWidth(document.getElementById("timeLine").offsetWidth)
+  useEffect(() => {
+    setFrameWidth(document.getElementById("timeLine").offsetWidth);
   }, []);
 
   return timeline.map((company: CompanyProps, index: number) => {
     const [left, width] = calculatePosition(company);
+    if (index % 2 === 0) { nodePairItt++ }
 
     return (
       <TimeLineNode
         key={company.companyName + "_" + index}
         onMouseOver={onHoverGetName}
         isEven={index % 2 === 0}
+        isLower={nodePairItt % 2 === 0}
         width={width}
         left={left}
         {...company}
@@ -64,27 +69,21 @@ const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName }) => {
   });
 };
 
-const TimelineWrapper = (props:TimelineFrameProps) => {
-  const startTimeLine = timeline[0].from;
-  const endTimeLine = timeline[timeline.length - 1].till;
-
-  const startYear = TimeLineUtil.getYearFromDateString(startTimeLine);
-  const endYear = TimeLineUtil.getYearFromDateString(endTimeLine);
+const TimelineWrapper = (props: TimelineFrameProps) => {
+  const startTimeLine = props.timeline[0].from;
+  const endTimeLine = props.timeline[props.timeline.length - 1].till;
 
   const onHoverGetName = (name: string) => {
     props.onMouseOver(name);
   };
 
   return (
-    <div className="timeline" id="timeLine">
-      <div className="start-date">{startYear}</div>
       <TimeLine
         startTimeLine={startTimeLine}
         endTimeLine={endTimeLine}
+        timeline={props.timeline}
         onHoverGetName={onHoverGetName}
       />
-      <div className="end-date">{endYear}</div>
-    </div>
   );
 };
 

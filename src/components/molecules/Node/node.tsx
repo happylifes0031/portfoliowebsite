@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import styled from "@emotion/styled";
 import { css, SerializedStyles } from "@emotion/core";
+import NodeCircle from "../../atoms/Node_circle/NodeCircle";
 import { useSpring, animated } from "react-spring";
 
-import NodeDetails from "../node_details/NodeDetails";
+import NodeDetails from "../../atoms/Node_details/NodeDetails";
 
 export interface TimeLineNodeProps {
   skills: string;
@@ -15,52 +16,26 @@ export interface TimeLineNodeProps {
   left: number;
   width: number;
   isEven: boolean;
+  isLower: boolean;
   companyName: string;
 }
 
 interface StyledNodeProps {
-  isEven: boolean;
   left: number;
   width: number;
-}
-
-interface StyledCircleProps {
-  companyName: string;
   isEven: boolean;
+  isLower: boolean;
 }
 
-const StyledCircle = styled.div( (props:StyledCircleProps):SerializedStyles => {
-    return css`
-      position: absolute;
-      height: 14px;
-      width: 14px;
-      border-radius: 50%;
-      display: block;
-      border: 1px dashed #0a354d;
-      top: ${ props.isEven ? -15 : 51 }px;
-      left: -8px;
-      &:after{
-        width:150px;
-        position:absolute;
-        font-size: 0.7em;
-        left: 20px;
-        top: 1px;
-        content: "${props.companyName}";
-      }
-      &:hover{
-        background-color: #5d89a1;
-      }
-    `
-});
-
-const StyledNode = styled.div(  (props: StyledNodeProps): SerializedStyles => {
-  return css(`
+const StyledNode = styled.div(
+  (props: StyledNodeProps): SerializedStyles => {
+    return css(`
     position: absolute;
-    height: 50px;
+    height: ${props.isLower ? 30 : 50}px;
     width: ${props.width}px;
     padding: 1px;
     display: inline-block;    
-    top: ${ props.isEven ? 34 : 85 }px;
+    top: ${props.isEven ? (props.isLower ? 67 : 47) : 98}px;
     left: ${props.left}px;
     animation-name: fadeIn;
     animation-duration: 1s;
@@ -69,8 +44,9 @@ const StyledNode = styled.div(  (props: StyledNodeProps): SerializedStyles => {
     h5 { 
       left: 15px;
     }
-`)
-});
+`);
+  }
+);
 
 const TimeLineNode = (props: TimeLineNodeProps): React.ReactElement => {
   const [isHoveringOver, setIsHoveringOver] = useState(false);
@@ -91,22 +67,28 @@ const TimeLineNode = (props: TimeLineNodeProps): React.ReactElement => {
 
   return (
     <StyledNode
-        isEven={props.isEven}
-        left={props.left}
-        width={props.width}
+      isEven={props.isEven}
+      isLower={props.isLower}
+      left={props.left}
+      width={props.width}
     >
-      <StyledCircle
-          companyName={props.companyName}
-          isEven={props.isEven}
-          onMouseOver={() => {
-            hoverOverNode();
-          }}
-          onMouseLeave={() => {
-            onMouseLeave();
-            props.onMouseOver([]);
-          }}
+      <NodeCircle
+        companyName={props.companyName}
+        isEven={props.isEven}
+        isLower={props.isLower}
+        onMouseOver={() => {
+          hoverOverNode();
+        }}
+        onMouseLeave={() => {
+          onMouseLeave();
+          props.onMouseOver([]);
+        }}
       />
-      <NodeDetails {...props} isVisible={isHoveringOver} />
+      <NodeDetails
+        {...props}
+        isVisible={isHoveringOver}
+        top={props.isEven ? 10 : 80}
+      />
     </StyledNode>
   );
 };

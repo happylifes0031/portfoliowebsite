@@ -1,5 +1,5 @@
 import React from "react";
-import TechColophon from "../../atoms/techcolophon/TechColophon";
+import TechColophon from "../../atoms/TechColophon/TechColophon";
 
 export const Header: React.SFC = () => (
   <header>
