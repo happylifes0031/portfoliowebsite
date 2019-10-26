@@ -14,6 +14,11 @@ const StyledTechColophon = styled(`div`)`
   padding: 0 0.5em;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+  &:hover { 
+    -webkit-box-shadow: 0 2px 5px 2px rgba(0,0,0, 0.15);
+    -moz-box-shadow: 0 2px 5px 2px rgba(0,0,0, 0.15);
+    box-shadow: 0 2px 5px 2px rgba(0,0,0, 0.15);
+  }
   div {
     text-align: center;
     letter-spacing: 2px;
@@ -35,7 +40,7 @@ const StyledTechColophon = styled(`div`)`
 const TechColophon = (): JSX.Element => {
   const [onHover, setOnHover] = useState(false);
   const transitions = useSpring({
-    marginTop: onHover ? 0 : -120
+    marginTop: onHover ? 0 : -118
   });
   return (
     <animated.div

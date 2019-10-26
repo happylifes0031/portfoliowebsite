@@ -78,12 +78,10 @@ article {
   line-height: 1.5em;
   text-align: justify;
   @include small-desktop {
-    margin: 1.3em 0 1.3em 1em;
     font-size: 1em;
     line-height: 1.3em;
   }
   @include desktop {
-    margin: 1em 0;
     font-size: 1.2em;
   }
 }

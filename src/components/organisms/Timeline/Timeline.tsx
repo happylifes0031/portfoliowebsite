@@ -4,7 +4,6 @@ import styled from "@emotion/styled";
 import TimeLineNode from "../../molecules/Node/node";
 import TimeLineUtil from "../../../utils/timeline-util";
 
-
 export interface TimelineFrameProps {
   onMouseOver: (companyName: string) => void;
   timeline: any;
@@ -19,7 +18,7 @@ interface CompanyProps {
   companyLogo: string;
 }
 
-const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName, timeline} ) => {
+const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName, timeline }) => {
   const [frameWidth, setFrameWidth] = useState(0);
   const totalAmountOfMonths = TimeLineUtil.calculateAmountOfTotalMonths(
     startTimeLine,
@@ -53,7 +52,9 @@ const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName, timeline} ) => {
 
   return timeline.map((company: CompanyProps, index: number) => {
     const [left, width] = calculatePosition(company);
-    if (index % 2 === 0) { nodePairItt++ }
+    if (index % 2 === 0) {
+      nodePairItt++;
+    }
 
     return (
       <TimeLineNode
@@ -78,12 +79,12 @@ const TimelineWrapper = (props: TimelineFrameProps) => {
   };
 
   return (
-      <TimeLine
-        startTimeLine={startTimeLine}
-        endTimeLine={endTimeLine}
-        timeline={props.timeline}
-        onHoverGetName={onHoverGetName}
-      />
+    <TimeLine
+      startTimeLine={startTimeLine}
+      endTimeLine={endTimeLine}
+      timeline={props.timeline}
+      onHoverGetName={onHoverGetName}
+    />
   );
 };
 
