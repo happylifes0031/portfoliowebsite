@@ -15,7 +15,7 @@ export const TitlesH2 = ({ children }: IStyledTitles) => {
 };
 
 const StyledTitleH1 = styled.h1`
-  font-size: 3em;
+  font-size: 5em;
   letter-spacing: 0.2em;
 `;
 

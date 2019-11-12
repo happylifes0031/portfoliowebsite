@@ -6,7 +6,6 @@ import Icon from "../../atoms/Icon/Icon";
 const compleetKnowledgeStack = require('../../../../data/knowledgeStack.json');
 
 const StyledKnowLedgeStack = styled.div(`
-    margin: 0 1em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

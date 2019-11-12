@@ -5,7 +5,7 @@ import Menu from "../../molecules/Menu/Menu";
 
 const StyledContent = styled.div`
   display: flex;
-  padding-top: 3em;
+  padding: 3em 0;
 `;
 
 const StyledArticle = styled.article`
@@ -15,9 +15,9 @@ const StyledArticle = styled.article`
   text-align: justify;
 `;
 
-const Content = () => (
+const Content = (props) => (
   <StyledContent>
-    <Menu />
+    <Menu togglePortfolio={props.togglePortfolio} />
     <StyledArticle>
       Freelance front-end developer and hobby game developer. Born and raised in
       Rotterdam, living in Amsterdam. I have background in game development and

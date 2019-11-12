@@ -8,12 +8,12 @@ const StyledIntro = styled.main`
   padding-top: 3em;
 `;
 
-const Intro = (): JSX.Element => (
+const Intro = (props): JSX.Element => (
   <StyledIntro>
     <TitlesH2>Hello, I am a freelance</TitlesH2>
     <TitlesH1>front-end developer</TitlesH1>
     <TitlesH2>& hobby game developer</TitlesH2>
-    <Content />
+    <Content togglePortfolio={props.togglePortfolio} />
   </StyledIntro>
 );
 

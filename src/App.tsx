@@ -21,6 +21,7 @@ export default class App extends React.Component {
   };
 
   private togglePortfolio = (): void => {
+    console.log('toggle portfolio');
     this.setState({ hidePortfolio: !this.state.hidePortfolio });
   };
 
@@ -45,12 +46,11 @@ export default class App extends React.Component {
   public render() {
     return (
       <Context.Provider value={this.state.skillSet}>
-        {" "}
         {
           <div className="container">
             <Header />
             <TimeLine onMouseOver={this.onMouseOver} />
-            <Intro />
+            <Intro togglePortfolio={this.togglePortfolio} />
             <KnowledgeStack />
             {!this.state.hidePortfolio && <Portfolio />}
           </div>
