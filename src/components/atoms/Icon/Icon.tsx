@@ -27,15 +27,14 @@ const StyledIcon = styled.span(
       `,
       props.active &&
         css`
+          display: block;
+          height: inherit;
           border-radius: 5px;
           -webkit-filter: grayscale(0%);
           -moz-filter: grayscale(0%);
           -o-filter: grayscale(0%);
           -ms-filter: grayscale(0%);
           filter: grayscale(0%);
-          -webkit-box-shadow: 1px, 1px, 12px, 0px, rgba(0, 0, 0, 0.35);
-          -moz-box-shadow: 1px, 1px, 12px, 0px, rgba(0, 0, 0, 0.35);
-          box-shadow: 1px, 1px, 12px, 0px, rgba(0, 0, 0, 0.35);
         `
     ]);
   }
@@ -54,6 +53,11 @@ const StyledImage = styled.img(
         `    
         width: 50px;
         height: 50px;
+        border-radius:5px;
+        
+          -webkit-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.35);
+            -moz-box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.35);
+            box-shadow: 1px 1px 12px 0px rgba(0,0,0,0.35);
     `
     ]);
   }

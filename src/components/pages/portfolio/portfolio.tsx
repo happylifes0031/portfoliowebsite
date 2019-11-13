@@ -8,7 +8,7 @@ export class Portfolio extends React.Component {
         offset: 0,
         scrollPosition: 0,
         pos: 0
-    }
+    };
 
     private handleScroll = ():void => {}
 

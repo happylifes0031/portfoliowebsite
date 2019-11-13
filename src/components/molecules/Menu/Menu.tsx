@@ -41,13 +41,16 @@ interface MenuProps {
 }
 
 const Menu = (props) => {
-  const menuItems = ["portfolio", "contact", "C.V."];
+  const menuItems = [
+      {title:"Portfolio", url:"#portfolio"},
+      {title:"C.V.", url:"../../../data/blijlevens_cv_eng.pdf"},
+      {title:"Contact", url:"mailto:e-postduif@blijlevens.nu"}
+  ];
 
   return (
     <StyledNav>
       <Trail
         items={menuItems}
-        keys={menuItems}
         from={{
           marginLeft: -80,
           opacity: 0,
@@ -55,9 +58,11 @@ const Menu = (props) => {
         }}
         to={{ marginLeft: 0, opacity: 1, transform: "translate3d(0,0,0)" }}
       >
-        {menuItems => (animStyle) => (
+        { menuItems => (animStyle) => (
           <animated.div style={animStyle}>
-            <StyledMenuItem onClick={ () => { props.togglePortfolio() } }>{menuItems}</StyledMenuItem>
+              <a href={menuItems.url} onClick={ () => { if( menuItems.title ==="Portfolio") { props.togglePortfolio() } } }>
+                <StyledMenuItem >{menuItems.title}</StyledMenuItem>
+              </a>
           </animated.div>
         )}
       </Trail>
