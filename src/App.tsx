@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import styled from '@emotion/styled';
 
 import { Header } from "./components/organisms/header/header";
 import KnowledgeStack from "./components/organisms/knowledgeStack/knowledgeStack";
@@ -7,55 +8,50 @@ import Intro from "./components/templates/intro/intro";
 import Context from "./context/Context";
 import TimeLine from "./components/templates/Timeline/Timeline";
 
-export default class App extends React.Component {
-  state = {
-    skillSet: [],
-    hidePortfolio: true,
-    isScrolling: false
-  };
+const StyledContainer = styled.div`
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100%; 
+  flex-direction: column;
+`;
 
-  private onMouseOver = (skillSet: string): void => {
-    this.setState({
-      skillSet: skillSet
-    });
-  };
+const App = () => {
+  const [hidePortfolio, setHidePortfolio] = useState(true);
+  const [skillSet, setSkillSet] = useState('');
 
-  private togglePortfolio = (): void => {
-    console.log('toggle portfolio');
-    this.setState({ hidePortfolio: !this.state.hidePortfolio });
-  };
+  const onMouseOver = (skillSet: string): void =>  {setSkillSet(skillSet); };
 
-  private handleScroll = (): void => {
+  const togglePortfolio = (): void => setHidePortfolio(!hidePortfolio);
+
+  const handleScroll = (): void => {
     let lastScrollY = window.scrollY;
 
-    if (!this.state.hidePortfolio && lastScrollY <= 50) {
-      this.setState({
-        hidePortfolio: !this.state.hidePortfolio
-      });
+    if (!hidePortfolio && lastScrollY <= 50) {
+      setHidePortfolio(!hidePortfolio);
     }
   };
 
-  public componentDidMount(): void {
-    window.addEventListener("scroll", this.handleScroll);
-  }
+  useEffect( () => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  });
 
-  public componentWillUnmount(): void {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
+  return (
+    <Context.Provider value={skillSet}>
+      {
+        <StyledContainer>
+          <Header />
+          <TimeLine onMouseOver={onMouseOver} />
+          <Intro togglePortfolio={togglePortfolio} />
+          <KnowledgeStack />
+          {!hidePortfolio && <Portfolio />}
+        </StyledContainer>
+      }
+    </Context.Provider>
+  );
+};
 
-  public render() {
-    return (
-      <Context.Provider value={this.state.skillSet}>
-        {
-          <div className="container">
-            <Header />
-            <TimeLine onMouseOver={this.onMouseOver} />
-            <Intro togglePortfolio={this.togglePortfolio} />
-            <KnowledgeStack />
-            {!this.state.hidePortfolio && <Portfolio />}
-          </div>
-        }
-      </Context.Provider>
-    );
-  }
-}
+export default App;

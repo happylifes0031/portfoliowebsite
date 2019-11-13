@@ -14,10 +14,10 @@ const StyledKnowLedgeStack = styled.div(`
 `);
 
 interface ListOfIconsProps {
-    skillSet:Array<string>;
+    skillSet:string;
 }
 
-const ListOfIcons = ({skillSet=[]}:ListOfIconsProps):JSX.Element => (
+const ListOfIcons = ({skillSet}:ListOfIconsProps):JSX.Element => (
   compleetKnowledgeStack.map( (icon, index) => {
     return ( <Icon element={icon} key={icon.icon+'_'+index} active={skillSet.includes(icon.icon)} /> )
   })
