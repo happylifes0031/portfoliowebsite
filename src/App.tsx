@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react";
 import styled from '@emotion/styled';
-
-import { Header } from "./components/organisms/header/header";
-import KnowledgeStack from "./components/organisms/knowledgeStack/knowledgeStack";
-import { Portfolio } from "./components/pages/portfolio/portfolio";
-import Intro from "./components/templates/intro/intro";
 import Context from "./context/Context";
+
+import Header from "./components/organisms/header/header";
+import Portfolio from "./components/pages/portfolio/portfolio";
+import KnowledgeStack from "./components/organisms/knowledgeStack/knowledgeStack";
+import Intro from "./components/templates/intro/intro";
 import TimeLine from "./components/templates/Timeline/Timeline";
 
 const StyledContainer = styled.div`
@@ -20,7 +20,7 @@ const App = () => {
   const [hidePortfolio, setHidePortfolio] = useState(true);
   const [skillSet, setSkillSet] = useState('');
 
-  const onMouseOver = (skillSet: string): void =>  {setSkillSet(skillSet); };
+  const onMouseOver = (skillSet: string): void => setSkillSet(skillSet);
 
   const togglePortfolio = (): void => setHidePortfolio(!hidePortfolio);
 

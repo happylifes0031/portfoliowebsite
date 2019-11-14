@@ -1,44 +1,67 @@
-import React from 'react';
-const showCase = require('../../../../data/portfolioCases.json');
-import {PortfolioRow} from './portfolio-row';
+import React from "react";
+import styled from "@emotion/styled";
 
+import { PortfolioRow } from "./portfolio-row";
+const showCase = require("../../../../data/portfolioCases.json");
 
-export class Portfolio extends React.Component {
-    state = { 
-        offset: 0,
-        scrollPosition: 0,
-        pos: 0
-    };
+const StyledPortfolio = styled.div`
+  margin: 2em 0;
+  h2 {
+    margin: 1em 0 1.5em 0;
+  }
+`;
 
-    private handleScroll = ():void => {}
+const StyledPortfolioContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  margin-bottom: 2em;
+  &:after {
+      content: '';
+      height:2px;
+      width: 45%;
+      margin-top:1em;
+      background-color: orange;
+  }
+`;
 
-    public componentDidMount():void {
-        window.addEventListener('scroll', this.handleScroll);
+const StyledProjectInfo = styled.div`
+  > div {
+    font-family: roboto-bold;
+    > span {
+      font-size: 0.85em;
+      font-family: roboto;
     }
+  }
+  &:last-child {
+    margin: 0.5em 0;
+  }
+`;
 
-    public componentWillUnmount():void {
-        window.removeEventListener('scroll', this.handleScroll);
-    }
-
-    public render():React.ReactNode {
+const Portfolio = (): JSX.Element => {
+  return (
+    <StyledPortfolio id="portfolio">
+      <h2>Portfolio</h2>
+      {showCase.map((showcase, index) => {
         return (
-            <div id='portfolio' className='portfolio'>
-                <h2>Portfolio</h2>
-                { 
-                    showCase.map( (showcase, index) => { 
-                        return ( 
-                            <div className='portfolio-content'>
-                                <div className='project-info'>
-                                    <div>Client: <span>{showcase.client}</span></div>
-                                    <div>Project: <span>{showcase.projectTitle}</span></div>
-                                    <div><span>{showcase.description}</span></div>
-                                </div>
-                                <PortfolioRow showcase={showcase} index={index}/>
-                            </div>
-                        )
-                    })
-                }
-            </div>   
-        )
-    }
-}
+          <StyledPortfolioContent>
+            <StyledProjectInfo>
+              <div>
+                Client: <span>{showcase.client}</span>
+              </div>
+              <div>
+                Project: <span>{showcase.projectTitle}</span>
+              </div>
+              <div>
+                <span>{showcase.description}</span>
+              </div>
+            </StyledProjectInfo>
+            <PortfolioRow showcase={showcase} index={index} />
+          </StyledPortfolioContent>
+        );
+      })}
+    </StyledPortfolio>
+  );
+};
+
+export default Portfolio;
