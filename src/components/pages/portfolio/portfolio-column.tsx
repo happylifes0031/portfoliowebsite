@@ -5,7 +5,7 @@ import { css } from "@emotion/core";
 import { SerializedStyles } from "@emotion/utils";
 
 interface PortfolioColumnProps {
-  showCase: any;
+  showCase: string;
 }
 
 interface StyledModalProps {
@@ -79,7 +79,7 @@ const PortfolioColumn = (props: PortfolioColumnProps): JSX.Element => {
   const toggleImageModal = (): void => setDisplayModal(!displayModal);
 
   return (
-    <div className="images">
+    <>
       <StyledScrim
         displayModal={displayModal}
         onClick={() => {
@@ -108,7 +108,7 @@ const PortfolioColumn = (props: PortfolioColumnProps): JSX.Element => {
           />
         </StyledModalContent>
       </StyledThumbnail>
-    </div>
+    </>
   );
 };
 

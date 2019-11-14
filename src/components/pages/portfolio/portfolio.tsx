@@ -1,8 +1,19 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import { PortfolioRow } from "./portfolio-row";
+import PortfolioRow from "./portfolio-row";
 const showCase = require("../../../../data/portfolioCases.json");
+
+
+export interface PortfolioRowProps{
+    client:string;
+    description:string;
+    projectTitle:string;
+    imgName1:string;
+    imgName2:string;
+    imgName3:string;
+}
+
 
 const StyledPortfolio = styled.div`
   margin: 2em 0;
@@ -42,21 +53,21 @@ const Portfolio = (): JSX.Element => {
   return (
     <StyledPortfolio id="portfolio">
       <h2>Portfolio</h2>
-      {showCase.map((showcase, index) => {
+      {showCase.map((showCase:PortfolioRowProps) => {
         return (
           <StyledPortfolioContent>
             <StyledProjectInfo>
               <div>
-                Client: <span>{showcase.client}</span>
+                Client: <span>{showCase.client}</span>
               </div>
               <div>
-                Project: <span>{showcase.projectTitle}</span>
+                Project: <span>{showCase.projectTitle}</span>
               </div>
               <div>
-                <span>{showcase.description}</span>
+                <span>{showCase.description}</span>
               </div>
             </StyledProjectInfo>
-            <PortfolioRow showcase={showcase} index={index} />
+            <PortfolioRow {...showCase} />
           </StyledPortfolioContent>
         );
       })}

@@ -2,11 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 import PortfolioColumn from "./portfolio-column";
-
-interface Props {
-  showcase: any;
-  index: number;
-}
+import {PortfolioRowProps} from "./portfolio";
 
 const StyledPortfolioRow = styled.div`
   display: flex;
@@ -14,41 +10,16 @@ const StyledPortfolioRow = styled.div`
   justify-content: space-between;
 `;
 
-export class PortfolioRow extends React.Component<Props> {
-  state = {
-    yPosition: 0,
-    modalOpend: false,
-    close: false
-  };
+const PortfolioRow = ({imgName1, imgName2, imgName3}:PortfolioRowProps) => {
+  return (
+    <StyledPortfolioRow>
+      <PortfolioColumn showCase={imgName1} />
+      <PortfolioColumn showCase={imgName2} />
+      {imgName3 && (
+        <PortfolioColumn showCase={imgName3} />
+      )}
+    </StyledPortfolioRow>
+  );
+};
 
-  updateRowState = (modalOpend: boolean, close: boolean): void => {
-    this.setState({ modalOpend, close });
-  };
-
-  closeModal = (): void => {
-    this.updateRowState(false, true);
-  };
-
-  toggleModal = (): void => {
-    this.updateRowState(true, false);
-  };
-
-  public render(): React.ReactNode {
-    return (
-      <StyledPortfolioRow>
-        <PortfolioColumn
-          showCase={this.props.showcase.imgName1}
-
-        />
-        <PortfolioColumn
-          showCase={this.props.showcase.imgName2}
-        />
-        {this.props.showcase.imgName3 && (
-          <PortfolioColumn
-            showCase={this.props.showcase.imgName3}
-          />
-        )}
-      </StyledPortfolioRow>
-    );
-  }
-}
+export default PortfolioRow;
