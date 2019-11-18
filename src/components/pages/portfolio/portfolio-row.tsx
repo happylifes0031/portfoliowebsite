@@ -15,9 +15,9 @@ const PortfolioRow = ({imgName1, imgName2, imgName3}:PortfolioRowProps) => {
     <StyledPortfolioRow>
       <PortfolioColumn showCase={imgName1} />
       <PortfolioColumn showCase={imgName2} />
-      {imgName3 && (
-        <PortfolioColumn showCase={imgName3} />
-      )}
+      {
+          imgName3 && <PortfolioColumn showCase={imgName3} />
+      }
     </StyledPortfolioRow>
   );
 };

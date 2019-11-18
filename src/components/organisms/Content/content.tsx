@@ -11,11 +11,12 @@ const StyledContent = styled.div`
 const StyledArticle = styled.article`
   color: #0a354d;
   text-transform: initial;
+  font-size: 1.2em;
   line-height: 1.5em;
   text-align: justify;
 `;
 
-const Content = (props) => (
+const Content = props => (
   <StyledContent>
     <Menu togglePortfolio={props.togglePortfolio} />
     <StyledArticle>

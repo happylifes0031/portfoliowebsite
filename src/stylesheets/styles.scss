@@ -1,13 +1,6 @@
-@import './settings';
 @import './fonts';
 @import './mixins';
 @import './settings';
-@import '../components/organisms/header/header.scss';
-@import '../components/atoms/TechColophon/techcolofon.scss';
-@import '../components/organisms/Timeline/timeline.scss';
-@import '../components/templates/intro/intro.scss';
-@import '../components/pages/portfolio/portfolio.scss';
-@import '../components/organisms/knowledgeStack/knowledgeStack.scss';
 
 html {
   min-height: 100%;
@@ -19,11 +12,7 @@ body {
   padding: 0;
   height: 100%;
   min-height: 100%;
-  background-color: $body-bg-color;
-  font-family: roboto;
-  letter-spacing: 1px;
-  color: $default-text-color;
-  text-transform: uppercase;
+  background-color: #D5d8d5;
 }
 #root{
   max-width: 1200px;
@@ -33,68 +22,5 @@ body {
   }
   @include desktop {
     max-width: 1200px;
-  }
-}
-a { 
-  font-family: roboto-bold;
-  text-decoration: none;
-  color: $node-line-color;
-  @include small-desktop {
-    margin: 0.3em 0;
-    letter-spacing: 0.2em;
-  }
-  &:active {
-    text-decoration: none;
-  }
-}
-h1 {
-  font-family: roboto-bold;
-  font-size: 1.9em;
-  @include small-desktop {
-    font-size: 4em;
-    letter-spacing: 0.1em;
-  }
-  @include desktop {  
-    font-size: 5em;
-  }
-}
-h1, h2 {
-  margin: 0;
-  @include desktop {
-    letter-spacing: 0.2em;
-  }
-}
-h5 {
-  font-size: 0.7em;
-}
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-article {
-  color: $blue-color;
-  text-transform: initial;
-  line-height: 1.5em;
-  text-align: justify;
-  @include small-desktop {
-    font-size: 1em;
-    line-height: 1.3em;
-  }
-  @include desktop {
-    font-size: 1.2em;
-  }
-}
-.container {
-  display: flex;
-  max-width: 100%;
-  margin: 0 auto;
-  height: 100%; 
-  flex-direction: column;
-  @include small-desktop {
-    max-width: 90%;
-  }
-  @include desktop {
-    max-width: 100%;
   }
 }

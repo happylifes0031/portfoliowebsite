@@ -8,6 +8,7 @@ interface IStyledTitles {
 const StyledTitleH2 = styled.h2`
   font-size: 1.5em;
   letter-spacing: 0.2em;
+  margin:0;
 `;
 
 export const TitlesH2 = ({ children }: IStyledTitles) => {
@@ -16,7 +17,9 @@ export const TitlesH2 = ({ children }: IStyledTitles) => {
 
 const StyledTitleH1 = styled.h1`
   font-size: 5em;
+  font-family: roboto-bold;
   letter-spacing: 0.2em;
+  margin:0;
 `;
 
 export const TitlesH1 = ({ children }: IStyledTitles) => {

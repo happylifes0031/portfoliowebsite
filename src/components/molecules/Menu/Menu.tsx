@@ -21,6 +21,13 @@ const StyledNav = styled.nav`
   }
 `;
 
+const StyledA = styled.a`
+  text-decoration: none;
+  color: #000;
+  margin: 0.3em 0;
+  letter-spacing: 0.2em;
+`;
+
 const StyledMenuItem = styled.div`
   border-radius: 0.2rem;
   overflow: hidden;
@@ -34,17 +41,17 @@ const StyledMenuItem = styled.div`
 `;
 
 interface MenuProps {
-    togglePortfolio?: () => void;
-    marginLeft : number;
-    opacity: number;
-    transform: string;
+  togglePortfolio?: () => void;
+  marginLeft: number;
+  opacity: number;
+  transform: string;
 }
 
-const Menu = (props) => {
+const Menu = props => {
   const menuItems = [
-      {title:"Portfolio", url:"#portfolio"},
-      {title:"C.V.", url:"../../../data/blijlevens_cv_eng.pdf"},
-      {title:"Contact", url:"mailto:e-postduif@blijlevens.nu"}
+    { title: "Portfolio", url: "#portfolio" },
+    { title: "C.V.", url: "../../../data/blijlevens_cv_eng.pdf" },
+    { title: "Contact", url: "mailto:e-postduif@blijlevens.nu" }
   ];
 
   return (
@@ -58,11 +65,18 @@ const Menu = (props) => {
         }}
         to={{ marginLeft: 0, opacity: 1, transform: "translate3d(0,0,0)" }}
       >
-        { menuItems => (animStyle) => (
+        {menuItems => animStyle => (
           <animated.div style={animStyle}>
-              <a href={menuItems.url} onClick={ () => { if( menuItems.title ==="Portfolio") { props.togglePortfolio() } } }>
-                <StyledMenuItem >{menuItems.title}</StyledMenuItem>
-              </a>
+            <StyledA
+              href={menuItems.url}
+              onClick={() => {
+                if (menuItems.title === "Portfolio") {
+                  props.togglePortfolio();
+                }
+              }}
+            >
+              <StyledMenuItem>{menuItems.title}</StyledMenuItem>
+            </StyledA>
           </animated.div>
         )}
       </Trail>
@@ -71,14 +85,3 @@ const Menu = (props) => {
 };
 
 export default Menu;
-
-/* <a href="#portfolio" onClick={props.togglePortfolio}>
-        Portfolio
-      </a>
-      <a href="mailto:e-postduif@blijlevens.nu">Contact</a>
-      <a
-        href="../../../../data/blijlevens_cv_eng.pdf"
-        title="Download CV in English"
-      >
-        C.V. <span className="download-note">(PDF | 1.1mb)</span>
-      </a>*/

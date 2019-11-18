@@ -12,8 +12,13 @@ const StyledContainer = styled.div`
   display: flex;
   max-width: 100%;
   margin: 0 auto;
-  height: 100%; 
+  height: 100%;
   flex-direction: column;
+  background-color: #D5d8d5;
+  font-family: roboto;
+  letter-spacing: 1px;
+  color: #000;
+  text-transform: uppercase;
 `;
 
 const App = () => {
@@ -47,7 +52,9 @@ const App = () => {
           <TimeLine onMouseOver={onMouseOver} />
           <Intro togglePortfolio={togglePortfolio} />
           <KnowledgeStack />
-          {!hidePortfolio && <Portfolio />}
+          {
+            !hidePortfolio && <Portfolio />
+          }
         </StyledContainer>
       }
     </Context.Provider>
