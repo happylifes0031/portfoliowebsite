@@ -1,7 +1,5 @@
 import React from "react";
-// @ts-ignore
 import styled from "@emotion/styled";
-// @ts-ignore
 import { css, SerializedStyles } from "@emotion/core";
 
 interface StyledIconProps {
@@ -24,6 +22,9 @@ const StyledIcon = styled.span(
         -o-filter: grayscale(90%);
         -ms-filter: grayscale(90%);
         filter: grayscale(90%);
+        :last-of-type{
+            margin-right: 0;
+        }
       `,
       props.active &&
         css`

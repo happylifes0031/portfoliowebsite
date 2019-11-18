@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import classNames from "classnames";
 import styled from "@emotion/styled";
 import { css, SerializedStyles } from "@emotion/core";
-import NodeCircle from "../../atoms/Node_circle/NodeCircle";
-import { useSpring, animated } from "react-spring";
 
+import NodeCircle from "../../atoms/Node_circle/NodeCircle";
 import NodeDetails from "../../atoms/Node_details/NodeDetails";
 
 export interface TimeLineNodeProps {
@@ -48,7 +46,7 @@ const StyledNode = styled.div(
   }
 );
 
-const TimeLineNode = (props: TimeLineNodeProps): React.ReactElement => {
+const TimeLineNode = (props: TimeLineNodeProps): JSX.Element => {
   const [isHoveringOver, setIsHoveringOver] = useState(false);
 
   const hoverOverNode = (): void => {

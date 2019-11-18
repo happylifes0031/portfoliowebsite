@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 
 import { TitlesH1, TitlesH2 } from "../../atoms/Titles/Titles";
-import Content from "../../organisms/Content/content";
+import Content from "../../organisms/Content/Content";
 
 const StyledIntro = styled.main`
   padding-top: 3em;

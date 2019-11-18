@@ -16,7 +16,7 @@ const StyledArticle = styled.article`
   text-align: justify;
 `;
 
-const Content = props => (
+const Content = (props): JSX.Element => (
   <StyledContent>
     <Menu togglePortfolio={props.togglePortfolio} />
     <StyledArticle>

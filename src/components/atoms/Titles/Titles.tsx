@@ -11,9 +11,8 @@ const StyledTitleH2 = styled.h2`
   margin:0;
 `;
 
-export const TitlesH2 = ({ children }: IStyledTitles) => {
-  return <StyledTitleH2>{children}</StyledTitleH2>;
-};
+export const TitlesH2 = ({ children }: IStyledTitles): JSX.Element =>
+    (<StyledTitleH2>{children}</StyledTitleH2>);
 
 const StyledTitleH1 = styled.h1`
   font-size: 5em;
@@ -22,6 +21,5 @@ const StyledTitleH1 = styled.h1`
   margin:0;
 `;
 
-export const TitlesH1 = ({ children }: IStyledTitles) => {
-  return <StyledTitleH1>{children}</StyledTitleH1>;
-};
+export const TitlesH1 = ({ children }: IStyledTitles): JSX.Element =>
+  (<StyledTitleH1>{children}</StyledTitleH1>);

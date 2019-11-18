@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styled from "@emotion/styled";
 
-import TimeLineNode from "../../molecules/Node/node";
+import TimeLineNode from "../../molecules/Node/Node";
 import TimeLineUtil from "../../../utils/timeline-util";
 
 export interface TimelineFrameProps {
@@ -50,7 +49,7 @@ const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName, timeline }) => {
     setFrameWidth(document.getElementById("timeLine").offsetWidth);
   }, []);
 
-  return timeline.map((company: CompanyProps, index: number) => {
+  return timeline.map((company: CompanyProps, index: number): JSX.Element=> {
     const [left, width] = calculatePosition(company);
     if (index % 2 === 0) {
       nodePairItt++;
@@ -70,7 +69,7 @@ const TimeLine = ({ startTimeLine, endTimeLine, onHoverGetName, timeline }) => {
   });
 };
 
-const TimelineWrapper = (props: TimelineFrameProps) => {
+const TimelineWrapper = (props: TimelineFrameProps): JSX.Element => {
   const startTimeLine = props.timeline[0].from;
   const endTimeLine = props.timeline[props.timeline.length - 1].till;
 

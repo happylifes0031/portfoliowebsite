@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import PortfolioColumn from "./portfolio-column";
-import {PortfolioRowProps} from "./portfolio";
+import PortfolioColumn from "./Portfolio-column";
+import {PortfolioRowProps} from "./Portfolio";
 
 const StyledPortfolioRow = styled.div`
   display: flex;

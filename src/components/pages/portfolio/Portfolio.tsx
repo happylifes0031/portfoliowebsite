@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import PortfolioRow from "./portfolio-row";
+import PortfolioRow from "./Portfolio-row";
 const showCase = require("../../../../data/portfolioCases.json");
 
 

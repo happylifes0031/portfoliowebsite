@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "@emotion/styled";
-import { useSpring, animated, config } from "react-spring";
+import {animated } from "react-spring";
 
 import { Trail } from "react-spring/renderprops";
 
@@ -40,14 +40,7 @@ const StyledMenuItem = styled.div`
   }
 `;
 
-interface MenuProps {
-  togglePortfolio?: () => void;
-  marginLeft: number;
-  opacity: number;
-  transform: string;
-}
-
-const Menu = props => {
+const Menu = (props): JSX.Element => {
   const menuItems = [
     { title: "Portfolio", url: "#portfolio" },
     { title: "C.V.", url: "../../../data/blijlevens_cv_eng.pdf" },

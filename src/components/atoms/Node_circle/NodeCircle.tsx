@@ -1,14 +1,15 @@
 import styled from "@emotion/styled";
-import {SerializedStyles} from "@emotion/utils";
-import {css} from "@emotion/core";
+import { SerializedStyles } from "@emotion/utils";
+import { css } from "@emotion/core";
 
 interface StyledCircleProps {
-    companyName: string;
-    isEven: boolean;
-    isLower: boolean;
+  companyName: string;
+  isEven: boolean;
+  isLower: boolean;
 }
 
-const StyledCircle = styled.div( (props:StyledCircleProps):SerializedStyles => {
+const StyledCircle = styled.div(
+  (props: StyledCircleProps): SerializedStyles => {
     return css`
       position: absolute;
       height: 14px;
@@ -16,7 +17,7 @@ const StyledCircle = styled.div( (props:StyledCircleProps):SerializedStyles => {
       border-radius: 50%;
       display: block;
       border: 1px dashed #0a354d;
-      top: ${ props.isEven ? -15 : props.isLower ? 31 : 51 }px;
+      top: ${props.isEven ? -15 : props.isLower ? 31 : 51}px;
       left: -8px;
       &:after{
         width:150px;
@@ -29,7 +30,8 @@ const StyledCircle = styled.div( (props:StyledCircleProps):SerializedStyles => {
       &:hover{
         background-color: #5d89a1;
       }
-    `
-});
+    `;
+  }
+);
 
 export default StyledCircle;
